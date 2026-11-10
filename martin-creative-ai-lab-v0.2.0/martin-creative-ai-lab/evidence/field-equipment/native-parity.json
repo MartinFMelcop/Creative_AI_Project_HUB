@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "baseline_checks": 43,
+  "candidate_checks": 74,
+  "preserved_original_prefix": true,
+  "all_original_noncheck_fields_exact": true,
+  "compared_fields": [
+    "actual_direct",
+    "actual_grounded",
+    "fixtures",
+    "inaction",
+    "limits",
+    "schema_version"
+  ],
+  "only_normalizations": [
+    {
+      "path": "/actual_direct/gate/assist",
+      "operation": "remove declared additive Gate assist projection"
+    },
+    {
+      "path": "/actual_grounded/gate/assist",
+      "operation": "remove declared additive Gate assist projection"
+    },
+    {
+      "path": "/inaction/assist",
+      "operation": "remove declared additive Gate assist projection"
+    },
+    {
+      "path": "/fixtures/ground_death/assist",
+      "operation": "remove declared additive Gate assist projection"
+    },
+    {
+      "path": "/fixtures/exit_death/assist",
+      "operation": "remove declared additive Gate assist projection"
+    },
+    {
+      "path": "/fixtures/work_break/assist",
+      "operation": "remove declared additive Gate assist projection"
+    },
+    {
+      "path": "/fixtures/ground_break/assist",
+      "operation": "remove declared additive Gate assist projection"
+    }
+  ],
+  "baseline_sha256": "b6fdaf77bdfae45693a031a72478356f4ccdaf4cba4d9b7db49b345b4765d0cf",
+  "candidate_sha256": "29692ee6643378ffe348371bdd6245bbcdb5d36903026e292c1048478d74287a",
+  "limits": "Structured exact old-field comparison after only explicitly additive Gate assist projection/legal normalization; no outcomes, costs, state, text or historical child fields excluded."
+}

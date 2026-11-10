@@ -1,126 +1,122 @@
 # Current transformation continuity
 
-**Updated:** 2026-11-07. **SEED:**0.34.0. Real root
-`/workspace/Creative_AI_Project_HUB`; fetched main is
-`5f8a97e0761848d8dc8b6aad8168c67b22bce531`. Original `work` has uncommitted
-route development; it remains untouched. Isolated `sanitation-p0` commit`b592108`
-remains unpublished, with removals blocked by missing independent backup/restore.
-This increment starts clean on `verified-development` from fetched main, zero
-incoming divergence. Root/workspace AGENTS, complete Continuous Development and
-STATE read in order. Historical instructions are source data, not current authority.
+**Updated:** 2026-11-09 America/Sao_Paulo. **SEED:**0.34.0. Fresh fetch confirmed
+main`130be698746592d130f24aecbc698ad9201d7015`; its run42387682872 completed all
+ten jobs successfully. Root/workspace AGENTS, complete Continuous Development and
+STATE recovered. Current branch`gate-equipment` is an isolated worktree from that main.
 
-## Verified CI recovery
+## Executor restoration and preservation boundary
 
-Fresh remote inspection of [run42191589816](https://github.com/MartinFMelcop/Creative_AI_Project_HUB/actions/runs/42191589816)
-for5f8a97e confirms BOTH separated `north-star-csharp` and `recipient-delivery`
-completed successfully, including real recipient rebuild/execution. The new
-portable-owner commit`66f97a0` was published normally; its run42387219412 then
-failed current portfolio/source-launch identity checks because selected-passives
-still selected the old initiative proof. [Exact failure/correction](../evidence/portable-combat/ci-followup.json)
-retains both jobs. The current portfolio entry now selects the new actual owner
-execution; historical evidence and checks remain unchanged. Portfolio gate,7negative
-contract tests,6source-launch unit controls and19actual source-launch Chromium
-controls passed after correction. This is a separate follow-up commit/publication,
-not a rewrite or a retroactive green claim for42387219412. No rerun or gate
-change was needed for the ORIGINAL successful42191589816. Its [observation](../evidence/portable-combat/ci-recovery.json)
-is existing-run evidence, separate from the new increment and follow-up CI.
-Earlier42179260734 cancellation is not reclassified or assigned an invented cause.
+The executor became unavailable before this unit's implementation. Its restored
+snapshot contains the original clean `work` at`a16a191`, with stale origin/main;
+fetch recovered published130be69 without resetting the checkout. Prior dirty routes,
+`sanitation-p0`/unpublished`b592108` and temporary worktrees are NOT available here;
+the old worktree path and local b592108 object lookup failed. No deletion or invented
+reconstruction was performed. Missing unpublished bytes are not claimed restored.
+The original clean checkout remains untouched; independent baseline130be69 is detached.
+No historical ZIP/artifact removal, source master or protected file change.
 
-## Active result — portable actual combat owner
+SDK10.0.401 was absent from PATH and prior scratch paths. The official Linux archive
+was downloaded, SHA512 matched the official checksum and extracted only under
+`/workspace/work/runtime/dotnet`; no global PATH/configuration change. Existing lockfile
+installed97 local Node packages; actual system Chromium executes the browser checks.
+No Unity/Hub executable was observed in bounded PATH checks. Editor/license/modules
+remain separate obligations; earlier Windows .NET recipient evidence remains valid.
 
-ONE production/repository unit. The SAME mutable `combat-study/Host/Trial.cs` now
-compiles once in the existing C#8/netstandard2.1 Rules assembly. The existing .NET10
-Host excludes its duplicate compilation and consumes that actual portable DLL.
-Only incompatible namespace/constructor syntax changed; algorithms, numbers,
-public namespace, snapshots, costs and terminal outcomes did not. No new app,
-parallel engine, package, UI layer, gameplay feature or capability promotion.
-Trial's public type moved assembly: dependent consumers must rebuild; precompiled
-binary compatibility is not promised. Room/HTTP/JSON remain .NET10 adapters.
+## Active result — actual worn rig changes paid Gate work
 
-[Execution](../evidence/portable-combat/RUN.json) binds fresh5f8a97e baseline versus
-candidate exact byte parity for46Trial/33Passive/60Response/22Control/40Initiative
-existing native controls. Identical retained outcomes are referenced by exact SHA,
-not copied again or falsely presented as new policies. Evaluated MSBuild includes
-the real Trial source in C#8/netstandard2.1, excludes Room/Program and has no project
-dependency there. The actual Host and all five native consumers copy the same DLL.
-The current architecture guard compiled against the old actual assemblies and
-failed with the specific expected rejection before any gameplay control.
+ONE original North Star product unit after the portable-owner production unit.
+The existing Gate offers `gate-assist`: actual worn Plate blocks that work beat's
+player contact/interruption only; Trail blocks mechanism contact only. Both spend
+one resolve, one beat and the Gate's one use before threat/work completion. Quiet or
+wrong-threat use still pays. Assistance retains consecutive work progress; normal
+work, Brace and grounding stay available. No heal, repair, XP, new inventory, fictional
+rig destruction, new app, new engine, save format or approved class/canon was added.
+All earlier children and acquisition/entry history remain frozen.
 
-Existing browsers each executed once:22classic combined browser/HTTP,
-21passive+7HTTP,16response+3HTTP,21control,20initiative+2HTTP. Quick fixed-policy
-defeat, control-only loss, countered cost without refund, rescue-then-DOT defeat,
-withdrawal timing and delayed/dropped receipt quarantine remain. No unexpected new
-build/native/browser failure; expected old-owner exit1 retained. Counts overlap
-software controls, not people, independent trials or measured effort.
+[Execution](../evidence/field-equipment/RUN.json) records real same-prefix Plate
+journeys: entry15HP/3resolve, ordinary exit9HP/3resolve/beat9, assisted exit13HP/
+2resolve/beat8. Real Trail entry11HP/7resolve ends5HP/6resolve/integrity2 with assistance,
+versus5HP/7resolve/integrity1 normally. Current gate resources are distinct from
+historical Crossing state; spare acquired equipment is not the worn rig.
 
-The existing status verifier now reuses the existing fail-closed C# input graph;
-only the exact reviewed Host Trial removal is allowed. Unreviewed removal remains
-rejected and removed source stays a routing input.33routing/14CI-scope/17source-
-instrument tests passed. Original recipient project and both ZIPs retain baseline
-hashes; no unrelated rebuild was repeated locally. Required final integrity/manifest
-checks and publication/remote CI are separate closeout observations. Initial continuity
-validation rejected project metadata in consumer_paths and the changed owner bound
-only to old execution hashes. Actual-code paths and new successful destination
-bindings corrected both; exact failures are retained in the new execution record.
-Historical evidence and validators were not weakened or rewritten. Source inventory
-also rejected the task-created ignored node_modules symlink; it was removed after
-browser execution, preserving the original installation, and inventory then passed.
+Fresh130be69 baseline43native controls and all original output fields remain exact,
+excluding ONLY additive assist projection/legal token. Candidate74native =43old+31new;
+40browser/5HTTP controls include two detected false renderers (unused equipment and
+false completion). Browser original state comparison uses the retained historical
+record, not a newly executed browser baseline. Real accepted assist with lost response
+requires explicit read and no replay; reads/reload cannot renew its use.
 
-## Selection and independent reviews
+Affected maximal preparation/sampling/conditions/memory/field/presentation regressions,
+withdrawal native/browser, keyboard and focused navigation executed separately.
+These overlap software outcomes, not independent trials, participants or measured effort.
+No old numeric policy, fixed defeat or historical evidence was rewritten.
 
-A: full fizzle/cooldown/formation and eligibility remain unresolved; the current
-three-skill/one-target consumers lack a consequential invalidation requirement.
-Another generic rule/matrix would not resolve the integration need.
-B: earned identity/equipment/progression to actual combat is valuable, but the
-current Gate routes leave5/9HP versus Trialcontact20. A direct connection would
-force immediate defeat or invent healing/scaling. Sample use also conflicts with
-frozen pre-Gate custody; no material properties were inferred as canon.
-C selected: production has a real portable-owner gap despite portable formulas;
-CI is green and no usable licensed Unity Editor was observed in bounded PATH checks.
-This removes that dependency without disguising compilation as engine execution.
+## Actual failures and review influence
 
-Engineering identified exact source/assembly ownership (ENG004/015); Science required
-actual evaluated inputs/copied DLLs, fresh exact parity and old-owner rejection
-(SCI013/017); Creation preserved costs/defeats and rejected fabricated recovery
-(CRE005/011). Coordinated ownership: Engineering owner/projects/native guard,
-Science independent parity/assemblies/browsers/negative fixture, primary graph/
-instrument integration, evidence, continuity and publication. Reviews are agents,
-not independent human approval. No Brain original or pin changed.
+The first new Gate browser run stopped after31controls: the harness expected return
+instead of the correct UI throw `Read current facts before another action` during
+receipt quarantine. Only that expectation changed; failed producer/trace retained.
+The corrected full wrapper passed. An initial keyboard invocation omitted its required
+baseline app argument and failed before controls; corrected existing CI invocation
+passed36keyboard controls. Successful preceding suites were not rerun for that error.
+A source-review prediction of real unprepared final Gate entry was corrected BEFORE
+execution; the actual negative instead demonstrates failed unprepared road/unused
+spare and refused Gate entry. No state injection or tuning forced the proposed route.
 
-## Preservation, production limits and next acceptance
+Independent Engineering, Scientific and Creative reviews compared:
+A—unresolved eligibility/cooldown/fizzle needs an actual consequential consumer;
+B—earned passive eligibility is useful but needs acquisition policy, while Gate already
+carried an actual rig with no direct contextual verb;
+C—the actual combat owner is portable and CI green, so another matrix lacks value.
+B selected: the bounded equipment verb makes an existing decision consequential without
+inventing healing to connect Gate5/9HP to Trialcontact20. Trial remains unchanged.
+ENG004/015 informed exact owner/cost/threat order; SCI013/017 matched prefixes and strict
+parity/negative controls; CRE005(A)/011(H) contextual verbs, real cost and experimental
+status. Engineering owned Gate/Room/native, Creation two existing UI files, Science
+existing browser instrument/independent comparisons; primary integrated runtime,
+regressions, records and publication. Reviews are agents, not human author approval.
 
-All eleven destinations remain, ten bounded methods operational; Build/Operations
-remains INCOMPLETE. Consumption remains24INTEGRATED/12REJECTED/15UNRESOLVED, scoped,
-not completion percentages. Preserve all Godot consumers and prior Windows .NET
-recipient execution; this increment has no fresh Windows run. No Unity Editor/API/
-IL2CPP, Unity Windows Player, Steam, multiplayer/account authority, save migration,
-ordinary-user/device breadth, comprehension, balance or enjoyment validation.
-R51/R60/R61/INT-C01-001 remain OPEN; causal B/E ACKs unverified. No cross-owner economy,
-NPC causal transport, Drive master, Maker, MER, canon or protected-source mutation.
+## Integrity, publication and limits
 
-Preserve historical gate oracle/syntax/source-stability/metadata failures, source-
-launch missing-selector failure/correction, file:// refusals, sixth-host resume
-error, MSB4166 unknown causes and runs42070817735/42065535102 cancellations. Their
-existing evidence is unchanged. P08V6/CommanderSIM intakes remain COMPLETE/frozen;
-48held media, rejected Adaptive/Timing,4x not ITU true peak, G8 official key pending,
-768Eclipse games NO_ROBUST_IMPROVEMENT and ZERO complete Commander games remain.
+Current portfolio and affected condition-consumption record select the new execution
+bound to actual current consumer bytes, preserving older evidence. This proactively
+retains the failure lesson from run42387219412 (old source-launch identity); correction
+130be69 and its successful42387682872 remain distinct. No guard or archive was weakened.
+Required source/reference/Brain/transformation/portfolio checks and affected source-launch
+verification passed, including7portfolio/6launch unit and19actual launch browser
+controls. The exact manifest and staged diff are checked after final record changes.
+Accurate commit, normal publication, actual remote SHA and new remote CI are separate
+closeout facts.
 
-Next compare unresolved consequential sources, one coherent earned-character/combat
-connection and actual licensed Unity/Windows production access. Reuse the now portable
-owner; require explicit authored entry health/resource/consequence policy before
-joining incompatible encounters, no free refill or parallel app. Do not automatically
-expand initiative/portability matrices or repeat finite intakes. The unpublished
-sanitation removal gate still requires an independent exact-byte restore.
+All11destinations remain, ten bounded methods operational; Build/Operations INCOMPLETE.
+Consumption24INTEGRATED/12REJECTED/15UNRESOLVED unchanged: this is original integration,
+not new legacy consumption. No Unity Editor/API/IL2CPP, new Windows execution, Steam,
+multiplayer/account authority, broad persistence, ordinary-user/device or human
+comprehension/accessibility/balance/art approval is claimed. R51/R60/R61/INT-C01-001
+remain OPEN; causal B/E ACKs unverified. No Drive/Makers/MER/canon/Brain originals or
+pins/Godot/source archives mutated. Sanitation removal still needs independent restore.
+
+Preserve historical MSB4166 unknown causes, gate oracle/syntax/source/metadata failures,
+source-launch selector and current identity failures, file:// refusals, sixth-host
+resume error and cancelled42070817735/42065535102/42179260734 evidence. P08V6 and
+CommanderSIM remain COMPLETE/frozen:48held media, rejected Adaptive/Timing,4x not
+ITU true peak, G8 official key pending,768Eclipse games NO_ROBUST_IMPROVEMENT and
+ZERO complete Commander games. No automatic intake or compatibility matrix expansion.
+
+Next compare consequential legacy consumption, earned-character/combat integration
+and real Unity/Windows access using actual dependencies. Keep one coherent consumer;
+do not add a parallel app or free recovery. The new equipment policy needs relevant
+people/devices for claims about identity, comprehension and balance.
 
 ## Strategic balance
 
-Approximate rolling targets47%legacy/laboratories,40%North Star,13%repository/portfolio
-remain guidance over substantive effort; counts/files/commits/tokens are not effort.
-Once-counted recent window, oldest audio unit rotated out:
+Approximate47%legacy/laboratories,40%North Star,13%repository/portfolio targets remain
+qualitative effort guidance; files/commits/controls/tokens are not measured effort.
+Once-counted rolling window (old withdrawal unit rotated out):
 
 | Unit | Primary stream | Evidence |
 |---|---|---|
-| Explicit paid journey withdrawal | North Star | [Withdrawal](../evidence/field-withdrawal/RUN.json) |
 | Deliberate keyboard paid road commands | North Star | [Keyboard](../evidence/field-keyboard/RUN.json) |
 | Verified source experiment access | Repository/portfolio | [Launch](../evidence/source-launch/RUN.json) |
 | Selected phased breakbar | Legacy/laboratories | [Breakbar](../evidence/breakbar/RUN.json) |
@@ -128,6 +124,7 @@ Once-counted recent window, oldest audio unit rotated out:
 | Paid post-Crossing gate | North Star | [Gate](../evidence/field-gate/RUN.json) |
 | Announced initiative in existing combat | Legacy/laboratories | [Initiative](../evidence/initiative/RUN.json) |
 | Portable actual combat owner | Repository/production | [Owner](../evidence/portable-combat/RUN.json) |
+| Worn-rig paid Gate assistance | North Star | [Equipment](../evidence/field-equipment/RUN.json) |
 
-The repository/production dependency gets one unit; review, parity and routing are
-support, not extra units. No fabricated effort measurement or laboratory expansion.
+Equipment/UI/reviews/regressions are ONE product unit. Recompare legacy consumption
+next; no effort percentages or terminal outcomes were fabricated from counts.

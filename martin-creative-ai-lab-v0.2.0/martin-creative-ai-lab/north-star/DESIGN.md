@@ -284,6 +284,17 @@ delivery, healing, XP or a refund. Prior Godot behavior remains preserved. Revie
 appropriate player observation and actual production execution; [software evidence](../evidence/field-gate/RUN.json)
 is not author approval, artistic quality or Unity/Windows/Steam acceptance.
 
+The further original `gate-assist` choice ties actual worn equipment to catch work:
+one resolve, one beat and one use per Gate. Plate blocks player contact/interruption
+only; Trail blocks mechanism contact only. Mismatched/quiet use still pays, and
+unblocked threat precedes work completion. This is neither armor-stat recovery nor
+fictional equipment destruction. Real matched Plate entries can exit one beat earlier
+for one resolve; Trail can preserve one integrity for that cost. Normal work, Brace
+and grounding remain separate options; earlier child history stays frozen. No healing,
+repair, XP, new item or final class/canon follows. [Actual execution](../evidence/field-equipment/RUN.json)
+retains the no-assist policies, refusals and first harness failure. CRE005(A)/011(H)
+informed contextual verbs and real consequences; no human agency/balance claim.
+
 ## Character look — experimental, separate from author-approved identity direction
 
 CRE-001 D supplies the identity ambition. CRE-009/029/066 H inform this limited free

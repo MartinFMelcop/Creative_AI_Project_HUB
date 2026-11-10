@@ -313,3 +313,22 @@ is not human agency, balance, accessibility, artistic approval or Unity/Windows/
 ```sh
 python3 north-star/field-journey/tools/gate-verify.py --dotnet dotnet --output /tmp/field-gate-new
 ```
+
+## Worn equipment in paid gate work — original experiment
+
+The actual worn rig now permits one optional assisted work beat in the existing Gate.
+It costs one resolve, one beat and the Gate's single assistance opportunity. Plate
+blocks only that beat's player contact and interruption; Trail blocks only mechanism
+contact. Wrong or quiet threats still spend the cost and use. Assistance preserves
+consecutive catch-work progress; it never supplies HP, integrity, XP, inventory, an
+extra rig, home return or delivery. The rig is not described as destroyed. Normal
+work, Brace and grounding remain separate choices. Availability and receipts come
+from the private owner, not browser inference or a proposed inventory item.
+
+Actual Plate entries can spend one resolve to avoid a work interruption and leave
+one beat earlier; actual Trail entries can spend it to preserve one integrity.
+These are original discrete policies, not imported armor statistics or approved class
+canon. All earlier children remain frozen history. Existing no-assist routes retain
+their original outcomes; [execution](../../evidence/field-equipment/RUN.json) also
+retains refusal, wrong-threat, quarantine and false-renderer controls. Software
+consequences do not establish balance, human comprehension or Unity/Windows execution.

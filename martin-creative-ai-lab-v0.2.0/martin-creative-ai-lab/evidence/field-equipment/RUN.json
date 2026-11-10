@@ -1,0 +1,297 @@
+{
+  "schema_version": 1,
+  "kind": "destination_execution",
+  "date": "2026-11-09 America/Sao_Paulo",
+  "baseline_commit": "130be698746592d130f24aecbc698ad9201d7015",
+  "branch": "gate-equipment",
+  "scope": "One original contextual paid use of actual worn equipment in the existing FieldJourney Gate. No new app, game engine, class catalog, source adaptation or capability promotion.",
+  "capability_ids": [
+    "NS-C03"
+  ],
+  "consumer_paths": [
+    "north-star/field-journey/Gate/Gate.cs",
+    "north-star/field-journey/Host/Room.cs",
+    "north-star/field-journey/Host/Program.cs",
+    "north-star/field-journey/web/app.js",
+    "north-star/memory-study/Conditions/Conditions.cs",
+    "north-star/memory-study/Host/Room.cs",
+    "north-star/memory-study/Host/Program.cs"
+  ],
+  "source_artifacts": [
+    {
+      "local_path": "north-star/field-journey/Gate/Gate.cs",
+      "size_bytes": 6949,
+      "sha256": "b451b327341dae492fb73a92dcc9cc13b6c8955d994aba6dff9b06727b601f3f"
+    },
+    {
+      "local_path": "north-star/field-journey/Host/Room.cs",
+      "size_bytes": 17616,
+      "sha256": "f9ce0f8759e0ecb3c5bce14d6c800911d2bca25b29f283b87784502e6316a9d7"
+    },
+    {
+      "local_path": "north-star/field-journey/Host/Program.cs",
+      "size_bytes": 5646,
+      "sha256": "98c6451ba46452e0588f6f22a7fff953e4eb9c4445eb9297f7a0cc27cfe69459"
+    },
+    {
+      "local_path": "north-star/field-journey/web/app.js",
+      "size_bytes": 40794,
+      "sha256": "ff4a4327947e2cb1b0862c1726056312353a377cfdaff53aea26b24c982f8df4"
+    },
+    {
+      "local_path": "north-star/memory-study/Conditions/Conditions.cs",
+      "size_bytes": 15705,
+      "sha256": "04faa4d84b061879f22891fcf3b9e6166a70a94ddb8bfa72f8ebe39e7d21c472"
+    },
+    {
+      "local_path": "north-star/memory-study/Host/Room.cs",
+      "size_bytes": 9987,
+      "sha256": "91dc190402af660d958749a26db7f670a799d285ceb0de7373ab8eacc14619ce"
+    },
+    {
+      "local_path": "north-star/memory-study/Host/Program.cs",
+      "size_bytes": 5133,
+      "sha256": "afd5a812978202c78f9bec8ceec1e892edcec10eb37c7f43bfe8c966425e44e5"
+    }
+  ],
+  "checks": {
+    "passed": 74,
+    "failed": 0,
+    "scope": "Existing43 plus31 new native controls; repeated runs and overlapping browser outcomes are not independent observations."
+  },
+  "browser": {
+    "passed": 40,
+    "failed": 0,
+    "http_negative_controls": 5,
+    "false_renderers_detected": 2
+  },
+  "commands": [
+    {
+      "command": [
+        "/workspace/work/runtime/dotnet/dotnet",
+        "--version"
+      ],
+      "exit_code": 0,
+      "full_output": "gate-commands.json",
+      "record_index": 0
+    },
+    {
+      "command": [
+        "/workspace/work/runtime/dotnet/dotnet",
+        "build",
+        "/workspace/work/gate-equipment/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/GateChecks/NorthStar.GateChecks.csproj",
+        "-c",
+        "Release"
+      ],
+      "exit_code": 0,
+      "full_output": "gate-commands.json",
+      "record_index": 1
+    },
+    {
+      "command": [
+        "/workspace/work/runtime/dotnet/dotnet",
+        "/workspace/work/gate-equipment/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/GateChecks/bin/Release/net10.0/NorthStar.GateChecks.dll",
+        "/workspace/work/gate-assist/verification-corrected/native.json"
+      ],
+      "exit_code": 0,
+      "full_output": "gate-commands.json",
+      "record_index": 2
+    },
+    {
+      "command": [
+        "node",
+        "/workspace/work/gate-equipment/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/tools/gate-browser.mjs",
+        "/workspace/work/runtime/dotnet/dotnet",
+        "/workspace/work/gate-assist/verification-corrected/browser"
+      ],
+      "exit_code": 0,
+      "full_output": "gate-commands.json",
+      "record_index": 3
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/field-journey/tools/preparation-verify.py",
+        "--dotnet",
+        "/workspace/work/runtime/dotnet/dotnet",
+        "--output",
+        "/workspace/work/gate-assist/regressions/preparation"
+      ],
+      "exit_code": 0,
+      "full_output": "regression-commands.json",
+      "record_index": 0
+    },
+    {
+      "command": [
+        "/workspace/work/runtime/dotnet/dotnet",
+        "build",
+        "north-star/field-journey/WithdrawalChecks/NorthStar.WithdrawalChecks.csproj",
+        "-c",
+        "Release",
+        "-m:1",
+        "--disable-build-servers"
+      ],
+      "exit_code": 0,
+      "full_output": "regression-commands.json",
+      "record_index": 1
+    },
+    {
+      "command": [
+        "/workspace/work/runtime/dotnet/dotnet",
+        "north-star/field-journey/WithdrawalChecks/bin/Release/net10.0/NorthStar.WithdrawalChecks.dll",
+        "/workspace/work/gate-assist/regressions/withdrawal-native.json"
+      ],
+      "exit_code": 0,
+      "full_output": "regression-commands.json",
+      "record_index": 2
+    },
+    {
+      "command": [
+        "node",
+        "north-star/field-journey/tools/withdrawal-browser.mjs",
+        "/workspace/work/runtime/dotnet/dotnet",
+        "/workspace/work/gate-assist/regressions/withdrawal-browser"
+      ],
+      "exit_code": 0,
+      "full_output": "regression-commands.json",
+      "record_index": 3
+    },
+    {
+      "command": [
+        "node",
+        "north-star/field-journey/tools/keyboard-browser.mjs",
+        "/workspace/work/runtime/dotnet/dotnet",
+        "/workspace/work/gate-assist/regressions/keyboard-browser-corrected",
+        "evidence/field-keyboard/baseline/app.js"
+      ],
+      "exit_code": 0,
+      "full_output": "regression-correction-commands.json",
+      "record_index": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/field-journey/tools/journey-view-verify.py",
+        "--dotnet",
+        "/workspace/work/runtime/dotnet/dotnet",
+        "--output",
+        "/workspace/work/gate-assist/regressions/journey-view"
+      ],
+      "exit_code": 0,
+      "full_output": "regression-correction-commands.json",
+      "record_index": 1
+    }
+  ],
+  "protocol": "protocol.json",
+  "pre_review_protocol": "protocol-pre-review.json",
+  "gate_execution": "gate-verification.json",
+  "native": "native.json",
+  "browser_execution": "browser.json",
+  "fresh_native_baseline": "baseline-outcome.json",
+  "native_parity": "native-parity.json",
+  "browser_parity": "browser-parity.json",
+  "independent_review": "science-review.json",
+  "affected_regressions": "affected-regressions.json",
+  "baseline_ci": "baseline-ci.json",
+  "sdk": "sdk-verification.json",
+  "capture": "actual-plate-assisted-exit.png",
+  "declared_policy": {
+    "cost": "One actual beat, one resolve and one use per Gate. No extra command fields.",
+    "plate": "Blocks only this assisted work beat player contact and its interruption.",
+    "trail": "Blocks only this assisted work beat winch contact.",
+    "mismatch_or_quiet": "Still spends both resolve and the one use; no refund.",
+    "work": "Preserves consecutive partial work; cost and unblocked threat precede completion.",
+    "authority": "Actual private worn rig at final Crossing completion, not an acquired spare, draft or client declaration. Earlier children remain frozen."
+  },
+  "actual_outcomes": {
+    "plate": {
+      "entry": {
+        "health": 15,
+        "resolve": 3
+      },
+      "ordinary": {
+        "health": 9,
+        "resolve": 3,
+        "integrity": 1,
+        "beat": 9
+      },
+      "assisted": {
+        "health": 13,
+        "resolve": 2,
+        "integrity": 1,
+        "beat": 8
+      }
+    },
+    "trail": {
+      "entry": {
+        "health": 11,
+        "resolve": 7
+      },
+      "ordinary": {
+        "health": 5,
+        "resolve": 7,
+        "integrity": 1,
+        "beat": 9
+      },
+      "assisted": {
+        "health": 5,
+        "resolve": 6,
+        "integrity": 2,
+        "beat": 9
+      }
+    }
+  },
+  "retained_failures": [
+    {
+      "evidence": [
+        "protocol-pre-review.json",
+        "protocol.json"
+      ],
+      "finding": "Initial proposed real unprepared Gate entry was disproved by source review before browser execution. The real case now verifies unprepared final-road failure with an acquired spare rig and refusal of entry/assist. Direct unprepared Gate negatives are declared native fixtures."
+    },
+    {
+      "evidence": [
+        "first-gate-commands.json",
+        "first-browser-failure.json",
+        "first-browser-producer.mjs",
+        "browser-correction.json"
+      ],
+      "finding": "First browser run stopped after31 controls because the new harness expected a return from send during read-required quarantine. UI correctly threw Read current facts before another action. Only assertion expectation changed; candidate gameplay/UI unchanged. Corrected full wrapper passed."
+    },
+    {
+      "evidence": [
+        "regression-commands.json",
+        "regression-correction-commands.json"
+      ],
+      "finding": "Initial keyboard invocation omitted required EXACT_BASELINE_APP_JS and failed before controls. Corrected invocation used existing evidence/field-keyboard/baseline/app.js;36 keyboard controls and actual negative passed. Earlier successful preparation/withdrawal checks were not rerun."
+    }
+  ],
+  "environment_recovery": {
+    "observed": "Executor restored an older clean work snapshot at a16a191. Prior temporary worktrees, dirty routes and unpublished b592108 object are absent from this instance. No deletion or reconstruction by this increment.",
+    "initial_command_failure": "Old /workspace/work/verified-development working directory absent; probe from /workspace succeeded.",
+    "preservation": "Root work checkout remains untouched. New isolated worktree based on freshly fetched main130be69. Missing unpublished bytes are not claimed restored."
+  },
+  "verification_timing": "Protocol/guards fixed before candidate browser acceptance, with pre-execution source-review correction retained. Field README was updated after Gate acceptance and before maximal affected regressions; no gameplay/UI code changed. Other current documentation and evidence bindings updated after execution. Raw per-run source closures describe their own execution epoch.",
+  "specialists": {
+    "engineering": "ENG004/015: exact owner, explicit costs, threat-before-benefit and no child mutation.",
+    "scientific": "SCI013/017: matched Plate prefix, actual rig/spare distinction, restricted parity normalization, false-used renderer and receipt quarantine.",
+    "creative": "CRE005(A)/011(H): contextual equipment verb with real immediate cost, separate player/mechanism protection, no fictional destruction or final canon."
+  },
+  "limits": [
+    "Software controls overlap; no humans, balance, accessibility, artistic approval or independent population claims.",
+    "Original discrete destination rule, not recovered armor statistics, canonical classes, repair, healing, XP or new inventory.",
+    "No Unity Editor/API/IL2CPP, new Windows execution, Steam, multiplayer or save-format integration. Prior Windows recipient evidence remains distinct and preserved.",
+    "All11 destinations,24INTEGRATED/12REJECTED/15UNRESOLVED and Build/Operations incomplete remain. R51/R60/R61/INT-C01-001 OPEN; causal B/E ACKs unverified.",
+    "No Drive master, Maker, MER, Brain original/pin, Godot source or historical evidence changed; no artifact removed."
+  ],
+  "validation_records": [
+    "integrity-checks.json",
+    "source-launch-command.json",
+    "source-launch-browser.json"
+  ],
+  "successful_command_files": [
+    "gate-commands.json",
+    "regression-commands.json",
+    "regression-correction-commands.json"
+  ]
+}

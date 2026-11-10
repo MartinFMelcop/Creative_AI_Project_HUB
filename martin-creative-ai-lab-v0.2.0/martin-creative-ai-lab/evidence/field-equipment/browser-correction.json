@@ -1,0 +1,9 @@
+{
+  "kind": "retained_browser_instrument_correction",
+  "failed_execution": "verification",
+  "error": "page.evaluate: Error: Read current facts before another action",
+  "checks_completed": 31,
+  "cause": "New quarantine control deliberately called UI send while read-required. The correct existing UI contract throws; harness incorrectly expected return.",
+  "correction": "Assert rejection with exact existing UI message, then still require one POST and exact actual owner after explicit read. No app, owner or expected gameplay value changed.",
+  "next_execution": "verification-corrected"
+}

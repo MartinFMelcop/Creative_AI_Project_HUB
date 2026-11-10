@@ -117,6 +117,14 @@
   $('gate-left').textContent=g.left_raised?'raised':'not raised';$('gate-right').textContent=g.right_raised?'raised':'not raised';
   $('gate-progress').textContent=g.progress>0?`Committed ${g.working} work: ${g.progress} of 2 actions. Moving, release, bracing or player contact damage cancels this partial work.`:'No partial catch work retained. Each catch needs two consecutive surviving work actions.';
   $('gate-threat').textContent=g.active?`Next gate threat: ${g.next_threat==='player'?'player contact / 2 HP':g.next_threat==='winch'?'mechanism contact / 1 integrity':'quiet / no contact'}. Each accepted paid action resolves its announced threat before work or exit.`:'No next active gate action. This phase cannot restart or restore entry resources.';
+  const assist=g.assist;
+  if(!assist||typeof assist.rig!=='string'||typeof assist.used!=='boolean'||typeof assist.eligible!=='boolean'||assist.resolve_cost!==1||!['player','winch','none'].includes(assist.protects)||!['player','winch','none'].includes(assist.last_blocked))throw Error('Actual equipment assistance facts required');
+  const gateAssistUsedObserved = assist.used === true;
+  $('gate-assist-facts').dataset.used=String(gateAssistUsedObserved);$('gate-assist-facts').dataset.protects=assist.protects;
+  const protection=assist.protects==='player'?'player contact only':assist.protects==='winch'?'mechanism contact only':'no contact';
+  const use=assist.protects==='none'?'This outfit supplies no assisted work.':gateAssistUsedObserved?'The one gate use is spent.':'One use remains for this gate.';
+  const blocked=assist.last_blocked==='player'?'player contact':assist.last_blocked==='winch'?'mechanism contact':'none';
+  $('gate-assist-facts').textContent=`${assist.rig} assistance can block ${protection} during its assisted work beat. ${use} Assisted work pays ${assist.resolve_cost} resolve and one actual gate beat. A wrong or quiet threat still spends the resolve and use. ${assist.eligible?'Available here.':'Unavailable here.'} Last assistance blocked: ${blocked}.`;
   $('gate-receipt').textContent=g.last_text;
   $('gate-outcome').hidden=!gateCompletedObserved&&!g.failed;$('gate-outcome').textContent=gateCompletedObserved?'Both catches were raised and this living person used the actual exit. The passage is open; home return, sample delivery, healing and additional XP were not observed.':g.failed?'The gate phase failed. The prior road remains complete as history; no revival, retry, delivery or home return was supplied.':'';
   $('gate-actor').setAttribute('transform',`translate(${positions[g.position]} 255)`);$('gate-cloth').setAttribute('fill',accents[id.accent]||accents.copper);$('gate-actor').dataset.alive=String(g.health>0);$('gate-actor').dataset.handle=id.handle;
@@ -229,7 +237,7 @@
   for(const key of ['focus','vitality'])$(key).disabled=busy||uncertain||locked||e.unspent<1;
   $('withdraw-expedition').disabled=busy||uncertain||!state.workshop_closed||e.complete||state.withdrawn===true;
   if(state.withdrawn===true){for(const el of document.querySelectorAll('button,input,select'))if(el.id!=='read'&&!el.hasAttribute('data-journey-nav'))el.disabled=true;}
-  const gate=state.gate,gateCommands=['gate-work','gate-ground','gate-wait','gate-brace','gate-exit'];
+  const gate=state.gate,gateCommands=['gate-work','gate-assist','gate-ground','gate-wait','gate-brace','gate-exit'];
   if(gate.entered){
    for(const el of document.querySelectorAll('button:not([data-journey-nav]),input,select'))if(el.id!=='read'&&!el.id.startsWith('gate-'))el.disabled=true;
    disarmKeyboard();
@@ -242,7 +250,7 @@
  async function read(){if(busy)return;busy=true;controls();const g=++generation;try{const r=await fetch('/state',{cache:'no-store'});if(!r.ok)throw Error('Read refused');const s=await r.json();if(g!==generation)return;uncertain=false;render(s);adopt(s.intake.draft);$('connection').textContent='Current facts read from the owner. No action was retried.';}catch(e){uncertain=true;$('connection').textContent='Unable to read: '+e.message+'. Read again before acting.';}finally{busy=false;controls();}}
  async function send(command,fields={}){if(busy||uncertain||!state)throw Error('Read current facts before another action');busy=true;controls();const g=generation;try{const r=await fetch('/command',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({command,revision:state.sequence,...fields})});if(!r.ok)throw Error('Command receipt unavailable');const s=await r.json();if(g!==generation)throw Error('Response quarantined after interruption');render(s);if(command==='draft'||command==='propose-card')adopt(s.intake.draft);$('connection').textContent='Actual owner response. No automatic retry or clock conversion.';return s;}catch(e){uncertain=true;$('connection').textContent='Outcome uncertain: '+e.message+'. Explicitly read facts before acting again.';throw e;}finally{busy=false;controls();}}
  function invoke(command,fields={}){send(command,fields).catch(()=>{});}
- for(const command of ['gate-enter','gate-work','gate-ground','gate-wait','gate-brace','gate-exit'])$(command).onclick=()=>invoke(command);
+ for(const command of ['gate-enter','gate-work','gate-assist','gate-ground','gate-wait','gate-brace','gate-exit'])$(command).onclick=()=>invoke(command);
  for(const target of ['left','right','ground','exit'])$('gate-move-'+target).onclick=()=>invoke('gate-move',{target});
  $('draft-form').onsubmit=e=>{e.preventDefault();invoke('draft',proposal());};$('review').onclick=()=>invoke('review');$('confirm').onclick=()=>invoke('confirm',{draft_revision:state.intake.draft_revision});
  for(const bench of ['west','east']){$(bench+'-help').onclick=()=>invoke(state.memory.benches.find(b=>b.id===bench).helped?'demonstrate':'help',{bench});$(bench+'-serve').onclick=()=>invoke('serve',{bench});$(bench+'-decline').onclick=()=>invoke('decline',{bench});}

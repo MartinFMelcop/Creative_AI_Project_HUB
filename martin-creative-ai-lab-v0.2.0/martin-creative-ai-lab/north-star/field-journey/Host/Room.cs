@@ -106,7 +106,7 @@ public sealed class Room
             "confirm"=>new[]{"draft_revision"},"allocate"=>new[]{"axis","points"},"slot"=>new[]{"slot"},
             "help" or "demonstrate" or "serve" or "decline"=>new[]{"bench"},"craft"=>new[]{"bench","rig"},"begin"=>new[]{"rig"},
             "sample"=>new[]{"site"},"propose-card"=>new[]{"card_id"},"gate-move"=>new[]{"target"},
-            "gate-enter" or "gate-work" or "gate-wait" or "gate-brace" or "gate-ground" or "gate-exit"=>Array.Empty<string>(),
+            "gate-enter" or "gate-work" or "gate-assist" or "gate-wait" or "gate-brace" or "gate-ground" or "gate-exit"=>Array.Empty<string>(),
             "review" or "walk" or "wait" or "wait-window" or "withdraw"=>Array.Empty<string>(),_=>throw new ArgumentException("Unknown command.")};
         Fields(root,extras);
         // Parse every adapter-owned field before any child can change state.

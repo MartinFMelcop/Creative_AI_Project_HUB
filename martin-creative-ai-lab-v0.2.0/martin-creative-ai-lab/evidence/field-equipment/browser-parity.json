@@ -1,0 +1,40 @@
+{
+  "kind": "exact_retained_browser_state_comparison",
+  "baseline_record": "evidence/field-gate/execution/browser/gate-browser.json",
+  "baseline_epoch": "Historical executed original Gate browser, not a fresh browser run in this increment. Fresh130be69 native baseline is separately recorded.",
+  "current_record": "verification-corrected/browser/gate-browser.json",
+  "baseline_sha256": "93dfee669f0b681b81f5b26315571d5038f93b33fcb9b6666fdb89720f9c7633",
+  "current_sha256": "11c144a4414ff34099f8812bc776d6c3776b6f9b613fb1f63f2750b60882fa35",
+  "original_states_exact_after_only_additive_normalization": [
+    "field",
+    "direct",
+    "grounded",
+    "lost"
+  ],
+  "original_browser_controls_retained": 26,
+  "original_http_controls_retained": 2,
+  "current_browser_controls": 40,
+  "current_http_controls": 5,
+  "normalization": "Only gate.assist projection and gate-assist string in legal; no resources, text, child, outcome or sequence fields excluded.",
+  "matched_plate": {
+    "actual_pre_state_exact": true,
+    "assisted_exit": {
+      "health": 13,
+      "resolve": 2,
+      "integrity": 1,
+      "beat": 8,
+      "completed": true
+    },
+    "ordinary_exit": {
+      "health": 9,
+      "resolve": 3,
+      "integrity": 1,
+      "beat": 9,
+      "completed": true
+    }
+  },
+  "specific_negatives": [
+    "false-unused-equipment",
+    "false-open"
+  ]
+}

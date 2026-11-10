@@ -1,0 +1,27 @@
+[
+  {
+    "command": [
+      "node",
+      "north-star/field-journey/tools/keyboard-browser.mjs",
+      "/workspace/work/runtime/dotnet/dotnet",
+      "/workspace/work/gate-assist/regressions/keyboard-browser-corrected",
+      "evidence/field-keyboard/baseline/app.js"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS 36 keyboard controls; 1 actual negative\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "north-star/field-journey/tools/journey-view-verify.py",
+      "--dotnet",
+      "/workspace/work/runtime/dotnet/dotnet",
+      "--output",
+      "/workspace/work/gate-assist/regressions/journey-view"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: same-owner focused journey, exact route parity and source stability\n",
+    "stderr": ""
+  }
+]

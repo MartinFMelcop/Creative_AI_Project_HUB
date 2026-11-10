@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "kind": "independent_scientific_review",
+  "question": "Does paid once-per-Gate assistance turn actual worn equipment into consequential work without free recovery, history mutation or automatic success?",
+  "protocol": "protocol.json",
+  "pre_execution_refinement": "protocol-pre-review.json records initial unprepared-survival prediction, corrected from Expedition.Act before any browser execution. No runtime success/failure is claimed for that discarded plan.",
+  "native_parity": "independent-native-parity.json",
+  "browser_parity": "independent-browser-parity.json",
+  "executed_wrapper": "verification-corrected/verification.json",
+  "results": {
+    "native_controls": 74,
+    "chromium_controls": 40,
+    "http_negatives": 5,
+    "renderer_negatives": 2,
+    "source_stable": true,
+    "actual_plate_before_exact": true,
+    "plate_assisted_exit": {
+      "health": 13,
+      "resolve": 2,
+      "integrity": 1,
+      "beat": 8
+    },
+    "same_plate_ordinary_exit": {
+      "health": 9,
+      "resolve": 3,
+      "integrity": 1,
+      "beat": 9
+    },
+    "trail_assist": "At announced WINCH, same actual health and beat as ordinary work,1greater integrity for1less resolve.",
+    "wrong_threat": "Trail on PLAYER contact still pays use/resolve/beat, loses2HP and resets progress.",
+    "replay": "Accepted assist with held/delayed response commits once; explicit offline quarantine rejects a second UI send, requires read, and does not replay."
+  },
+  "preserved_failure": {
+    "execution": "verification",
+    "completed_controls": 31,
+    "correction": "verification-correction.json",
+    "scope": "New test expected UI send to return while read-required; correct existing UI throws. Harness now asserts exact rejection. No owner/app policy or expected gameplay value changed."
+  },
+  "image_inspection": {
+    "path": "verification-corrected/browser/actual-plate-assisted-exit.png",
+    "observed": "Same Neri/lure/teal person, historical Crossing15HP/3resolve visibly distinct from actual Gate13HP/2resolve, integrity1, beat8, raised catches, passage opened and spent assist.",
+    "limit": "Agent image inspection is not independent human, artistic, usability or enjoyment validation."
+  },
+  "brain": [
+    "SCI013 rival explanations: free action, phantom worn equipment, wrong-threat immunity, stale/replayed use, false spend UI.",
+    "SCI017 matched same-rig/same-input-prefix comparison and retained ordinary outcomes; deterministic software controls are not independent participants."
+  ],
+  "limitations": [
+    "Original experimental policy, not imported material/armor canon or source timing fidelity.",
+    "No Unity/Windows/Steam, multiplayer, accounts, human balance, recognition or accessibility evidence.",
+    "Native Gate constructor failure fixtures are synthetic; actual Field entry positive routes are separately marked.",
+    "Historical original browser outcome comparison is not a fresh baseline browser execution; fresh130be69 native baseline is separate."
+  ]
+}

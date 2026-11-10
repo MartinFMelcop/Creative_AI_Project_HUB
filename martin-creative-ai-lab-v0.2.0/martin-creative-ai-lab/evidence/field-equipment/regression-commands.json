@@ -1,0 +1,61 @@
+[
+  {
+    "command": [
+      "python3",
+      "north-star/field-journey/tools/preparation-verify.py",
+      "--dotnet",
+      "/workspace/work/runtime/dotnet/dotnet",
+      "--output",
+      "/workspace/work/gate-assist/regressions/preparation"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: authored preparations and affected existing consumers\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/runtime/dotnet/dotnet",
+      "build",
+      "north-star/field-journey/WithdrawalChecks/NorthStar.WithdrawalChecks.csproj",
+      "-c",
+      "Release",
+      "-m:1",
+      "--disable-build-servers"
+    ],
+    "exit_code": 0,
+    "stdout": "  Determining projects to restore...\n  Restored /workspace/work/gate-equipment/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/WithdrawalChecks/NorthStar.WithdrawalChecks.csproj (in 114 ms).\n  13 of 14 projects are up-to-date for restore.\n  NorthStar.Domain -> /workspace/work/gate-equipment/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/bin/Release/netstandard2.1/NorthStar.Domain.dll\n  NorthStar.Crossing -> /workspace/work/gate-equipment/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Portable/Crossing/bin/Release/netstandard2.1/NorthStar.Crossing.dll\n  NorthStar.Forge -> /workspace/work/gate-equipment/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Portable/Forge/bin/Release/netstandard2.1/NorthStar.Forge.dll\n  NorthStar.Loadout -> /workspace/work/gate-equipment/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Portable/Loadout/bin/Release/netstandard2.1/NorthStar.Loadout.dll\n  NorthStar.Preparation -> /workspace/work/gate-equipment/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Preparation/bin/Release/netstandard2.1/NorthStar.Preparation.dll\n  NorthStar.FieldGate -> /workspace/work/gate-equipment/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Gate/bin/Release/netstandard2.1/NorthStar.FieldGate.dll\n  NorthStar.FieldSampling -> /workspace/work/gate-equipment/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Sampling/bin/Release/netstandard2.1/NorthStar.FieldSampling.dll\n  NorthStar.FieldPresentation -> /workspace/work/gate-equipment/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Presentation/bin/Release/netstandard2.1/NorthStar.FieldPresentation.dll\n  NorthStar.Intake -> /workspace/work/gate-equipment/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/Host/bin/Release/net10.0/NorthStar.Intake.dll\n  NorthStar.Memory -> /workspace/work/gate-equipment/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Rules/bin/Release/netstandard2.1/NorthStar.Memory.dll\n  NorthStar.Conditions -> /workspace/work/gate-equipment/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Conditions/bin/Release/netstandard2.1/NorthStar.Conditions.dll\n  NorthStar.MemoryStudy -> /workspace/work/gate-equipment/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Host/bin/Release/net10.0/NorthStar.MemoryStudy.dll\n  NorthStar.FieldJourney -> /workspace/work/gate-equipment/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/bin/Release/net10.0/NorthStar.FieldJourney.dll\n  NorthStar.WithdrawalChecks -> /workspace/work/gate-equipment/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/WithdrawalChecks/bin/Release/net10.0/NorthStar.WithdrawalChecks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:05.73\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/runtime/dotnet/dotnet",
+      "north-star/field-journey/WithdrawalChecks/bin/Release/net10.0/NorthStar.WithdrawalChecks.dll",
+      "/workspace/work/gate-assist/regressions/withdrawal-native.json"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: 36 explicit withdrawal native controls\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "node",
+      "north-star/field-journey/tools/withdrawal-browser.mjs",
+      "/workspace/work/runtime/dotnet/dotnet",
+      "/workspace/work/gate-assist/regressions/withdrawal-browser"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS 22 actual withdrawal browser controls; 1 actual renderer negative\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "node",
+      "north-star/field-journey/tools/keyboard-browser.mjs",
+      "/workspace/work/runtime/dotnet/dotnet",
+      "/workspace/work/gate-assist/regressions/keyboard-browser"
+    ],
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "file:///workspace/work/gate-equipment/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/tools/keyboard-browser.mjs:11\nif(!dotnet||!out||!baseline||out===root||out.startsWith(root+path.sep))throw Error('Usage: keyboard-browser.mjs DOTNET NEW_EXTERNAL_OUTPUT EXACT_BASELINE_APP_JS');\n                                                                             ^\n\nError: Usage: keyboard-browser.mjs DOTNET NEW_EXTERNAL_OUTPUT EXACT_BASELINE_APP_JS\n    at file:///workspace/work/gate-equipment/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/tools/keyboard-browser.mjs:11:78\n    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)\n    at async node:internal/modules/esm/loader:643:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)\n\nNode.js v24.19.0\n"
+  }
+]

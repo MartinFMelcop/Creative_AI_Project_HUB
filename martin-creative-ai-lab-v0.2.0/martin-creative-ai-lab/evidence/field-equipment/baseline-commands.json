@@ -1,0 +1,35 @@
+[
+  {
+    "command": [
+      "/workspace/work/runtime/dotnet/dotnet",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "10.0.401\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/runtime/dotnet/dotnet",
+      "build",
+      "/workspace/work/gate-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/GateChecks/NorthStar.GateChecks.csproj",
+      "-c",
+      "Release",
+      "-m:1",
+      "--disable-build-servers"
+    ],
+    "exit_code": 0,
+    "stdout": "  Determining projects to restore...\n  Restored /workspace/work/gate-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/GateChecks/NorthStar.GateChecks.csproj (in 183 ms).\n  Restored /workspace/work/gate-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/NorthStar.FieldJourney.csproj (in 183 ms).\n  Restored /workspace/work/gate-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Gate/NorthStar.FieldGate.csproj (in 5.41 sec).\n  Restored /workspace/work/gate-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Portable/Loadout/NorthStar.Loadout.csproj (in 5.41 sec).\n  Restored /workspace/work/gate-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Portable/Crossing/NorthStar.Crossing.csproj (in 2 ms).\n  Restored /workspace/work/gate-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Portable/Forge/NorthStar.Forge.csproj (in 2 ms).\n  Restored /workspace/work/gate-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Rules/NorthStar.Memory.csproj (in 1 ms).\n  Restored /workspace/work/gate-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/NorthStar.Domain.csproj (in 1 ms).\n  Restored /workspace/work/gate-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Conditions/NorthStar.Conditions.csproj (in 0.8 ms).\n  Restored /workspace/work/gate-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Host/NorthStar.MemoryStudy.csproj (in 3 ms).\n  Restored /workspace/work/gate-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/Host/NorthStar.Intake.csproj (in 2 ms).\n  Restored /workspace/work/gate-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Sampling/NorthStar.FieldSampling.csproj (in 1 ms).\n  Restored /workspace/work/gate-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Presentation/NorthStar.FieldPresentation.csproj (in 0.9 ms).\n  Restored /workspace/work/gate-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Preparation/NorthStar.Preparation.csproj (in 2 ms).\n  NorthStar.Domain -> /workspace/work/gate-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/bin/Release/netstandard2.1/NorthStar.Domain.dll\n  NorthStar.Crossing -> /workspace/work/gate-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Portable/Crossing/bin/Release/netstandard2.1/NorthStar.Crossing.dll\n  NorthStar.Forge -> /workspace/work/gate-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Portable/Forge/bin/Release/netstandard2.1/NorthStar.Forge.dll\n  NorthStar.Loadout -> /workspace/work/gate-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Portable/Loadout/bin/Release/netstandard2.1/NorthStar.Loadout.dll\n  NorthStar.Preparation -> /workspace/work/gate-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Preparation/bin/Release/netstandard2.1/NorthStar.Preparation.dll\n  NorthStar.FieldGate -> /workspace/work/gate-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Gate/bin/Release/netstandard2.1/NorthStar.FieldGate.dll\n  NorthStar.FieldSampling -> /workspace/work/gate-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Sampling/bin/Release/netstandard2.1/NorthStar.FieldSampling.dll\n  NorthStar.FieldPresentation -> /workspace/work/gate-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Presentation/bin/Release/netstandard2.1/NorthStar.FieldPresentation.dll\n  NorthStar.Intake -> /workspace/work/gate-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/Host/bin/Release/net10.0/NorthStar.Intake.dll\n  NorthStar.Memory -> /workspace/work/gate-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Rules/bin/Release/netstandard2.1/NorthStar.Memory.dll\n  NorthStar.Conditions -> /workspace/work/gate-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Conditions/bin/Release/netstandard2.1/NorthStar.Conditions.dll\n  NorthStar.MemoryStudy -> /workspace/work/gate-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Host/bin/Release/net10.0/NorthStar.MemoryStudy.dll\n  NorthStar.FieldJourney -> /workspace/work/gate-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/bin/Release/net10.0/NorthStar.FieldJourney.dll\n  NorthStar.GateChecks -> /workspace/work/gate-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/GateChecks/bin/Release/net10.0/NorthStar.GateChecks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:25.93\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/runtime/dotnet/dotnet",
+      "/workspace/work/gate-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/GateChecks/bin/Release/net10.0/NorthStar.GateChecks.dll",
+      "/workspace/work/gate-assist/baseline/native.json"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: 43 actual gate native controls\n",
+    "stderr": ""
+  }
+]
