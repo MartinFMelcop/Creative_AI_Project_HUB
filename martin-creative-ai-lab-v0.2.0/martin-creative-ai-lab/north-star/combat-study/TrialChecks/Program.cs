@@ -29,7 +29,7 @@ static class TrialChecks
             var target=(System.Runtime.Versioning.TargetFrameworkAttribute?)Attribute.GetCustomAttribute(ownerAssembly,typeof(System.Runtime.Versioning.TargetFrameworkAttribute));
             if(ownerAssembly!=typeof(NorthStar.Combat.EffectSet).Assembly||ownerAssembly==typeof(Room).Assembly||target?.FrameworkName!=".NETStandard,Version=v2.1")
                 throw new Exception("Actual Trial owner must execute from the shared netstandard2.1 combat assembly, not the host.");
-            Schema();Journeys();passed=true;return 0;}
+            Schema();Journeys();ForecastChecks.Run(path);passed=true;return 0;}
         catch(Exception e){failure=e.Message;Console.Error.WriteLine(failure);return 1;}
         finally{if(path!=null)File.WriteAllText(path,JsonSerializer.Serialize(new {passed,failure,controls,journeys},new JsonSerializerOptions{WriteIndented=true}));Console.WriteLine($"{controls.Count} consumer controls; passed: {passed}");}
     }

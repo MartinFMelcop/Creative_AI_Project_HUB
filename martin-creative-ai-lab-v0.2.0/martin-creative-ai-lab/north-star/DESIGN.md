@@ -1043,3 +1043,20 @@ invalidation absent from the current consumer. Creation favored surviving-to-act
 consequences over another Field layer. The chosen initiative scope makes its greater
 original-policy burden explicit and preserves classic controls. See
 [evidence](../evidence/initiative/RUN.json), not agent opinion, for executed observations.
+
+
+## Conditional one-action inspection — experimental method consumption
+
+The Treatment Line adapts P05's bounded response forecast METHOD, without its fiction
+or campaign. One currently legal action runs on a reconstruction of the same Trial;
+its conditional costs, contact/DOT, response and next decision remain separate from
+the live owner. Commit inspection stops at its pending choice, never assuming Release
+or Break ward. A returned next initiative queue belongs only to that conditional branch.
+
+Inspection spends nothing and grants no outcome. Confirm inspected action is explicit
+and binds the observed Room sequence; changed context refuses without applying it.
+Other commands, read/reconnect and interruption discard inspection. Existing direct
+action buttons and all numeric policies remain available unchanged. This is optional
+information for an existing decision, not a plan, source fiction, final class, balance
+or human-comprehension finding. [Execution](../evidence/combat-status/forecast/RUN.json) keeps
+old defeats, the failed initial rescue fixture and the false conditional-HP renderer.

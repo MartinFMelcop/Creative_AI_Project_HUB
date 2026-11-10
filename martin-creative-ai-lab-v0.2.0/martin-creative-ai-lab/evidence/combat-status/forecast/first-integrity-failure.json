@@ -1,0 +1,26 @@
+{
+  "failures": [
+    {
+      "command": [
+        "python3",
+        "tools/validate_repo.py"
+      ],
+      "error": "Local prototype requires actual destination code, not documentation; downstream unknown reference IDs.",
+      "correction": "Keep JS as UI/source evidence; remove it from current global consumer list, whose unchanged validator permits only .gd/.py/.cs."
+    },
+    {
+      "command": [
+        "python3",
+        "tools/check_transformation.py"
+      ],
+      "error": "consumption XP-COMBAT-STATUS: integrated consumer source hash mismatch",
+      "correction": "All five affected prior integrations select fresh actually executed regression proof first; historical records/hashes unchanged. New proof declares actual reexecuted Rule/Trial/Room consumers and successful wrapper commands."
+    },
+    {
+      "phase": "record assembly",
+      "error": "KeyError evidence on the intentionally incomplete lab row interrupted the first metadata update.",
+      "correction": "Read optional lab evidence with get; rebind all current new-proof references before validation."
+    }
+  ],
+  "scope": "Metadata corrections only; no validator, source, gameplay or historical evidence edited."
+}

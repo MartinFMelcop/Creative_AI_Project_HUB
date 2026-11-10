@@ -1,0 +1,34 @@
+[
+  {
+    "command": [
+      "/workspace/work/runtime/dotnet/dotnet",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "10.0.401\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/runtime/dotnet/dotnet",
+      "build",
+      "Checks/Cinder.Checks.csproj",
+      "-c",
+      "Release",
+      "-m:1",
+      "--disable-build-servers"
+    ],
+    "exit_code": 0,
+    "stdout": "  Determining projects to restore...\n  Restored /workspace/work/forecast-evidence/p05-final/source/Core/Cinder.Core.csproj (in 210 ms).\n  Restored /workspace/work/forecast-evidence/p05-final/source/Checks/Cinder.Checks.csproj (in 295 ms).\n  Cinder.Core -> /workspace/work/forecast-evidence/p05-final/source/Core/bin/Release/net10.0/Cinder.Core.dll\n  Cinder.Checks -> /workspace/work/forecast-evidence/p05-final/source/Checks/bin/Release/net10.0/Cinder.Checks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:15.07\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/runtime/dotnet/dotnet",
+      "Checks/bin/Release/net10.0/Cinder.Checks.dll"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"checks\":3711,\"journeys\":[{\"first\":\"coolant\",\"second\":\"plates\",\"phase\":\"Victory\",\"sparks\":0,\"kits\":0,\"hp\":[6,6,28],\"actions\":65},{\"first\":\"coolant\",\"second\":\"edge\",\"phase\":\"Victory\",\"sparks\":0,\"kits\":0,\"hp\":[6,13,28],\"actions\":59},{\"first\":\"sparks\",\"second\":\"plates\",\"phase\":\"Victory\",\"sparks\":0,\"kits\":0,\"hp\":[7,16,28],\"actions\":71},{\"first\":\"sparks\",\"second\":\"edge\",\"phase\":\"Victory\",\"sparks\":0,\"kits\":0,\"hp\":[7,23,28],\"actions\":65}],\"naive\":{\"phase\":\"Defeat\",\"actions\":37},\"assessment\":\"Synthetic implementing-agent policies; no human balance evidence\"}\n",
+    "stderr": "Response forecasts compared against execution: 906 legal branches across four declared campaign policies.\ncoolant/plates: Victory; HP 6,6,28; kits 0; cells 0\ncoolant/edge: Victory; HP 6,13,28; kits 0; cells 0\nsparks/plates: Victory; HP 7,16,28; kits 0; cells 0\nsparks/edge: Victory; HP 7,23,28; kits 0; cells 0\n"
+  }
+]

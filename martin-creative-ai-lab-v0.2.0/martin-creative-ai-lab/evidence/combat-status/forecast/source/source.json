@@ -1,0 +1,67 @@
+{
+  "kind": "actual_copied_P05_domain_execution",
+  "source_artifacts": [
+    {
+      "local_path": "projects/cinderwatch/Checks/Cinder.Checks.csproj",
+      "sha256": "afdf6744dff68b5c7898a757e74bccf944d203548b06213b12a866facc78c956",
+      "size_bytes": 190
+    },
+    {
+      "local_path": "projects/cinderwatch/Checks/Probe.cs",
+      "sha256": "e119d4ff44256cb3d2ce9acbdc045f5842373baccf4e5ca38f57c60f233f5193",
+      "size_bytes": 1843
+    },
+    {
+      "local_path": "projects/cinderwatch/Checks/Program.cs",
+      "sha256": "056bb5a8719ad3eb988b96aa3c45dfcf22d41d1954171c950cc2e25732ea1210",
+      "size_bytes": 6077
+    },
+    {
+      "local_path": "projects/cinderwatch/Checks/ResponseChecks.cs",
+      "sha256": "16592010df910bee5d6545ada3b6cec2c7587594a5d52b43199386c94b5e1df2",
+      "size_bytes": 5796
+    },
+    {
+      "local_path": "projects/cinderwatch/Core/AssemblyInfo.cs",
+      "sha256": "a14dad30ab9e586a7ae0ae9d9dbf20d2a0d0accc9b79207903ecc729cd1a21f8",
+      "size_bytes": 87
+    },
+    {
+      "local_path": "projects/cinderwatch/Core/Cinder.Core.csproj",
+      "sha256": "8d654c44b7bebb6b31a9f2f606927f45b5072193adc4eef8cce3f3cf3b278df3",
+      "size_bytes": 36
+    },
+    {
+      "local_path": "projects/cinderwatch/Core/Content.cs",
+      "sha256": "d37035eab4aa09802511dd3b5806ae8d295156824a18962a9ed14d19184fb3bb",
+      "size_bytes": 5034
+    },
+    {
+      "local_path": "projects/cinderwatch/Core/Game.cs",
+      "sha256": "53dd7148e63dd57ae0796943b810d0652398d72fd75e46bdd76a8f322d2674d7",
+      "size_bytes": 13340
+    },
+    {
+      "local_path": "projects/cinderwatch/Core/Journal.cs",
+      "sha256": "46bae735fc58e58dce317234c418775f410e58ad8bea728df2d41c8f098f38e4",
+      "size_bytes": 2149
+    },
+    {
+      "local_path": "projects/cinderwatch/Core/ResponseForecast.cs",
+      "sha256": "ba3f73572055f57ee7e125045c1ed68d9582e89c2090b5baca31c68d5c4a5c37",
+      "size_bytes": 2212
+    },
+    {
+      "local_path": "projects/cinderwatch/Directory.Build.props",
+      "sha256": "62720f290d07a9d7f4899af16ff649dec8969a0b825aacdf1f5df943bea3668d",
+      "size_bytes": 407
+    },
+    {
+      "local_path": "projects/cinderwatch/global.json",
+      "sha256": "a0dcc4ee0c1b8044f9498734741bd764d5c2585f4d0d8e31e27e26e9662f751f",
+      "size_bytes": 59
+    }
+  ],
+  "commands": "commands.json",
+  "scope": "Actual existing source checks include bounded forecasts versus actual branch execution. Full campaign check count is not new North Star forecast count or human evidence. No Cinder fiction/statistics imported."
+}

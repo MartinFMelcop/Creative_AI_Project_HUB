@@ -1,0 +1,48 @@
+{
+  "baseline_commit": "5c468f80bd44c9db0f56ab06477c9ab59509513c",
+  "fresh_native_modes": [
+    {
+      "mode": "Trial",
+      "baseline": "evidence/combat-status/forecast/baseline/Trial.json",
+      "baseline_sha256": "987590174614c13e5e921d22fe80fc0c09b00ee73ce4d62d4a6eceb08bc3f076",
+      "candidate_sha256": "987590174614c13e5e921d22fe80fc0c09b00ee73ce4d62d4a6eceb08bc3f076",
+      "exact_json_equal": true
+    },
+    {
+      "mode": "Passive",
+      "baseline": "evidence/combat-status/forecast/baseline/Passive.json",
+      "baseline_sha256": "005c9a8bbdb18fbd7439147b1ced63065cc83a8da35a3002b144b36d3f33d307",
+      "candidate_sha256": "005c9a8bbdb18fbd7439147b1ced63065cc83a8da35a3002b144b36d3f33d307",
+      "exact_json_equal": true
+    },
+    {
+      "mode": "Control",
+      "baseline": "evidence/combat-status/forecast/baseline/Control.json",
+      "baseline_sha256": "7db0a850cc40916e3c6e6c2ed018d5377cbd600d5e7ca8400566ce23b9aa0237",
+      "candidate_sha256": "7db0a850cc40916e3c6e6c2ed018d5377cbd600d5e7ca8400566ce23b9aa0237",
+      "exact_json_equal": true
+    },
+    {
+      "mode": "Response",
+      "baseline": "evidence/combat-status/forecast/baseline/Response.json",
+      "baseline_sha256": "fc764314a885dcaf7535ec5a21d202d39b657ee29f1d2c2e9b0b2e4afb5462ce",
+      "candidate_sha256": "fc764314a885dcaf7535ec5a21d202d39b657ee29f1d2c2e9b0b2e4afb5462ce",
+      "exact_json_equal": true
+    },
+    {
+      "mode": "Initiative",
+      "baseline": "evidence/combat-status/forecast/baseline/Initiative.json",
+      "baseline_sha256": "0144d9a461c968e0f6e898921551a836ff3c2c3b813c0e81a63a49db659cec69",
+      "candidate_sha256": "0144d9a461c968e0f6e898921551a836ff3c2c3b813c0e81a63a49db659cec69",
+      "exact_json_equal": true
+    }
+  ],
+  "initiative_comparable_command": [
+    "/workspace/work/runtime/dotnet/dotnet",
+    "/workspace/work/forecast-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/InitiativeChecks/bin/Release/net10.0/NorthStar.InitiativeChecks.dll",
+    "/workspace/work/forecast-evidence/baseline/Initiative.json",
+    "--vectors",
+    "/workspace/work/forecast-evidence/initiative/cases.json"
+  ],
+  "limit": "Original exact same source cases for comparable initiative output; no new matrix/seed cases. Initial unvectored baseline retained outside maintained sources."
+}

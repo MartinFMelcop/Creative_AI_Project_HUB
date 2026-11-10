@@ -1,0 +1,122 @@
+[
+  {
+    "command": [
+      "/workspace/work/runtime/dotnet/dotnet",
+      "build",
+      "north-star/combat-study/TrialChecks/NorthStar.TrialChecks.csproj",
+      "-c",
+      "Release",
+      "-m:1",
+      "--disable-build-servers"
+    ],
+    "exit_code": 0,
+    "stdout": "  Determining projects to restore...\n  Restored /workspace/work/forecast-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/NorthStar.CombatStudy.csproj (in 302 ms).\n  Restored /workspace/work/forecast-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/TrialChecks/NorthStar.TrialChecks.csproj (in 303 ms).\n  Restored /workspace/work/forecast-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Rules/NorthStar.Combat.csproj (in 331 ms).\n  NorthStar.Combat -> /workspace/work/forecast-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Rules/bin/Release/netstandard2.1/NorthStar.Combat.dll\n  NorthStar.CombatStudy -> /workspace/work/forecast-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/bin/Release/net10.0/NorthStar.CombatStudy.dll\n  NorthStar.TrialChecks -> /workspace/work/forecast-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/TrialChecks/bin/Release/net10.0/NorthStar.TrialChecks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:36.51\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/runtime/dotnet/dotnet",
+      "north-star/combat-study/TrialChecks/bin/Release/net10.0/NorthStar.TrialChecks.dll",
+      "/workspace/work/forecast-evidence/baseline/Trial.json"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS observation-is-not-action\nPASS schema-reject-atomic-0\nPASS schema-reject-atomic-1\nPASS schema-reject-atomic-2\nPASS schema-reject-atomic-3\nPASS schema-reject-atomic-4\nPASS schema-reject-atomic-5\nPASS schema-reject-atomic-6\nPASS toxic-win-accepted-1\nPASS toxic-win-accepted-2\nPASS toxic-win-accepted-3\nPASS toxic-win-accepted-4\nPASS toxic-real-victory\nPASS heated-win-accepted-1\nPASS heated-win-accepted-2\nPASS heated-win-accepted-3\nPASS heated-win-accepted-4\nPASS heated-win-accepted-5\nPASS heated-win-accepted-6\nPASS heated-win-accepted-7\nPASS heated-real-victory\nPASS heated-mistimed-treatment-negative-accepted-1\nPASS heated-mistimed-treatment-negative-accepted-2\nPASS heated-mistimed-treatment-negative-accepted-3\nPASS heated-mistimed-treatment-negative-accepted-4\nPASS heated-mistimed-treatment-negative-accepted-5\nPASS heated-mistimed-treatment-negative-accepted-6\nPASS mistimed-treatment-does-not-secure\nPASS toxic-constant-guard-defeated\nPASS heated-constant-guard-defeated\nPASS guard-observation-accepted-1\nPASS strike-observation-accepted-1\nPASS guard-halves-contact-leaves-full-dot\nPASS cleanse-cost-accepted-1\nPASS cleanse-charge-and-opportunity\nPASS bleed-treatment-accepted-1\nPASS bleed-treatment-accepted-2\nPASS bleed-real-healing\nPASS disarm-refusal-atomic\nPASS disarm-bash-and-burn\nPASS disarm-global-expiry\nPASS burn-real-strike\nPASS withdrawal-no-fabricated-win\nPASS terminal-refusal-atomic\nPASS explicit-restart\nPASS exhausted-treatment-atomic\n46 consumer controls; passed: True\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/runtime/dotnet/dotnet",
+      "build",
+      "north-star/combat-study/PassiveChecks/NorthStar.PassiveChecks.csproj",
+      "-c",
+      "Release",
+      "-m:1",
+      "--disable-build-servers"
+    ],
+    "exit_code": 0,
+    "stdout": "  Determining projects to restore...\n  Restored /workspace/work/forecast-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/PassiveChecks/NorthStar.PassiveChecks.csproj (in 223 ms).\n  2 of 3 projects are up-to-date for restore.\n  NorthStar.Combat -> /workspace/work/forecast-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Rules/bin/Release/netstandard2.1/NorthStar.Combat.dll\n  NorthStar.CombatStudy -> /workspace/work/forecast-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/bin/Release/net10.0/NorthStar.CombatStudy.dll\n  NorthStar.PassiveChecks -> /workspace/work/forecast-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/PassiveChecks/bin/Release/net10.0/NorthStar.PassiveChecks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:05.99\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/runtime/dotnet/dotnet",
+      "north-star/combat-study/PassiveChecks/bin/Release/net10.0/NorthStar.PassiveChecks.dll",
+      "/workspace/work/forecast-evidence/baseline/Passive.json"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: 33 passive native controls\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/runtime/dotnet/dotnet",
+      "build",
+      "north-star/combat-study/ControlChecks/NorthStar.ControlChecks.csproj",
+      "-c",
+      "Release",
+      "-m:1",
+      "--disable-build-servers"
+    ],
+    "exit_code": 0,
+    "stdout": "  Determining projects to restore...\n  Restored /workspace/work/forecast-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/ControlChecks/NorthStar.ControlChecks.csproj (in 194 ms).\n  2 of 3 projects are up-to-date for restore.\n  NorthStar.Combat -> /workspace/work/forecast-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Rules/bin/Release/netstandard2.1/NorthStar.Combat.dll\n  NorthStar.CombatStudy -> /workspace/work/forecast-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/bin/Release/net10.0/NorthStar.CombatStudy.dll\n  NorthStar.ControlChecks -> /workspace/work/forecast-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/ControlChecks/bin/Release/net10.0/NorthStar.ControlChecks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:05.92\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/runtime/dotnet/dotnet",
+      "north-star/combat-study/ControlChecks/bin/Release/net10.0/NorthStar.ControlChecks.dll",
+      "/workspace/work/forecast-evidence/baseline/Control.json"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"checks\": 22,\n  \"controls\": [\n    \"hard drains three without control\",\n    \"specific immunity neither drains nor applies\",\n    \"breaking application drains only\",\n    \"exposed hard applies and refills\",\n    \"positive exposed value remains vulnerable\",\n    \"full refill application applies before protection\",\n    \"renewed protection drains instead of controls\",\n    \"invalid category rejected\",\n    \"classic refuses new action\",\n    \"hard actual cost round and contact\",\n    \"light pays contact plus DOT\",\n    \"zero crossing still pays contact\",\n    \"exposed control suppresses contact but DOT payable\",\n    \"empty hard refused without advancing bar round\",\n    \"partial refill remains exposed\",\n    \"full refill controls actual contact\",\n    \"next immune contact defeats\",\n    \"terminal control refuses\",\n    \"explicit preparation has no owner state\",\n    \"begin creates original control practice\",\n    \"retreat remains explicit not boss-world escape\",\n    \"read stable\"\n  ],\n  \"trace\": {\n    \"profile\": \"toxic\",\n    \"initiative\": null,\n    \"breakbar\": {\n      \"phase\": \"protected\",\n      \"value\": 4,\n      \"capacity\": 5,\n      \"lastApplied\": false,\n      \"lastDrain\": 1,\n      \"lastRefill\": 0\n    },\n    \"responsePractice\": false,\n    \"wardAvailable\": false,\n    \"pending\": null,\n    \"resolution\": [],\n    \"round\": 7,\n    \"hp\": 0,\n    \"maxHp\": 100,\n    \"enemyHp\": 96,\n    \"charges\": 0,\n    \"effects\": [],\n    \"threat\": \"No further threat; encounter ended.\",\n    \"events\": [\n      \"Control paid: one actual round; drained 1, refilled 0, applied False. No target HP damage.\",\n      \"Target contact: 20 incoming direct damage; 1 actual HP lost.\",\n      \"Round 7 resolved: defeated.\"\n    ],\n    \"outcome\": \"defeated\",\n    \"last\": \"Encounter ended. Restart explicitly to practice again.\",\n    \"weaponEnabled\": true,\n    \"attackMultiplier\": 1,\n    \"healingMultiplier\": 1,\n    \"passive\": \"none\",\n    \"armor\": \"light\",\n    \"rescueSpent\": false,\n    \"lastHit\": {\n      \"kind\": \"PhysicalDirect\",\n      \"incoming\": 20,\n      \"effectiveDamage\": 20,\n      \"hpBefore\": 1,\n      \"hpAfter\": 0,\n      \"damageReduced\": 0,\n      \"actualHpLost\": 1,\n      \"avoidedHpLoss\": 0,\n      \"rescued\": false\n    }\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/runtime/dotnet/dotnet",
+      "build",
+      "north-star/combat-study/ResponseChecks/NorthStar.ResponseChecks.csproj",
+      "-c",
+      "Release",
+      "-m:1",
+      "--disable-build-servers"
+    ],
+    "exit_code": 0,
+    "stdout": "  Determining projects to restore...\n  Restored /workspace/work/forecast-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/ResponseChecks/NorthStar.ResponseChecks.csproj (in 197 ms).\n  2 of 3 projects are up-to-date for restore.\n  NorthStar.Combat -> /workspace/work/forecast-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Rules/bin/Release/netstandard2.1/NorthStar.Combat.dll\n  NorthStar.CombatStudy -> /workspace/work/forecast-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/bin/Release/net10.0/NorthStar.CombatStudy.dll\n  NorthStar.ResponseChecks -> /workspace/work/forecast-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/ResponseChecks/bin/Release/net10.0/NorthStar.ResponseChecks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:05.77\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/runtime/dotnet/dotnet",
+      "north-star/combat-study/ResponseChecks/bin/Release/net10.0/NorthStar.ResponseChecks.dll",
+      "/workspace/work/forecast-evidence/baseline/Response.json"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: 60 actual response-chain controls\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/runtime/dotnet/dotnet",
+      "build",
+      "north-star/combat-study/InitiativeChecks/NorthStar.InitiativeChecks.csproj",
+      "-c",
+      "Release",
+      "-m:1",
+      "--disable-build-servers"
+    ],
+    "exit_code": 0,
+    "stdout": "  Determining projects to restore...\n  Restored /workspace/work/forecast-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/InitiativeChecks/NorthStar.InitiativeChecks.csproj (in 256 ms).\n  2 of 3 projects are up-to-date for restore.\n  NorthStar.Combat -> /workspace/work/forecast-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Rules/bin/Release/netstandard2.1/NorthStar.Combat.dll\n  NorthStar.CombatStudy -> /workspace/work/forecast-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/bin/Release/net10.0/NorthStar.CombatStudy.dll\n  NorthStar.InitiativeChecks -> /workspace/work/forecast-baseline/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/InitiativeChecks/bin/Release/net10.0/NorthStar.InitiativeChecks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:06.25\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/runtime/dotnet/dotnet",
+      "north-star/combat-study/InitiativeChecks/bin/Release/net10.0/NorthStar.InitiativeChecks.dll",
+      "/workspace/work/forecast-evidence/baseline/Initiative.json"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: 40 initiative native controls\n",
+    "stderr": ""
+  }
+]

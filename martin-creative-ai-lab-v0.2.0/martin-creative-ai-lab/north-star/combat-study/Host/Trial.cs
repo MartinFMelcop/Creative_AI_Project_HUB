@@ -12,6 +12,8 @@ public sealed class Trial
     readonly EffectSet effects = new EffectSet();
     readonly List<string> events = new List<string>();
     readonly string profile;
+    readonly uint initialSeed;
+    readonly List<string> acceptedCommands = new List<string>();
     readonly PassiveEncounter passive;
     HitResult? lastHit;
     readonly bool responses;
@@ -30,6 +32,7 @@ public sealed class Trial
         if(profile!="toxic" && profile!="heated") throw new ArgumentException("Unknown practice profile.");
         if((responses?1:0)+(controls?1:0)+(initiativeMode?1:0)>1)throw new ArgumentException("Practice modes are exclusive.");
         initiative=initiativeMode?new Initiative(tempo,initiativeSeed):null;
+        initialSeed=initiativeSeed;
         this.profile=profile;this.responses=responses;breakbar=controls?new Breakbar(5):null;
         this.passive=new PassiveEncounter(passive,armor);
         if(profile=="toxic") { effects.Apply(Effect.Poison,3);effects.Apply(Effect.Bleed,3); }
@@ -37,7 +40,25 @@ public sealed class Trial
         events.Add(profile=="toxic"?"Practice begins with poison and bleed, each lasting three global rounds.":"Practice begins with burn for three rounds and disarm for two rounds.");
     }
     string Threat => round%3==1 ? "Pressure: 20 direct damage, then extends poison (toxic) or burn (heated) by two rounds." : "Contact: 20 direct damage.";
+    // Reuse this same owner for a bounded conditional branch, never a second rule engine.
+    public object Forecast(string command)
+    {
+        if(!Active)throw new ArgumentException("An active encounter is required for inspection.");
+        var branch=new Trial(profile,passive.Selection,passive.Armor,responses,breakbar!=null,
+            initiative!=null,initiative==null?"heavy":initiative.Style,initialSeed);
+        foreach(string accepted in acceptedCommands)
+            if(!branch.Execute(accepted))throw new InvalidOperationException("Accepted history failed to reconstruct its owner.");
+        branch.Last=Last;
+        if(!branch.Execute(command))throw new ArgumentException("Inspect a currently legal action. "+branch.Last);
+        return new {command,boundary=branch.pending!=null?"response":branch.Active?"action":"ended",state=branch.Snapshot()};
+    }
     public bool Execute(string command)
+    {
+        bool accepted=ExecuteCore(command);
+        if(accepted)acceptedCommands.Add(command);
+        return accepted;
+    }
+    bool ExecuteCore(string command)
     {
         if(outcome!="active") return Refuse("Encounter ended. Restart explicitly to practice again.");
         if(pending!=null)

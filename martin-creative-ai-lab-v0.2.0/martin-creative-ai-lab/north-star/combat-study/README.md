@@ -33,6 +33,15 @@ Unknown receipts pause actions; Reconnect observes the real owner without retryi
 The transport is bounded, same-origin JSON, exact-command/schema and static-asset allowlists;
 it is not a public/authenticated game service or durable world.
 
+## Inspect one action
+
+Choose an action in the conditional inspector, then Inspect only. Live state stays
+unchanged. Confirm inspected action is a separate paid command bound to that observed
+context; stale context refuses. A pending Commit prediction stops before any response
+choice. Other commands or interruption discard inspection. This adapts the P05 method,
+not its fiction or numeric policies. [Current execution](../../evidence/combat-status/forecast/RUN.json)
+and [acceptance boundary](FORECAST_PROTOCOL.md) distinguish actual results from hypotheses.
+
 ## What was consumed
 
 [The source assay](../../labs/combat-response/status/README.md) stages reviewed preserved

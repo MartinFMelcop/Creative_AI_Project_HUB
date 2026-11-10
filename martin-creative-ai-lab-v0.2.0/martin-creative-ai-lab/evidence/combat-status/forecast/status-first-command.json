@@ -1,0 +1,13 @@
+{
+  "command": [
+    "python3",
+    "north-star/combat-study/tools/verify.py",
+    "--dotnet",
+    "/workspace/work/runtime/dotnet/dotnet",
+    "--output",
+    "/workspace/work/forecast-evidence/status-first"
+  ],
+  "exit_code": 0,
+  "stdout": "Actual combat consumer and source instruments passed; stable inputs: 38\n",
+  "stderr": ""
+}

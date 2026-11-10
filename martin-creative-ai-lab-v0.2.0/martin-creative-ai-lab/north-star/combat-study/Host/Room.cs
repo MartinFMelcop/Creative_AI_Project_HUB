@@ -19,12 +19,35 @@ public sealed class Room
         state=preparing?null:game.Snapshot()
     };
     public object Snapshot()=>observation;
-    public object Execute(JsonElement document)
+    private static bool Action(string command)=>command is "strike" or "bash" or "guard" or "treat" or "cleanse" or "retreat" or "commit" or "release" or "break-ward" or "light-control" or "hard-control";
+    private static string Parse(JsonElement document,bool allowReview,out long? review)
     {
+        review=null;
         if(document.ValueKind!=JsonValueKind.Object)throw new ArgumentException("Object required");
         var fields=document.EnumerateObject().ToArray();
-        if(fields.Length!=1||fields[0].Name!="command"||fields[0].Value.ValueKind!=JsonValueKind.String)throw new ArgumentException("Exactly one command required");
-        string command=fields[0].Value.GetString()!;
+        if(fields.Length!=1&&(!allowReview||fields.Length!=2))throw new ArgumentException("Exact command envelope required");
+        var commands=fields.Where(p=>p.Name=="command").ToArray();
+        if(commands.Length!=1||commands[0].Value.ValueKind!=JsonValueKind.String)throw new ArgumentException("Exactly one command string required");
+        if(fields.Length==2)
+        {
+            var revisions=fields.Where(p=>p.Name=="reviewed_sequence").ToArray();
+            if(revisions.Length!=1||revisions[0].Value.ValueKind!=JsonValueKind.Number||!revisions[0].Value.TryGetInt64(out long number)||number<0)throw new ArgumentException("Exact nonnegative reviewed sequence required");
+            review=number;
+        }
+        return commands[0].Value.GetString()!;
+    }
+    public object Forecast(JsonElement document)
+    {
+        string command=Parse(document,false,out _);
+        if(preparing||!Action(command))throw new ArgumentException("Inspect one encounter action after Begin.");
+        return new {sequence,forecast=game.Forecast(command)};
+    }
+    public object Execute(JsonElement document)
+    {
+        string command=Parse(document,true,out long? review);
+        // A review binds context, not permission. Existing direct commands retain their contract.
+        if(review.HasValue&&(review.Value!=sequence||preparing||!game.Active||!Action(command)))
+            throw new ArgumentException("Inspected context changed. Read and inspect again before confirming.");
         bool responsePrepare=command is "prepare responses toxic" or "prepare responses heated";
         bool controlPrepare=command is "prepare controls toxic" or "prepare controls heated";
         bool initiativePrepare=command is "prepare initiative toxic" or "prepare initiative heated";

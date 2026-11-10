@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-09",
+  "updated_at": "2026-11-10",
   "baseline_commit": "9c69f295a1c5d736761a113d0e41aaa8600fb635",
   "scope": "Mandatory eleven-laboratory transformation. Historical source preservation is separate from terminal knowledge consumption; operational claims require executed instruments and bound evidence.",
   "north_star_consumer_demonstrated": true,
@@ -701,7 +701,7 @@
       ],
       "status": "operational",
       "domain": "Attributes, equipment, progression, status, tactical rules and builds",
-      "question": "Can typed XP thresholds and additive budgets preserve all source vectors while refusing silent schema loss?",
+      "question": "Can source-bound progression and bounded same-owner action forecasts preserve real costs, decision boundaries and live state in actual C# consumers?",
       "source_paths": [
         "projects/cinderwatch/Core",
         "projects/cinderwatch/Checks",
@@ -722,26 +722,35 @@
       "consumer_paths": [
         "north-star/csharp/Domain/Progression.cs",
         "north-star/csharp/Crossing/Session.cs",
-        "north-star/csharp/Crossing/Program.cs"
+        "north-star/csharp/Crossing/Program.cs",
+        "north-star/combat-study/Host/Trial.cs",
+        "north-star/combat-study/Host/Room.cs"
       ],
       "controls": [
         "Nine preserved legacy vectors",
         "537 threshold neighbors and nine split-grant controls",
         "Header/schema rejection and wrong-contract calibration",
-        "Actual C# domain/destination execution"
+        "Actual C# domain/destination execution",
+        "P05 bounded fork/one-action method: fresh five-mode native parity; actual conditional branch/confirm controls; stale context and false forecast renderer refusal."
       ],
-      "validity_boundary": "Typed progression contract and synthetic original C# destination only; source-binding mismatch is a static assay, not full RGSS execution; no Unity Editor, Windows, independent player or final 180-level pacing claim.",
+      "validity_boundary": "Typed progression contract and synthetic original C# destination only; source-binding mismatch is a static assay, not full RGSS execution; no Unity Editor, Windows, independent player or final 180-level pacing claim. Selected P05 forecast method now executes through the existing portable Trial and Chromium, not copied source fiction/stats, a complete source campaign port, human comprehension or balance.",
       "next_objective": "Bounded preparation/progression and local replay already operate; evaluate remaining skill effects, approved identity and pacing with actual product needs and appropriate people. Do not automatically repeat loadout/progression/recovery matrices.",
       "path": "labs/rpg-systems",
       "instrument": "labs/rpg-systems/run.py",
       "evidence": [
+        "evidence/combat-status/forecast/RUN.json",
         "evidence/rpg-progression/RUN.json",
         "evidence/rpg-progression/results.json"
       ],
       "evidence_sha256": {
         "evidence/rpg-progression/RUN.json": "40ecd7eb61d9b1e3a51deb3ce3240b2f54d7e1f14def2e7b513212b35f1ec05a",
-        "evidence/rpg-progression/results.json": "e1f46e6e746400222a673da68cd94b10687515d44f7f61a6818d14df1749648f"
-      }
+        "evidence/rpg-progression/results.json": "e1f46e6e746400222a673da68cd94b10687515d44f7f61a6818d14df1749648f",
+        "evidence/combat-status/forecast/RUN.json": "87d35388acc0f924c61dae2bcb2eb155e51c444e6f0349baba77514fcab895fc"
+      },
+      "additional_instruments": [
+        "north-star/combat-study/tools/forecast-source.py",
+        "north-star/combat-study/tools/verify.py"
+      ]
     },
     {
       "id": "combat-response",
@@ -1247,7 +1256,7 @@
         "projects/cinderwatch/Core",
         "projects/cinderwatch/Checks"
       ],
-      "decision": "Remaining source capabilities in this laboratory domain are available or explicitly scoped gaps; source preservation and origin execution do not count as consumed.",
+      "decision": "Remaining source capabilities in this laboratory domain are available or explicitly scoped gaps; source preservation and origin execution do not count as consumed. Selected bounded response forecasting is now separately INTEGRATED in the same existing North Star combat owner; full source progression, campaign, fiction and persistence remain unresolved.",
       "next_action": "Extend validated progression into approved identity/loadout and persistence contracts; resolve final pacing separately from source arithmetic."
     },
     {
@@ -1353,6 +1362,7 @@
         "north-star/combat-study/Host/Trial.cs"
       ],
       "evidence": [
+        "evidence/combat-status/forecast/RUN.json",
         "evidence/portable-combat/RUN.json",
         "evidence/initiative/RUN.json",
         "evidence/breakbar/RUN.json",
@@ -1370,7 +1380,8 @@
         "evidence/combat-status/browser.json": "9d4f2e9d20dffeace99d3f514fbeb818a85b0c9cd4e21833ee70c4a737d887f1",
         "evidence/breakbar/RUN.json": "7990e8154852f9ef62b1bb940d35938255113be195412b1a1b4c15fee0840816",
         "evidence/initiative/RUN.json": "78de76f7cb3f9fdbba30fd3dc863899763ade65bc1e077a6045eca74f0616926",
-        "evidence/portable-combat/RUN.json": "796d88965428745910575525df3ea135512709a750c36b114dce606e4878aa92"
+        "evidence/portable-combat/RUN.json": "796d88965428745910575525df3ea135512709a750c36b114dce606e4878aa92",
+        "evidence/combat-status/forecast/RUN.json": "87d35388acc0f924c61dae2bcb2eb155e51c444e6f0349baba77514fcab895fc"
       }
     },
     {
@@ -2033,6 +2044,7 @@
       ],
       "decision": "Adapt one out-of-combat slot and selected literal heavy-physical 10% reduction/fatal-hit 1HP once-per-combat mechanics into the existing C# Treatment Line. Destination explicitly chooses direct-hit versus DOT separation, Guard-before-reduction and away-from-zero integer rounding. Source does not settle these policies. Class/gender/level/pool/scaling/rarity acquisition is not implemented: presets are experimental, not earned source abilities. Rogue chance survival and Knight control condition remain distinct, unintegrated choices.",
       "evidence": [
+        "evidence/combat-status/forecast/RUN.json",
         "evidence/portable-combat/RUN.json",
         "evidence/initiative/RUN.json",
         "evidence/breakbar/RUN.json",
@@ -2046,7 +2058,8 @@
         "evidence/passive-response/execution/source-assay.json": "b72eec94785a819330fdd0e45601db6673bdaddedf67214036b5c8e0825dee31",
         "evidence/breakbar/RUN.json": "7990e8154852f9ef62b1bb940d35938255113be195412b1a1b4c15fee0840816",
         "evidence/initiative/RUN.json": "78de76f7cb3f9fdbba30fd3dc863899763ade65bc1e077a6045eca74f0616926",
-        "evidence/portable-combat/RUN.json": "796d88965428745910575525df3ea135512709a750c36b114dce606e4878aa92"
+        "evidence/portable-combat/RUN.json": "796d88965428745910575525df3ea135512709a750c36b114dce606e4878aa92",
+        "evidence/combat-status/forecast/RUN.json": "87d35388acc0f924c61dae2bcb2eb155e51c444e6f0349baba77514fcab895fc"
       },
       "consumer_paths": [
         "north-star/combat-study/Rules/Passives.cs",
@@ -2209,6 +2222,7 @@
       "decision": "Only selected queued action/reaction, LIFO and cast-cost-retention contracts are integrated through actual opt-in original Treatment Line. Damage48, one ward and shared charge policy are original, not recovered source abilities. Classic mode remains. Full stack, initiative, slot ordering, triggers, fizzle, cooldown and battle/runtime remain unresolved.",
       "next_action": "Compare actual authored combat needs and appropriate people/production access; do not automatically extend response matrices. Resolve broader battle contracts under explicit owner semantics.",
       "evidence": [
+        "evidence/combat-status/forecast/RUN.json",
         "evidence/portable-combat/RUN.json",
         "evidence/initiative/RUN.json",
         "evidence/breakbar/RUN.json",
@@ -2218,7 +2232,8 @@
         "evidence/response-chain/RUN.json": "638130278829912603ccd89e38e4da2945d4072221fc3eb08bcb8dd985006f14",
         "evidence/breakbar/RUN.json": "7990e8154852f9ef62b1bb940d35938255113be195412b1a1b4c15fee0840816",
         "evidence/initiative/RUN.json": "78de76f7cb3f9fdbba30fd3dc863899763ade65bc1e077a6045eca74f0616926",
-        "evidence/portable-combat/RUN.json": "796d88965428745910575525df3ea135512709a750c36b114dce606e4878aa92"
+        "evidence/portable-combat/RUN.json": "796d88965428745910575525df3ea135512709a750c36b114dce606e4878aa92",
+        "evidence/combat-status/forecast/RUN.json": "87d35388acc0f924c61dae2bcb2eb155e51c444e6f0349baba77514fcab895fc"
       },
       "origin_projects": [
         "P10"
@@ -2267,6 +2282,7 @@
       ],
       "decision": "Only selected weight1/3, protection/exposure/refill and specific-immunity boundaries are integrated through actual original Treatment Line control mode. Capacity5 consumer, zero-crossing drain-only, full-refill application ordering, shared hard-control charge and one-round contact/pressure suppression are explicit destination policies. DOT remains payable. No full CC/boss catalog, source runtime, balance or world fiction integration.",
       "evidence": [
+        "evidence/combat-status/forecast/RUN.json",
         "evidence/portable-combat/RUN.json",
         "evidence/initiative/RUN.json",
         "evidence/breakbar/RUN.json"
@@ -2274,7 +2290,8 @@
       "evidence_sha256": {
         "evidence/breakbar/RUN.json": "7990e8154852f9ef62b1bb940d35938255113be195412b1a1b4c15fee0840816",
         "evidence/initiative/RUN.json": "78de76f7cb3f9fdbba30fd3dc863899763ade65bc1e077a6045eca74f0616926",
-        "evidence/portable-combat/RUN.json": "796d88965428745910575525df3ea135512709a750c36b114dce606e4878aa92"
+        "evidence/portable-combat/RUN.json": "796d88965428745910575525df3ea135512709a750c36b114dce606e4878aa92",
+        "evidence/combat-status/forecast/RUN.json": "87d35388acc0f924c61dae2bcb2eb155e51c444e6f0349baba77514fcab895fc"
       }
     },
     {
@@ -2296,13 +2313,48 @@
       "decision": "Selected INI001/002/004/005 and FLW one-turn/global-DOT boundaries now execute in actual optional Treatment Line. Numeric AGI+jitter/LCG/seed, two one-turn actors and Heavy/Quick damage are original destination policies. Earlier lethal contact cancels later action; earlier lethal strike skips contact; reads cannot reroll. Full initiative/formation/extra turns/SP/fizzle/cooldown/source runtime remain unresolved.",
       "next_action": "Compare remaining consequential source obligations, actual product needs and licensed Unity/Windows access; do not automatically expand initiative matrices. Human comprehension and balance need appropriate people.",
       "evidence": [
+        "evidence/combat-status/forecast/RUN.json",
         "evidence/portable-combat/RUN.json",
         "evidence/initiative/RUN.json"
       ],
       "evidence_sha256": {
         "evidence/initiative/RUN.json": "78de76f7cb3f9fdbba30fd3dc863899763ade65bc1e077a6045eca74f0616926",
-        "evidence/portable-combat/RUN.json": "796d88965428745910575525df3ea135512709a750c36b114dce606e4878aa92"
+        "evidence/portable-combat/RUN.json": "796d88965428745910575525df3ea135512709a750c36b114dce606e4878aa92",
+        "evidence/combat-status/forecast/RUN.json": "87d35388acc0f924c61dae2bcb2eb155e51c444e6f0349baba77514fcab895fc"
       }
+    },
+    {
+      "id": "P05-BOUNDED-RESPONSE-FORECAST",
+      "origin_projects": [
+        "P05"
+      ],
+      "laboratory_id": "rpg-systems",
+      "status": "INTEGRATED",
+      "source_paths": [
+        "projects/cinderwatch/Core/ResponseForecast.cs",
+        "projects/cinderwatch/Core/Game.cs",
+        "projects/cinderwatch/Checks/ResponseChecks.cs"
+      ],
+      "consumer_paths": [
+        "north-star/combat-study/Host/Trial.cs",
+        "north-star/combat-study/Host/Room.cs",
+        "north-star/combat-study/Host/Program.cs",
+        "north-star/combat-study/Host/web/app.js"
+      ],
+      "decision": "Adapt the real P05 fork/one-chosen-action/announced-consequence/next-decision boundary method through private accepted-history reconstruction of the SAME portable Trial, never parallel combat formulas. Repeated inspection preserves live RNG, charges, effects, rescue and full Room observation. Conditional pending Commit does not choose Release/Break ward. Separate source-sequence-guarded confirmation refuses stale/malformed context before mutation. Original five-mode native outputs and retained classic browser states remain exact. No P05 fiction, numeric balance, campaign, source save format, full runtime, Unity or human validation transfer.",
+      "evidence": [
+        "evidence/combat-status/forecast/RUN.json",
+        "evidence/combat-status/forecast/source/source.json",
+        "evidence/combat-status/forecast/native-parity.json",
+        "evidence/combat-status/forecast/browser/forecast-browser.json"
+      ],
+      "evidence_sha256": {
+        "evidence/combat-status/forecast/RUN.json": "87d35388acc0f924c61dae2bcb2eb155e51c444e6f0349baba77514fcab895fc",
+        "evidence/combat-status/forecast/source/source.json": "0353ac9e9a180b9974b18386d6dfed427815d0b7ea906fd8876dc6346afaf1e0",
+        "evidence/combat-status/forecast/native-parity.json": "95eed7b5fbe895c9c8949ebcb2232cc3e758d05742ad9a5427aae45dbb0497ff",
+        "evidence/combat-status/forecast/browser/forecast-browser.json": "bf1164037c699688b5c2e27ce91a51e038c0dab8a743301f1f4f1bf0096195fb"
+      },
+      "next_action": "Compare remaining consequential legacy and earned-character needs; do not expand forecast/initiative/portability matrices automatically. Human comprehension and preference require suitable people/devices."
     }
   ]
 }

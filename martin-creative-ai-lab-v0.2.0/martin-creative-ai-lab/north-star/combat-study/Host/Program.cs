@@ -61,7 +61,7 @@ public static class Program
                 body=await File.ReadAllBytesAsync(Path.Combine(web,file),request.Token);
                 type=file.EndsWith(".css",StringComparison.Ordinal)?"text/css":file.EndsWith(".js",StringComparison.Ordinal)?"text/javascript":"text/html";
             }
-            else if(context.Request.HttpMethod=="POST" && path=="/api/command")
+            else if(context.Request.HttpMethod=="POST" && path is "/api/command" or "/api/forecast")
             {
                 if(context.Request.ContentLength64<0 || context.Request.ContentLength64>1024)
                     throw new ArgumentException("Bounded JSON required.");
@@ -70,7 +70,7 @@ public static class Program
                    || context.Request.Headers["Origin"] is string origin && origin!=$"http://127.0.0.1:{port}")
                     throw new ArgumentException("Same-origin JSON required.");
                 using var document=await JsonDocument.ParseAsync(context.Request.InputStream,cancellationToken:request.Token);
-                body=Encoding.UTF8.GetBytes(JsonSerializer.Serialize(room.Execute(document.RootElement),Json));
+                body=Encoding.UTF8.GetBytes(JsonSerializer.Serialize(path=="/api/forecast"?room.Forecast(document.RootElement):room.Execute(document.RootElement),Json));
             }
             else { status=404; body=Encoding.UTF8.GetBytes("{}"); }
         }

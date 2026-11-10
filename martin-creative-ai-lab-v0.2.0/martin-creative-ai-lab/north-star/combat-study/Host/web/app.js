@@ -1,5 +1,6 @@
 'use strict';
 let current=null;let observation=null;let pending=false;let uncertain=true;
+let inspected=null;let forecastGeneration=0;
 const $=id=>document.getElementById(id);
 const buttons=()=>document.querySelectorAll('[data-command]');
 const passiveNames={none:'None',lining:'Lining','last-thread':'Last thread'};
@@ -7,6 +8,8 @@ function availability(){
  buttons().forEach(b=>b.disabled=pending||uncertain||(observation?.phase==='preparation'&&['strike','bash','guard','treat','cleanse','retreat'].includes(b.dataset.command))||(b.dataset.command==='begin'&&observation?.phase!=='preparation'));
  const response=current?.responsePractice===true;const waiting=current?.pending!==null&&current?.pending!==undefined;
  buttons().forEach(b=>{const c=b.dataset.command;if(['commit','release','break-ward'].includes(c))b.disabled=pending||uncertain||observation?.phase!=='active'||!response||(c==='commit'?waiting||current.charges<1:!waiting||(c==='break-ward'&&(!current.pending.ward||current.charges<1)));else if(['light-control','hard-control'].includes(c))b.disabled=pending||uncertain||observation?.phase!=='active'||!current?.breakbar||waiting||(c==='hard-control'&&current.charges<1);else if(c.startsWith('tempo '))b.disabled=pending||uncertain||observation?.phase!=='preparation'||observation?.preparation.initiative!==true;else if(waiting&&['strike','bash','guard','treat','cleanse','retreat'].includes(c))b.disabled=true;});
+ for(const id of ['inspect-action','inspect'])$(id).disabled=pending||uncertain||observation?.phase!=='active';
+ $('confirm-forecast').disabled=pending||uncertain||!inspected||inspected.sequence!==observation?.sequence||observation?.phase!=='active';
  $('reconnect').hidden=!uncertain;$('reconnect').disabled=pending;
  for(const id of ['passive-select','armor-select','equip-passive'])$(id).disabled=pending||uncertain||observation?.phase!=='preparation';
 }
@@ -82,8 +85,40 @@ function render(s){
  $('stats').replaceChildren(...[`Profile ${s.profile}`,`Round ${s.round}`,`HP ${s.hp}/${s.maxHp}`,`Target ${s.enemyHp}`,`Charges ${s.charges}`,`Outcome ${s.outcome}`].map(t=>{const n=document.createElement('span');n.textContent=t;return n;}));$('effects').replaceChildren(...(s.effects.length?s.effects.map(e=>`${e.effect} · ${e.remaining} rounds`):['No active effects.']).map(t=>{const n=document.createElement('span');n.textContent=t;return n;}));document.querySelector('.arena').className='arena '+s.outcome+' '+s.effects.map(e=>e.effect.toLowerCase()).join(' ');$('player-hp').value=s.hp;$('target-hp').value=s.enemyHp;$('threat').textContent='Next: '+s.threat;$('last').textContent=s.last;$('events').replaceChildren(...s.events.map(t=>{const n=document.createElement('li');n.textContent=t;return n;}));
 }
 async function request(path,options){const controller=new AbortController();const timer=setTimeout(()=>controller.abort(),8000);try{const response=await fetch(path,{...options,signal:controller.signal});if(!response.ok)throw new Error(`Response ${response.status}`);return await response.json();}finally{clearTimeout(timer);}}
-async function run(command){if(pending||(command!==null&&uncertain))return null;pending=true;availability();try{const result=command===null?await request('/api/state'):await request('/api/command',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({command})});if(command!==null&&(typeof result.accepted!=='boolean'||result.command!==command||!Number.isInteger(result.sequence)))throw new Error('Invalid command receipt');if(!['preparation','active','ended'].includes(result.phase)||!result.preparation||!Object.hasOwn(passiveNames,result.preparation.passive)||!['light','heavy'].includes(result.preparation.armor)||!['toxic','heated'].includes(result.preparation.profile)||typeof result.preparation.controls!=='boolean'||typeof result.preparation.initiative!=='boolean'||!['heavy','quick'].includes(result.preparation.tempo)||(result.phase==='preparation')!==(result.state===null))throw Error('Invalid lifecycle observation');observation=result;render(result.state);$('passive-select').value=result.preparation.passive;$('armor-select').value=result.preparation.armor;uncertain=false;return result;}catch(error){uncertain=true;$('last').textContent='Result unknown. Actions paused. Reconnect observes current state without retrying the command. '+error.message;throw error;}finally{pending=false;availability();}}
+async function run(command,reviewedSequence=null){if(pending||(command!==null&&uncertain))return null;clearForecast();pending=true;availability();try{const result=command===null?await request('/api/state'):await request('/api/command',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(reviewedSequence===null?{command}:{command,reviewed_sequence:reviewedSequence})});if(command!==null&&(typeof result.accepted!=='boolean'||result.command!==command||!Number.isInteger(result.sequence)))throw new Error('Invalid command receipt');if(!['preparation','active','ended'].includes(result.phase)||!result.preparation||!Object.hasOwn(passiveNames,result.preparation.passive)||!['light','heavy'].includes(result.preparation.armor)||!['toxic','heated'].includes(result.preparation.profile)||typeof result.preparation.controls!=='boolean'||typeof result.preparation.initiative!=='boolean'||!['heavy','quick'].includes(result.preparation.tempo)||(result.phase==='preparation')!==(result.state===null))throw Error('Invalid lifecycle observation');observation=result;render(result.state);$('passive-select').value=result.preparation.passive;$('armor-select').value=result.preparation.armor;uncertain=false;return result;}catch(error){uncertain=true;$('last').textContent='Result unknown. Actions paused. Reconnect observes current state without retrying the command. '+error.message;throw error;}finally{pending=false;availability();}}
+function clearForecast(message='No action inspected. No conditional outcome is reserved.'){
+ inspected=null;forecastGeneration++;$('forecast-state').textContent=message;$('forecast-events').replaceChildren();$('confirm-forecast').disabled=true;
+}
+function drawForecast(result){
+ const f=result.forecast;
+ const forecastHpObserved = f.state.hp;
+ $('forecast-state').textContent=`IF committed now: ${f.command}. HP ${forecastHpObserved}/${f.state.maxHp}; target ${f.state.enemyHp}; charges ${f.state.charges}; round ${f.state.round}; ${f.state.outcome}. Stop: ${f.boundary==='response'?'pending response choice — Release or Break ward has NOT been chosen':f.boundary==='ended'?'encounter ended; no later action':'before the next player decision'}.`;
+ $('forecast-state').dataset.hp=String(forecastHpObserved);$('forecast-state').dataset.sequence=String(result.sequence);
+ $('forecast-events').replaceChildren(...f.state.events.map(text=>{const e=document.createElement('li');e.textContent=text;return e;}));
+}
+async function forecast(action){
+ if(pending||uncertain||observation?.phase!=='active')return null;
+ const sequence=observation.sequence;clearForecast();const generation=forecastGeneration;pending=true;availability();
+ try{
+  const result=await request('/api/forecast',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({command:action})});
+  if(generation!==forecastGeneration)return null;
+  const f=result.forecast;
+  if(result.sequence!==sequence||observation.sequence!==sequence){uncertain=true;throw Error('Inspection context changed; reconnect before deciding.');}
+  if(!f||f.command!==action||!valid(f.state)||!['response','action','ended'].includes(f.boundary)||f.boundary!==(f.state.pending!==null?'response':f.state.outcome==='active'?'action':'ended'))throw Error('Invalid conditional observation');
+  inspected=result;drawForecast(result);return result;
+ }catch(error){clearForecast('Inspection unavailable; no action was sent. '+error.message);throw error;}
+ finally{pending=false;availability();}
+}
+async function confirmForecast(){
+ if(pending||uncertain||!inspected||inspected.sequence!==observation?.sequence)return null;
+ const selected=inspected;return run(selected.forecast.command,selected.sequence);
+}
+$('inspect').addEventListener('click',()=>forecast($('inspect-action').value).catch(()=>{}));
+$('confirm-forecast').addEventListener('click',()=>confirmForecast().catch(()=>{}));
+$('inspect-action').addEventListener('change',()=>{clearForecast();availability();});
+window.addEventListener('blur',()=>{clearForecast('Inspection discarded after interruption. Inspect again before confirming.');availability();});
+document.addEventListener('visibilitychange',()=>{if(document.hidden){clearForecast('Inspection discarded after interruption.');availability();}});
 async function command(value){return run(value);}
 document.querySelectorAll('[data-command]').forEach(button=>button.addEventListener('click',()=>{command(button.dataset.command).catch(()=>{});}));$('equip-passive').addEventListener('click',()=>command('equip '+$('passive-select').value+' '+$('armor-select').value).catch(()=>{}));$('reconnect').addEventListener('click',()=>run(null).catch(()=>{}));
-window.combatStudy={snapshot:()=>current?JSON.parse(JSON.stringify(current)):null,observation:()=>observation?JSON.parse(JSON.stringify(observation)):null,command,reconnect:()=>run(null)};
+window.combatStudy={snapshot:()=>current?JSON.parse(JSON.stringify(current)):null,observation:()=>observation?JSON.parse(JSON.stringify(observation)):null,command,reconnect:()=>run(null),forecast,confirmForecast,forecastSnapshot:()=>inspected?JSON.parse(JSON.stringify(inspected)):null};
 availability();run(null).catch(()=>{});

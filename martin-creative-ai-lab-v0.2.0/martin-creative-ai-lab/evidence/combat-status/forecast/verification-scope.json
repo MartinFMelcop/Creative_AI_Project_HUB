@@ -1,0 +1,488 @@
+{
+  "schema_version": 1,
+  "selected": {
+    "progression": false,
+    "crafting": false,
+    "loadout": false,
+    "recovery": false,
+    "narrative": false,
+    "input_timing": false,
+    "intake": false,
+    "field": true,
+    "presentation": false,
+    "audio": false,
+    "authored_scene": false,
+    "tooling": false,
+    "reputation": false,
+    "combat": true,
+    "availability": false,
+    "recipient": false
+  },
+  "suites": [
+    "field",
+    "combat"
+  ],
+  "browser": true,
+  "required": true,
+  "full_fallback": false,
+  "changed_paths": [
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/docs/STATE.md",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/origins.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/DESIGN.md",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/capabilities.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/Program.cs",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/Room.cs",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/Trial.cs",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/web/app.js",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/web/index.html",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/README.md",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/TrialChecks/Program.cs",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/tools/browser.mjs",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/tools/verify.py",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/showcase/portfolio.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/RUN.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/affected-regressions.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/baseline/Control.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/baseline/Initiative.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/baseline/Passive.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/baseline/Response.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/baseline/Trial.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/baseline/commands.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/browser-parity.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/browser/execution.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/browser/forecast-browser.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/browser/forecast.png",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/browser/results.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/commands.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/evidence-placement.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/exploratory-native.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/exploratory-native.txt",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/first-forecast-native.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/first-integrity-failure.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/forecast-native.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/integrity-checks.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/launch-current-browser.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/launch-current-command.txt",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/launch-current-field-journey.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/launch-current-selected-passives.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/launch-initial-browser.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/launch-initial-field-journey.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/launch-initial-selected-passives.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/metadata-comparison-correction.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/native-fixture-correction.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/native-parity.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/native.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/portfolio-unit.txt",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/regression-commands.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/results.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/setup-failures.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/source-launch-browser-command.txt",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/source-launch-unit.txt",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/source/commands.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/source/source.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/status-first-command.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/FORECAST_PROTOCOL.md",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/TrialChecks/ForecastChecks.cs",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/tools/forecast-browser.mjs",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/tools/forecast-source.py"
+  ],
+  "reasons": [
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/Program.cs",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/Room.cs",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/Trial.cs",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/web/app.js",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/web/index.html",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/README.md",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/TrialChecks/Program.cs",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/tools/browser.mjs",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/tools/verify.py",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/showcase/portfolio.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "field",
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/RUN.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/affected-regressions.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/baseline/Control.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/baseline/Initiative.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/baseline/Passive.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/baseline/Response.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/baseline/Trial.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/baseline/commands.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/browser-parity.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/browser/execution.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/browser/forecast-browser.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/browser/forecast.png",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/browser/results.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/commands.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/evidence-placement.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/exploratory-native.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/exploratory-native.txt",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/first-forecast-native.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/first-integrity-failure.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/forecast-native.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/integrity-checks.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/launch-current-browser.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/launch-current-command.txt",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/launch-current-field-journey.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/launch-current-selected-passives.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/launch-initial-browser.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/launch-initial-field-journey.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/launch-initial-selected-passives.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/metadata-comparison-correction.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/native-fixture-correction.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/native-parity.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/native.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/portfolio-unit.txt",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/regression-commands.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/results.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/setup-failures.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/source-launch-browser-command.txt",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/source-launch-unit.txt",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/source/commands.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/source/source.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-status/forecast/status-first-command.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/FORECAST_PROTOCOL.md",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/TrialChecks/ForecastChecks.cs",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/tools/forecast-browser.mjs",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/tools/forecast-source.py",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "combat"
+      ]
+    }
+  ],
+  "wrapper_coverage": {
+    "field": [
+      "preparation-verify.py",
+      "sampling-verify.py",
+      "conditions-verify.py",
+      "memory-verify",
+      "presentation-verify.py",
+      "field-verify"
+    ]
+  },
+  "limits": "Conservative routing of unchanged verification bodies; no test execution, performance, Unity/Windows or human claim."
+}

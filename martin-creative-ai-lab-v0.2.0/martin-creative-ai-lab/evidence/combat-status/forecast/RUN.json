@@ -1,0 +1,479 @@
+{
+  "schema_version": 1,
+  "kind": "destination_execution",
+  "date": "2026-11-10",
+  "baseline_commit": "5c468f80bd44c9db0f56ab06477c9ab59509513c",
+  "capability_ids": [
+    "NS-C03"
+  ],
+  "consumer_paths": [
+    "north-star/combat-study/Rules/Passives.cs",
+    "north-star/combat-study/Host/Trial.cs",
+    "north-star/combat-study/Host/Room.cs",
+    "north-star/combat-study/Host/Program.cs",
+    "north-star/combat-study/Host/web/app.js",
+    "north-star/combat-study/Rules/Combat.cs",
+    "north-star/combat-study/Rules/ResponseChain.cs",
+    "north-star/combat-study/Rules/Breakbar.cs",
+    "north-star/combat-study/Rules/Initiative.cs"
+  ],
+  "scope": "Selected P05 same-owner bounded response forecasting integrated into the existing Treatment Line, with independent read-only inspection and source-sequence-guarded confirmation. No later player action, new gameplay mode or numeric policy.",
+  "runtime": "Actual isolated SDK10.0.401, C#8/netstandard2.1 Trial owner with .NET10 host, Node24.19.0 and system Chromium on Linux; no Unity, Windows gameplay or Steam execution.",
+  "checks": {
+    "passed": 67,
+    "failed": 0
+  },
+  "browser_checks": {
+    "passed": 18,
+    "failed": 0
+  },
+  "counting_limit": "Native67 and browser18 controls overlap behavior; original46 native/22 browser and four regressions are not additional independent populations. Copied P05 campaign checks are origin execution, not new North Star checks.",
+  "commands": [
+    {
+      "command": [
+        "/workspace/work/runtime/dotnet/dotnet",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "10.0.401\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "v24.19.0\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/runtime/dotnet/dotnet",
+        "build",
+        "/workspace/work/combat-forecast/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Checks/NorthStar.CombatChecks.csproj",
+        "-c",
+        "Release",
+        "-m:1",
+        "--disable-build-servers"
+      ],
+      "exit_code": 0,
+      "stdout": "  Determining projects to restore...\n  Restored /workspace/work/combat-forecast/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Checks/NorthStar.CombatChecks.csproj (in 189 ms).\n  1 of 2 projects are up-to-date for restore.\n  NorthStar.Combat -> /workspace/work/combat-forecast/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Rules/bin/Release/netstandard2.1/NorthStar.Combat.dll\n  NorthStar.CombatChecks -> /workspace/work/combat-forecast/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Checks/bin/Release/net10.0/NorthStar.CombatChecks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:04.92\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/runtime/dotnet/dotnet",
+        "build",
+        "/workspace/work/combat-forecast/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/TrialChecks/NorthStar.TrialChecks.csproj",
+        "-c",
+        "Release",
+        "-m:1",
+        "--disable-build-servers"
+      ],
+      "exit_code": 0,
+      "stdout": "  Determining projects to restore...\n  All projects are up-to-date for restore.\n  NorthStar.Combat -> /workspace/work/combat-forecast/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Rules/bin/Release/netstandard2.1/NorthStar.Combat.dll\n  NorthStar.CombatStudy -> /workspace/work/combat-forecast/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/bin/Release/net10.0/NorthStar.CombatStudy.dll\n  NorthStar.TrialChecks -> /workspace/work/combat-forecast/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/TrialChecks/bin/Release/net10.0/NorthStar.TrialChecks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:05.87\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/runtime/dotnet/dotnet",
+        "/workspace/work/combat-forecast/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Checks/bin/Release/net10.0/NorthStar.CombatChecks.dll"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS tiny-positive-hit\nPASS tiny-positive-apply\nPASS hit\nPASS hit-floor\nPASS hit-cap\nPASS crit\nPASS raw\nPASS mitigation\nPASS round-away\nPASS apply-floor\nPASS duration-away\nPASS duration-floor\nPASS reapply-zero\nPASS unknown-dot\nPASS dot-no-trim\nPASS dot-case\nPASS minHP-zero\nPASS dot-away\nPASS nan\nPASS infinity\nPASS negative\nPASS level\nPASS sum-overflow\nPASS add-not-max\nPASS modifiers\nPASS snapshot-copy\nPASS enum\nPASS zero-duration\nPASS cap-atomic\nPASS cap-unchanged\nPASS skip-round\nPASS HP-atomic\nPASS invalid-unchanged\nPASS global-dot-sum\nPASS all-entry\nPASS decrement-once\nPASS expiry\nPASS duplicate\nPASS duplicate-unchanged\nPASS tick-copy\nPASS cleanse-count\nPASS cleanse-empty\nPASS empty-round\n43 native controls passed\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/runtime/dotnet/dotnet",
+        "/workspace/work/combat-forecast/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/TrialChecks/bin/Release/net10.0/NorthStar.TrialChecks.dll",
+        "/workspace/work/forecast-evidence/status-first/native.json"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS observation-is-not-action\nPASS schema-reject-atomic-0\nPASS schema-reject-atomic-1\nPASS schema-reject-atomic-2\nPASS schema-reject-atomic-3\nPASS schema-reject-atomic-4\nPASS schema-reject-atomic-5\nPASS schema-reject-atomic-6\nPASS toxic-win-accepted-1\nPASS toxic-win-accepted-2\nPASS toxic-win-accepted-3\nPASS toxic-win-accepted-4\nPASS toxic-real-victory\nPASS heated-win-accepted-1\nPASS heated-win-accepted-2\nPASS heated-win-accepted-3\nPASS heated-win-accepted-4\nPASS heated-win-accepted-5\nPASS heated-win-accepted-6\nPASS heated-win-accepted-7\nPASS heated-real-victory\nPASS heated-mistimed-treatment-negative-accepted-1\nPASS heated-mistimed-treatment-negative-accepted-2\nPASS heated-mistimed-treatment-negative-accepted-3\nPASS heated-mistimed-treatment-negative-accepted-4\nPASS heated-mistimed-treatment-negative-accepted-5\nPASS heated-mistimed-treatment-negative-accepted-6\nPASS mistimed-treatment-does-not-secure\nPASS toxic-constant-guard-defeated\nPASS heated-constant-guard-defeated\nPASS guard-observation-accepted-1\nPASS strike-observation-accepted-1\nPASS guard-halves-contact-leaves-full-dot\nPASS cleanse-cost-accepted-1\nPASS cleanse-charge-and-opportunity\nPASS bleed-treatment-accepted-1\nPASS bleed-treatment-accepted-2\nPASS bleed-real-healing\nPASS disarm-refusal-atomic\nPASS disarm-bash-and-burn\nPASS disarm-global-expiry\nPASS burn-real-strike\nPASS withdrawal-no-fabricated-win\nPASS terminal-refusal-atomic\nPASS explicit-restart\nPASS exhausted-treatment-atomic\nForecast controls: 67; complete: True\n46 consumer controls; passed: True\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "/workspace/work/combat-forecast/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/combat-response/status/run.py",
+        "--dotnet",
+        "/workspace/work/runtime/dotnet/dotnet",
+        "--output",
+        "/workspace/work/forecast-evidence/status-first/source"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"components\": 9, \"source_vectors\": 49, \"python_surrogate_passed\": 49, \"csharp_passed\": 49, \"ruby_executed\": false, \"rmxp_executed\": false}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "/workspace/work/combat-forecast/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/tools/browser.mjs",
+        "/workspace/work/runtime/dotnet/dotnet",
+        "/workspace/work/forecast-evidence/status-first/browser"
+      ],
+      "exit_code": 0,
+      "stdout": "40 browser/HTTP controls passed; actual renderer negative detected\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/combat-study/tools/passive-verify.py",
+        "--dotnet",
+        "/workspace/work/runtime/dotnet/dotnet",
+        "--output",
+        "/workspace/work/forecast-evidence/passive"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: actual passives and affected prior consumer/source/browser regressions\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/combat-study/tools/control-verify.py",
+        "--dotnet",
+        "/workspace/work/runtime/dotnet/dotnet",
+        "--output",
+        "/workspace/work/forecast-evidence/control"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: selected breakbar and actual consumer; stable inputs 55\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/combat-study/tools/response-verify.py",
+        "--dotnet",
+        "/workspace/work/runtime/dotnet/dotnet",
+        "--output",
+        "/workspace/work/forecast-evidence/response"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: actual paid response chain and browser; stable inputs 55\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/combat-study/tools/initiative-verify.py",
+        "--dotnet",
+        "/workspace/work/runtime/dotnet/dotnet",
+        "--output",
+        "/workspace/work/forecast-evidence/initiative"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: selected initiative, same-case comparison and actual browser; stable inputs 57\n",
+      "stderr": ""
+    }
+  ],
+  "source_artifacts": [
+    {
+      "local_path": "labs/combat-response/status/run.py",
+      "sha256": "782c5c4f0c2e4ca79344a5a77738e4e0e447a4d71347153d42ca4f0b8491f6fd",
+      "size_bytes": 8821
+    },
+    {
+      "local_path": "labs/combat-response/status/source-lock.json",
+      "sha256": "915750f4f6138920d547153f91dc24261a67dd896d56cfedf45a31ae2c191e82",
+      "size_bytes": 1679
+    },
+    {
+      "local_path": "labs/combat-response/status/test_instrument.py",
+      "sha256": "cb5855d37be6bde0cbc3998c0c49525091b6defb4f70ee87b2241f6ddc4f49bc",
+      "size_bytes": 7848
+    },
+    {
+      "local_path": "north-star/combat-study/Checks/NorthStar.CombatChecks.csproj",
+      "sha256": "d159d1f16880492f4366940b4f8318c45cdede7bea1a237f9686d3ad7a637411",
+      "size_bytes": 309
+    },
+    {
+      "local_path": "north-star/combat-study/Checks/Program.cs",
+      "sha256": "8901ea5754bb5d89d805b0298438cfb2a4a411b0f403e1843abae72720e066a1",
+      "size_bytes": 5543
+    },
+    {
+      "local_path": "north-star/combat-study/Host/NorthStar.CombatStudy.csproj",
+      "sha256": "93c5614414b9fc0fd22879817abe3cfa17daec3d697443876cb8eb3fffec7cc8",
+      "size_bytes": 400
+    },
+    {
+      "local_path": "north-star/combat-study/Host/Program.cs",
+      "sha256": "7f1cca377b43bf70e5dd59134f9ac1c0cfba3357568cab6241545d8e84848bdf",
+      "size_bytes": 5035
+    },
+    {
+      "local_path": "north-star/combat-study/Host/Room.cs",
+      "sha256": "a3ee4ad4145db6e85800621bfa88d05f7ee663345c8df52db722374b77b9f8f2",
+      "size_bytes": 5609
+    },
+    {
+      "local_path": "north-star/combat-study/Host/Trial.cs",
+      "sha256": "be3eb5bb4cabc1efd7b49f691a456f4e5e004268dd3fe960b6b66c9df320d307",
+      "size_bytes": 15169
+    },
+    {
+      "local_path": "north-star/combat-study/Host/web/app.js",
+      "sha256": "b16910f0fc5587e0d9e338b0ab6246f6bacb7b883a002a659ba810f0f838ff50",
+      "size_bytes": 18380
+    },
+    {
+      "local_path": "north-star/combat-study/Host/web/index.html",
+      "sha256": "59604bf45fa21dc03816d9cfe31060dce2dc7cbf4ebad41c9e6be538c52009b1",
+      "size_bytes": 11157
+    },
+    {
+      "local_path": "north-star/combat-study/Host/web/style.css",
+      "sha256": "a384e80bf1b9f6371cf9d780d75a6c20f4030188404c3183a468977de77100a3",
+      "size_bytes": 5411
+    },
+    {
+      "local_path": "north-star/combat-study/Rules/Breakbar.cs",
+      "sha256": "e63f1f3ba5165112da903a16e4a07bec2bd88b0832af6c923d5038cb27bfe5c5",
+      "size_bytes": 1813
+    },
+    {
+      "local_path": "north-star/combat-study/Rules/Combat.cs",
+      "sha256": "2624d7596cca2cc4bef78c17f143004b48978866654e4c84f6b4960ff5800fb6",
+      "size_bytes": 5165
+    },
+    {
+      "local_path": "north-star/combat-study/Rules/Initiative.cs",
+      "sha256": "44d56c704d5fe66825aeec3ffd27a77ff5b1a101c3b6eee8996a8273c01e2a9c",
+      "size_bytes": 2043
+    },
+    {
+      "local_path": "north-star/combat-study/Rules/NorthStar.Combat.csproj",
+      "sha256": "333b2e67b6e8c46089a5e5273fd1b09e5facb36aa719bde7b3ff1a8e97a70134",
+      "size_bytes": 309
+    },
+    {
+      "local_path": "north-star/combat-study/Rules/Passives.cs",
+      "sha256": "4ef33bc84c6fdf7849d3aa8bda925a0f7fd2293be29cdfbf884cc67bccc87d10",
+      "size_bytes": 3997
+    },
+    {
+      "local_path": "north-star/combat-study/Rules/ResponseChain.cs",
+      "sha256": "ebcad92f15603d95b1cd0b32163e4fcfe17a082422cf003c172865f0bd4d6692",
+      "size_bytes": 2412
+    },
+    {
+      "local_path": "north-star/combat-study/TrialChecks/ForecastChecks.cs",
+      "sha256": "444b49b91202d2b0032bdea51832f01727ad6c8f51e819d66107708f1eb46a1d",
+      "size_bytes": 6902
+    },
+    {
+      "local_path": "north-star/combat-study/TrialChecks/NorthStar.TrialChecks.csproj",
+      "sha256": "0a72d3d879071cd0be22e857004f718bb46110a7d972d2a2f3644f50a2bc8d79",
+      "size_bytes": 313
+    },
+    {
+      "local_path": "north-star/combat-study/TrialChecks/Program.cs",
+      "sha256": "9833e78674c9256539b589ab2a7c47b1a1aff9feb1892fe56cbaa2f7831b2f2f",
+      "size_bytes": 6963
+    },
+    {
+      "local_path": "north-star/combat-study/tools/browser.mjs",
+      "sha256": "f19236edc5efc60f8c609d70583998df42a8ffa49f20473e3ce94f8ee206792f",
+      "size_bytes": 10955
+    },
+    {
+      "local_path": "north-star/combat-study/tools/control-browser.mjs",
+      "sha256": "05be6b161ed2835b5ca1f202ebb1d81ee4505003dcc729119b59e925383ac56f",
+      "size_bytes": 11735
+    },
+    {
+      "local_path": "north-star/combat-study/tools/control-verify.py",
+      "sha256": "16aeac0ac88901b19f0c2be89a565d1fc3ab3903d7f61fd77c9305d27492e11c",
+      "size_bytes": 3277
+    },
+    {
+      "local_path": "north-star/combat-study/tools/forecast-browser.mjs",
+      "sha256": "4f7f66eaf1345d6e3d49894be6c99bfe734a2367bfd4d54067874f94a27b0da3",
+      "size_bytes": 7831
+    },
+    {
+      "local_path": "north-star/combat-study/tools/forecast-source.py",
+      "sha256": "5537b6e5eee48498b33a9cf96ab16d06bd981cb68db5c77ce1e6920cf2b5dd33",
+      "size_bytes": 2450
+    },
+    {
+      "local_path": "north-star/combat-study/tools/initiative-browser.mjs",
+      "sha256": "dc684edf93a3c6763bc4c0a960d2fe34a00af73da1c2c0c0dded9fd5fa3bd206",
+      "size_bytes": 16279
+    },
+    {
+      "local_path": "north-star/combat-study/tools/initiative-verify.py",
+      "sha256": "40e2a64e468f78b8f8864fabc6d4dd0413a403d6c24f1270693e6f5ea5b699f5",
+      "size_bytes": 4663
+    },
+    {
+      "local_path": "north-star/combat-study/tools/passive-browser.mjs",
+      "sha256": "6b961013207514f7483dd357e457f8a318e4d71841675ff28bebb13d56634c82",
+      "size_bytes": 17763
+    },
+    {
+      "local_path": "north-star/combat-study/tools/passive-verify.py",
+      "sha256": "560a0394ea8384b8fd9d330bf8a59e847c61ee8eb580d7de16e6a61d6ae45947",
+      "size_bytes": 3136
+    },
+    {
+      "local_path": "north-star/combat-study/tools/response-browser.mjs",
+      "sha256": "3621617e300b14f6f53e1f5bc33768d327127ee652a58ddaa74472e4ea0d6c2d",
+      "size_bytes": 14277
+    },
+    {
+      "local_path": "north-star/combat-study/tools/response-verify.py",
+      "sha256": "09569c99c9538c2b178eb6e0a4173e07fdf2914997e56010bab31f4a706b3798",
+      "size_bytes": 2942
+    },
+    {
+      "local_path": "north-star/combat-study/tools/verify.py",
+      "sha256": "72ae0d9d6f11f645b1408211fb1a4654eb8568b421b74586726c86a16506d11c",
+      "size_bytes": 4297
+    },
+    {
+      "local_path": "north-star/csharp/global.json",
+      "sha256": "e0c0882461e712f6c2c66241bf2f175c60832e3ff077dc26091ff8c661d4193e",
+      "size_bytes": 55
+    },
+    {
+      "local_path": "projects/realtime-integration-lab/package-lock.json",
+      "sha256": "aa191ef2158e6cc6f770bf4b3ee44dca17175ef1a3cd572b98115246bf46aea7",
+      "size_bytes": 42105
+    },
+    {
+      "local_path": "projects/realtime-integration-lab/package.json",
+      "sha256": "42e3cc9633e522dd6d9a5c11023418331129632881a8bf0b95e3717247d57ebe",
+      "size_bytes": 1445
+    },
+    {
+      "local_path": "tools/ci_scope.py",
+      "sha256": "bd44357e0ba67bb1569aab73d83f210ac4bb899da2678cb405a1dd732812ae93",
+      "size_bytes": 10114
+    },
+    {
+      "local_path": "tools/csharp_scope.py",
+      "sha256": "a8bdcfd1bee766318c8c06865fb39a190cfadc0dea4033d769a94401b6afff03",
+      "size_bytes": 18569
+    },
+    {
+      "local_path": "projects/cinderwatch/Checks/Cinder.Checks.csproj",
+      "sha256": "afdf6744dff68b5c7898a757e74bccf944d203548b06213b12a866facc78c956",
+      "size_bytes": 190
+    },
+    {
+      "local_path": "projects/cinderwatch/Checks/Probe.cs",
+      "sha256": "e119d4ff44256cb3d2ce9acbdc045f5842373baccf4e5ca38f57c60f233f5193",
+      "size_bytes": 1843
+    },
+    {
+      "local_path": "projects/cinderwatch/Checks/Program.cs",
+      "sha256": "056bb5a8719ad3eb988b96aa3c45dfcf22d41d1954171c950cc2e25732ea1210",
+      "size_bytes": 6077
+    },
+    {
+      "local_path": "projects/cinderwatch/Checks/ResponseChecks.cs",
+      "sha256": "16592010df910bee5d6545ada3b6cec2c7587594a5d52b43199386c94b5e1df2",
+      "size_bytes": 5796
+    },
+    {
+      "local_path": "projects/cinderwatch/Core/AssemblyInfo.cs",
+      "sha256": "a14dad30ab9e586a7ae0ae9d9dbf20d2a0d0accc9b79207903ecc729cd1a21f8",
+      "size_bytes": 87
+    },
+    {
+      "local_path": "projects/cinderwatch/Core/Cinder.Core.csproj",
+      "sha256": "8d654c44b7bebb6b31a9f2f606927f45b5072193adc4eef8cce3f3cf3b278df3",
+      "size_bytes": 36
+    },
+    {
+      "local_path": "projects/cinderwatch/Core/Content.cs",
+      "sha256": "d37035eab4aa09802511dd3b5806ae8d295156824a18962a9ed14d19184fb3bb",
+      "size_bytes": 5034
+    },
+    {
+      "local_path": "projects/cinderwatch/Core/Game.cs",
+      "sha256": "53dd7148e63dd57ae0796943b810d0652398d72fd75e46bdd76a8f322d2674d7",
+      "size_bytes": 13340
+    },
+    {
+      "local_path": "projects/cinderwatch/Core/Journal.cs",
+      "sha256": "46bae735fc58e58dce317234c418775f410e58ad8bea728df2d41c8f098f38e4",
+      "size_bytes": 2149
+    },
+    {
+      "local_path": "projects/cinderwatch/Core/ResponseForecast.cs",
+      "sha256": "ba3f73572055f57ee7e125045c1ed68d9582e89c2090b5baca31c68d5c4a5c37",
+      "size_bytes": 2212
+    },
+    {
+      "local_path": "projects/cinderwatch/Directory.Build.props",
+      "sha256": "62720f290d07a9d7f4899af16ff649dec8969a0b825aacdf1f5df943bea3668d",
+      "size_bytes": 407
+    },
+    {
+      "local_path": "projects/cinderwatch/global.json",
+      "sha256": "a0dcc4ee0c1b8044f9498734741bd764d5c2585f4d0d8e31e27e26e9662f751f",
+      "size_bytes": 59
+    }
+  ],
+  "result_artifacts": [
+    {
+      "local_path": "evidence/combat-status/forecast/forecast-native.json",
+      "sha256": "ac01e0857f2358906707bfe810513c0823e90b8b85fa9157a096dc25a9d0680a",
+      "size_bytes": 40737
+    },
+    {
+      "local_path": "evidence/combat-status/forecast/browser/forecast-browser.json",
+      "sha256": "bf1164037c699688b5c2e27ce91a51e038c0dab8a743301f1f4f1bf0096195fb",
+      "size_bytes": 13383
+    },
+    {
+      "local_path": "evidence/combat-status/forecast/native-parity.json",
+      "sha256": "95eed7b5fbe895c9c8949ebcb2232cc3e758d05742ad9a5427aae45dbb0497ff",
+      "size_bytes": 2347
+    },
+    {
+      "local_path": "evidence/combat-status/forecast/browser-parity.json",
+      "sha256": "f548b3937d8388510b4842b6386918fc88e7d17c9e4be847880fb8815b31da92",
+      "size_bytes": 383
+    },
+    {
+      "local_path": "evidence/combat-status/forecast/source/source.json",
+      "sha256": "0353ac9e9a180b9974b18386d6dfed427815d0b7ea906fd8876dc6346afaf1e0",
+      "size_bytes": 2554
+    },
+    {
+      "local_path": "evidence/combat-status/forecast/affected-regressions.json",
+      "sha256": "6528d2822a14860e30bee338c3e4bc31c6f1e3bf04ba66687ea57bbcc0fa06fc",
+      "size_bytes": 34903
+    }
+  ],
+  "limitations": [
+    "Experimental local conditional information, not canon, optimal policy, human comprehension, enjoyment, accessibility or balance.",
+    "Initial seed and private accepted history replay the SAME owner; no public save format, new engine or cross-owner causal transport.",
+    "Conditional next initiative state is returned only for the branch; live RNG/order remain unchanged.",
+    "Independent three-specialty analyses completed before implementation; subagents then became unavailable. Primary implementation/execution is not independent human validation.",
+    "Prior fixed defeats, Gate equipment and source/recipient archives remain unchanged.",
+    "P05 fiction, unit stats, source campaign and full battle/XP runtime are not imported."
+  ],
+  "validation": {
+    "native": "forecast-native.json",
+    "browser": "browser/forecast-browser.json",
+    "native_parity": "native-parity.json",
+    "browser_parity": "browser-parity.json",
+    "source": "source/source.json",
+    "regressions": "affected-regressions.json",
+    "failures": [
+      "native-fixture-correction.json",
+      "setup-failures.json",
+      "metadata-comparison-correction.json"
+    ]
+  }
+}
