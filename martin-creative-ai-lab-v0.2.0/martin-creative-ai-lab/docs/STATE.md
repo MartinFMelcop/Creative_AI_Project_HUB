@@ -1,9 +1,12 @@
 # Current transformation continuity
 
-**Updated:** 2026-11-10 America/Sao_Paulo. **SEED:**0.34.0. Fresh fetch confirmed
-main `5990be50bc7ea023cb1f13db24c64f465d72cf58`; isolated branch `authored-startup`
-starts there without incoming/outgoing divergence or dirty source work. Root/workspace
-AGENTS, complete Continuous Development, STATE and relevant DESIGN were recovered.
+**Updated:** 2026-11-10 America/Sao_Paulo. **SEED:**0.34.0. Baseline main was
+`5990be50bc7ea023cb1f13db24c64f465d72cf58`. The readiness correction was normally
+published as `bf0bef4406878200ce99e4526c3370077d4fcd36` from isolated `authored-startup`.
+Its run42767207345 passed actual `north-star-csharp` but rejected the missing diagnostic
+ZIP inventory update; separate Windows recipient run42767207385 succeeded. The bounded
+inventory follow-up preserves that failure and does not count as another strategic unit.
+Root/workspace AGENTS, complete Continuous Development, STATE and DESIGN were recovered.
 
 ## Active result — observe readiness before connecting
 
@@ -82,7 +85,8 @@ verified against its official archive checksum in the prior equipment evidence. 
 global configuration changed. Locked Node24.19.0 dependencies and actual Chromium
 execute this consumer. The diagnostic hook is scratch-only and absent from the final
 wrapper environment. Unity Editor/license/modules remain separate unavailable access
-obligations; earlier Windows .NET recipient evidence is historical, not new execution.
+obligations; earlier Windows .NET evidence remains historical; the new CI separately reexecutes
+only its narrow private-runtime recipient contract.
 
 ## Integrity, publication and limits
 
@@ -91,6 +95,15 @@ changed. The current primary now selects the fresh execution, with the old proof
 as supporting history. A second rejection exposed the fresh wrapper record's missing
 capability-envelope fields; only the new record was adapted to the existing schema
 using real executed results. Both failures are retained; no validator or old pin changed.
+Published run42767207345 then caught an omitted package-inventory update for the two
+preserved diagnostic ZIPs. Inspected generated diff changes ONLY package metadata:
+41→43packages and29290tracked bytes added; all11origin/source inventories and all old
+package records remain exact. No source archive or old evidence was regenerated. The
+actual C# recovery passed remotely and separate Windows recipient controls succeeded;
+that narrow .NET recipient execution is not a Unity/Windows gameplay build. The follow-up
+updates the existing inventory and repeats affected integrity checks, not successful
+local gameplay suites. [Correction](../evidence/authored-scene/startup-readiness/ci-inventory-correction.json)
+retains the failed CI and inspected differences.
 Current execution and scoped NS-C04 record are updated in place. Required
 source/reference/Brain/transformation/portfolio checks passed; exact manifest is
 regenerated after final records. Actual affected regressions passed. Local commit, verified normal publication and new CI
@@ -100,7 +113,7 @@ All11destinations remain, ten bounded methods operational; Build/Operations INCO
 Consumption24INTEGRATED/12REJECTED/15UNRESOLVED unchanged. No new legacy integration is
 claimed. Preserve protected Brain originals/pins, source licenses, Drive/Makers/MER/
 canon, Godot consumers, historical archives and useful negatives. No Unity Editor/API/
-IL2CPP, new Windows, Steam, multiplayer/account authority, broad persistence or human
+IL2CPP, Windows gameplay build, Steam, multiplayer/account authority, broad persistence or human
 comprehension/accessibility/balance/art approval. R51/R60/R61/INT-C01-001 remain OPEN;
 causal B/E ACKs unverified.
 

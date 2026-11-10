@@ -1,0 +1,40 @@
+{
+  "commit": "bf0bef4406878200ce99e4526c3370077d4fcd36",
+  "ci_run": 42767207345,
+  "failed_job": 129666381844,
+  "failure": "FAIL: Origin inventory differs; inspect changed inputs before regeneration",
+  "executed_command": "python3 tools/inventory_origins.py --check labs/source-inventory.json",
+  "other_results": {
+    "north_star_csharp": "success",
+    "windows_recipient_run": 42767207385,
+    "windows_recipient": "success",
+    "unrelated_lab_jobs": "skipped by unchanged scoped routing; not passes"
+  },
+  "cause": "Existing inventory globally inventories all ZIP/PCK artifacts; the two preserved CI diagnostic ZIPs were not included.",
+  "generator_command": "python3 tools/inventory_origins.py --output /workspace/work/authored-startup-evidence/proposed-inventory.json",
+  "diff": {
+    "origins_and_unique_source_inventory_equal": true,
+    "added": [
+      {
+        "bytes": 15161,
+        "members": 31,
+        "path": "evidence/authored-scene/startup-readiness/ci-attempt1.zip",
+        "sha256": "5fa8519b6bded96ed4cfea74e2d69f3e39b14413fff9ed38c7d36035dc4f3947",
+        "uncompressed_bytes": 31278
+      },
+      {
+        "bytes": 14129,
+        "members": 29,
+        "path": "evidence/authored-scene/startup-readiness/ci-attempt2.zip",
+        "sha256": "8451bf1370a47a7a8ce593fd4da7339fba4e8931d1f977c114a7f9a82b81bb3c",
+        "uncompressed_bytes": 26691
+      }
+    ],
+    "removed": [],
+    "modified_existing_packages": [],
+    "previous_packages": 41,
+    "current_packages": 43,
+    "added_tracked_blob_bytes": 29290
+  },
+  "scope": "Update only generated current inventory after exact difference review. No historical package/evidence regeneration, source/pin/gate change or second strategic unit."
+}

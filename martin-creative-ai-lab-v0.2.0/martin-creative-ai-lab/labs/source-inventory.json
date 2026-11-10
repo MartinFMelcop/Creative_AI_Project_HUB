@@ -376,7 +376,7 @@
   "packages": {
     "identical_whole_packages": [],
     "limits": "No package is declared removable. Identical embedded runtimes do not make version-specific source, saves, PCKs or notices redundant; no extraction or execution occurred.",
-    "package_count": 41,
+    "package_count": 43,
     "packages": [
       {
         "bytes": 448865,
@@ -398,6 +398,20 @@
         "path": "delivery/authored-scene/dist/authored-scene-demo-linux-x64.zip",
         "sha256": "d829b1b59ee2dd22f87ab007c4db96bfe1655731b38d02f5085f0b8d30e043e4",
         "uncompressed_bytes": 83096958
+      },
+      {
+        "bytes": 15161,
+        "members": 31,
+        "path": "evidence/authored-scene/startup-readiness/ci-attempt1.zip",
+        "sha256": "5fa8519b6bded96ed4cfea74e2d69f3e39b14413fff9ed38c7d36035dc4f3947",
+        "uncompressed_bytes": 31278
+      },
+      {
+        "bytes": 14129,
+        "members": 29,
+        "path": "evidence/authored-scene/startup-readiness/ci-attempt2.zip",
+        "sha256": "8451bf1370a47a7a8ce593fd4da7339fba4e8931d1f977c114a7f9a82b81bb3c",
+        "uncompressed_bytes": 26691
       },
       {
         "bytes": 1545183,
@@ -1252,8 +1266,8 @@
         "sha256": "3316bd0c5a36335cac98cd8747919444e3316452466c0448ecbcd2ea89ca5437"
       }
     ],
-    "tracked_blob_bytes": 663180019,
-    "zip_uncompressed_bytes": 1656361604
+    "tracked_blob_bytes": 663209309,
+    "zip_uncompressed_bytes": 1656419573
   },
   "preserved_archive_sources": [
     {
