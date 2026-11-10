@@ -1,0 +1,23 @@
+..F..F
+======================================================================
+FAIL: test_occupied_port_refuses_without_host (__main__.LaunchControls.test_occupied_port_refuses_without_host)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/work/earned-practice/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/tools/test_source_launch.py", line 49, in test_occupied_port_refuses_without_host
+    self.assertEqual(result.returncode,1);self.assertIn('Address already in use',result.stderr);self.assertNotIn('"event": "ready"',result.stdout)
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'Address already in use' not found in '{"event": "failed", "error": "Source experiment consumer identity mismatch"}\n'
+
+======================================================================
+FAIL: test_wrong_sdk_refuses_before_host (__main__.LaunchControls.test_wrong_sdk_refuses_before_host)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/work/earned-practice/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/tools/test_source_launch.py", line 25, in test_wrong_sdk_refuses_before_host
+    self.assertEqual(result.returncode,1);self.assertIn('Exact SDK',result.stderr);self.assertNotIn('"event": "ready"',result.stdout)
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'Exact SDK' not found in '{"event": "failed", "error": "Source experiment consumer identity mismatch"}\n'
+
+----------------------------------------------------------------------
+Ran 6 tests in 1.378s
+
+FAILED (failures=2)

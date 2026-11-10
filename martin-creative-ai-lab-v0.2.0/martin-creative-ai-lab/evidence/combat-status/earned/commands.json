@@ -1,0 +1,54 @@
+[
+  {
+    "command": [
+      "python3",
+      "north-star/combat-study/tools/passive-verify.py",
+      "--dotnet",
+      "/workspace/work/runtime/dotnet/dotnet",
+      "--output",
+      "/workspace/work/earned-evidence/passive"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: actual passives and affected prior consumer/source/browser regressions\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "north-star/combat-study/tools/control-verify.py",
+      "--dotnet",
+      "/workspace/work/runtime/dotnet/dotnet",
+      "--output",
+      "/workspace/work/earned-evidence/control"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: selected breakbar and actual consumer; stable inputs 58\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "north-star/combat-study/tools/response-verify.py",
+      "--dotnet",
+      "/workspace/work/runtime/dotnet/dotnet",
+      "--output",
+      "/workspace/work/earned-evidence/response"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: actual paid response chain and browser; stable inputs 58\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "north-star/combat-study/tools/initiative-verify.py",
+      "--dotnet",
+      "/workspace/work/runtime/dotnet/dotnet",
+      "--output",
+      "/workspace/work/earned-evidence/initiative"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: selected initiative, same-case comparison and actual browser; stable inputs 60\n",
+    "stderr": ""
+  }
+]

@@ -42,6 +42,21 @@ choice. Other commands or interruption discard inspection. This adapts the P05 m
 not its fiction or numeric policies. [Current execution](../../evidence/combat-status/forecast/RUN.json)
 and [acceptance boundary](FORECAST_PROTOCOL.md) distinguish actual results from hypotheses.
 
+## Original earned practice
+
+The optional earned route starts with None. Clear one actual encounter in that route
+to acquire a host-session preparation choice; demonstrations, forecasts, defeat and
+withdrawal do not qualify. Choose a passive explicitly in a later earned preparation:
+acquired, selected and active are different facts. One slot, heavy Lining and Last
+Thread's single direct-hit rescue retain their existing effects and costs.
+
+An active earned attempt cannot be replaced by Prepare or Restart. Finish or withdraw
+first; an untouched initial default may enter directly. A later Begin deliberately
+starts a fresh practice, not recovery or a Field/Gate health transfer. Closing this
+host loses acquisition. No XP, account, save format, historical level6/9 or class grant
+is implemented. Existing free presets remain demonstrations. [Policy](EARNED_PROTOCOL.md)
+and [execution](../../evidence/combat-status/earned/RUN.json) bound this original experiment.
+
 ## What was consumed
 
 [The source assay](../../labs/combat-response/status/README.md) stages reviewed preserved

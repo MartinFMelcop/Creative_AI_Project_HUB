@@ -1,0 +1,42 @@
+{
+  "baseline_commit": "d01132bd0cd0f25aaa3339f36def1ba66049cb26",
+  "comparisons": [
+    {
+      "mode": "Trial",
+      "baseline": "baseline/Trial.json",
+      "current": "native/Trial.json",
+      "complete_json_equal": true
+    },
+    {
+      "mode": "Passive",
+      "baseline": "baseline/Passive.json",
+      "current": "native/Passive.json",
+      "complete_json_equal": true
+    },
+    {
+      "mode": "Control",
+      "baseline": "baseline/Control.json",
+      "current": "native/Control.json",
+      "complete_json_equal": true
+    },
+    {
+      "mode": "Response",
+      "baseline": "baseline/Response.json",
+      "current": "native/Response.json",
+      "complete_json_equal": true
+    },
+    {
+      "mode": "Initiative",
+      "baseline": "baseline/Initiative.json",
+      "current": "native/Initiative.json",
+      "complete_json_equal": true
+    }
+  ],
+  "forecast": {
+    "baseline": "baseline/forecast-native.json",
+    "current": "forecast-native.json",
+    "complete_json_equal": true,
+    "controls": 67
+  },
+  "limits": "Exact complete JSON comparisons for the same existing vectors; no expanded combat/initiative/portability matrix."
+}

@@ -1,0 +1,88 @@
+{
+  "kind": "observed-earned-preparation-capture",
+  "new_test_count": 0,
+  "command": [
+    "node",
+    "/workspace/work/earned-evidence/capture-earned.cjs"
+  ],
+  "cwd": "/workspace/work/earned-practice/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+  "scratch_script_sha256": "d0cb580c9eed49a07ee3721f8ff4f27955f44d3d58e7ea9e92338aeb443b4319",
+  "runtime": {
+    "node": "24.19.0",
+    "playwright_core": "1.64.0",
+    "chromium_executable": "/usr/bin/chromium",
+    "dotnet_executable": "/workspace/work/runtime/dotnet/dotnet",
+    "sdk": "10.0.401",
+    "runtime": "10.0.12"
+  },
+  "host_arguments": [
+    "/workspace/work/earned-practice/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/bin/Release/net10.0/NorthStar.CombatStudy.dll",
+    "--serve",
+    "18769",
+    "/workspace/work/earned-practice/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/web",
+    "--seconds",
+    "60"
+  ],
+  "environment_overrides": {
+    "DOTNET_CLI_HOME": "/workspace/work/runtime/cli-home",
+    "NUGET_PACKAGES": "/workspace/work/runtime/nuget",
+    "DOTNET_PROCESSOR_COUNT": "2",
+    "DOTNET_NOLOGO": "1",
+    "DOTNET_CLI_TELEMETRY_OPTOUT": "1"
+  },
+  "environment_removed": [
+    "DOTNET_STARTUP_HOOKS"
+  ],
+  "environment_limit": "Other process environment inherited; no credential or environment dump captured.",
+  "readiness": "Exact READY http://127.0.0.1:18769/ awaited before HTTP; bounded15second readiness timeout.",
+  "browser": {
+    "headless": true,
+    "arguments": [
+      "--no-sandbox"
+    ],
+    "viewport": {
+      "width": 1280,
+      "height": 1040
+    },
+    "device_scale_factor": 1
+  },
+  "commands": [
+    "prepare earned toxic",
+    "begin",
+    "strike",
+    "strike",
+    "strike",
+    "strike",
+    "prepare earned toxic"
+  ],
+  "observed": {
+    "sequence": 7,
+    "phase": "preparation",
+    "passive": "none",
+    "armor": "light",
+    "earned": {
+      "mode": true,
+      "unlocked": true,
+      "attempt": 1,
+      "receipt": {
+        "kind": "earned-practice-clear",
+        "sequence": 6,
+        "attempt": 1,
+        "profile": "toxic"
+      }
+    }
+  },
+  "screenshot": {
+    "path": "earned-choice.png",
+    "bytes": 122225,
+    "sha256": "4d6805351b86205e178c7a68feaecb53daacb1df2afa94434f2c3d486de4c31c"
+  },
+  "inspection": "Viewed using view_image: acquired eligibility text visible beside None select; None prepared glyph also visible. No automatic equipment inferred.",
+  "initial_failure": "Scratch script first required absent node_modules/playwright. MODULE_NOT_FOUND exit1 occurred before Host construction. Corrected to installed playwright-core; no package installation or source changes.",
+  "process_stop": {
+    "browser": "await browser.close completed",
+    "host": "SIGTERM sent; child exit awaited",
+    "capture_exit_code": 0
+  },
+  "limits": "Single observational capture, not additional controls, human validation, persistence, Unity or Windows gameplay evidence."
+}

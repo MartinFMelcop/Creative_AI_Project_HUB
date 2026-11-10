@@ -1,0 +1,30 @@
+EE.....
+======================================================================
+ERROR: test_actual_recipient_and_source_evidence_are_accepted (__main__.PortfolioClaims.test_actual_recipient_and_source_evidence_are_accepted)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/work/earned-practice/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/tools/test_check_portfolio.py", line 25, in test_actual_recipient_and_source_evidence_are_accepted
+    result = contract.validate(ROOT, self.data())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/work/earned-practice/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/tools/check_portfolio.py", line 188, in validate
+    require(name in artifacts and artifacts[name].get('sha256') == digest(path)
+  File "/workspace/work/earned-practice/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/tools/check_portfolio.py", line 45, in require
+    raise ValueError(message)
+ValueError: Source experiment consumer identity mismatch
+
+======================================================================
+ERROR: test_changed_archive_bytes_fail_even_when_zip_is_still_readable (__main__.PortfolioClaims.test_changed_archive_bytes_fail_even_when_zip_is_still_readable)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/work/earned-practice/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/tools/test_check_portfolio.py", line 80, in test_changed_archive_bytes_fail_even_when_zip_is_still_readable
+    contract.validate(root, copy.deepcopy(data))
+  File "/workspace/work/earned-practice/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/tools/check_portfolio.py", line 188, in validate
+    require(name in artifacts and artifacts[name].get('sha256') == digest(path)
+  File "/workspace/work/earned-practice/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/tools/check_portfolio.py", line 45, in require
+    raise ValueError(message)
+ValueError: Source experiment consumer identity mismatch
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.741s
+
+FAILED (errors=2)

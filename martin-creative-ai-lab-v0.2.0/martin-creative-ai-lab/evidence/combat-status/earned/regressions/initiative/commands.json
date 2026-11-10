@@ -1,0 +1,76 @@
+[
+  {
+    "command": [
+      "/workspace/work/runtime/dotnet/dotnet",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "10.0.401\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/runtime/dotnet/dotnet",
+      "build",
+      "/workspace/work/earned-practice/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/InitiativeChecks/NorthStar.InitiativeChecks.csproj",
+      "-c",
+      "Release",
+      "-m:1",
+      "--disable-build-servers"
+    ],
+    "exit_code": 0,
+    "stdout": "  Determining projects to restore...\n  Restored /workspace/work/earned-practice/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/InitiativeChecks/NorthStar.InitiativeChecks.csproj (in 254 ms).\n  2 of 3 projects are up-to-date for restore.\n  NorthStar.Combat -> /workspace/work/earned-practice/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Rules/bin/Release/netstandard2.1/NorthStar.Combat.dll\n  NorthStar.CombatStudy -> /workspace/work/earned-practice/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/bin/Release/net10.0/NorthStar.CombatStudy.dll\n  NorthStar.InitiativeChecks -> /workspace/work/earned-practice/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/InitiativeChecks/bin/Release/net10.0/NorthStar.InitiativeChecks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:05.80\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "-B",
+      "/workspace/work/earned-practice/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/combat-response/initiative/source_assay.py",
+      "--output",
+      "/workspace/work/earned-evidence/initiative/source-initial.json",
+      "--export-cases",
+      "/workspace/work/earned-evidence/initiative/cases.json"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: 7 literal rows; 12 same-input cases/384 rounds; C# compared=False\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/runtime/dotnet/dotnet",
+      "/workspace/work/earned-practice/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/InitiativeChecks/bin/Release/net10.0/NorthStar.InitiativeChecks.dll",
+      "/workspace/work/earned-evidence/initiative/native.json",
+      "--vectors",
+      "/workspace/work/earned-evidence/initiative/cases.json"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: 40 initiative native controls\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "-B",
+      "/workspace/work/earned-practice/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/combat-response/initiative/source_assay.py",
+      "--output",
+      "/workspace/work/earned-evidence/initiative/source.json",
+      "--native",
+      "/workspace/work/earned-evidence/initiative/native.json"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: 7 literal rows; 12 same-input cases/384 rounds; C# compared=True\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "node",
+      "/workspace/work/earned-practice/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/tools/initiative-browser.mjs",
+      "/workspace/work/runtime/dotnet/dotnet",
+      "/workspace/work/earned-evidence/initiative/browser"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: 20 initiative Chromium controls; 2 HTTP negatives\n",
+    "stderr": ""
+  }
+]

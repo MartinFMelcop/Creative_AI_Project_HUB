@@ -54,7 +54,7 @@ def verify(output,dotnet):
     execute(['python3',ROOT/'labs/combat-response/status/run.py','--dotnet',sdk,'--output',output/'source'],ROOT)
     execute(['node',STUDY/'tools/browser.mjs',sdk,output/'browser'],ROOT)
     if before!=inputs():raise ValueError('Source changed during execution')
-    result=dict(schema_version=1,sdk=version,node=node_version,input_hashes=before,commands='commands.json',native='native.json',source='source/summary.json',browser='browser/results.json',forecast_native='forecast-native.json',forecast_browser='browser/forecast-browser.json',source_stable=True)
+    result=dict(schema_version=1,sdk=version,node=node_version,input_hashes=before,commands='commands.json',native='native.json',source='source/summary.json',browser='browser/results.json',forecast_native='forecast-native.json',forecast_browser='browser/forecast-browser.json',earned_native='earned-native.json',earned_browser='browser/earned-browser.json',source_stable=True)
     (output/'results.json').write_text(json.dumps(result,indent=2)+'\n')
     print('Actual combat consumer and source instruments passed; stable inputs:',len(before))
 if __name__=='__main__':

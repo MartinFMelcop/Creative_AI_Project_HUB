@@ -1,0 +1,22 @@
+{
+  "initial_command": [
+    "/workspace/work/runtime/dotnet/dotnet",
+    "run",
+    "--project",
+    "../combat-study/TrialChecks/NorthStar.TrialChecks.csproj",
+    "-c",
+    "Release",
+    "--",
+    "/workspace/work/earned-evidence/trial-native.json"
+  ],
+  "cwd": "candidate workspace/north-star/csharp",
+  "initial_failure": "Wrong-directory test-file creation failed before write; following build failed CS0103 EarnedChecks missing. No output JSON from that compile.",
+  "default_profile_effects": [
+    "/home/agent/.dotnet SDK10.0.401 first-use/certificate/toolpath sentinels at17:44:17Z",
+    "/home/agent/.nuget/NuGet/NuGet.Config at17:44:18Z",
+    "user netstandard.library.ref2.1.0 cache and workload advertising metadata at17:44:22\u201325Z"
+  ],
+  "certificate_limit": "SDK printed installed development certificate; observed certificate file mtime00:43:18Z predates this command. No certificate/config contents were read/exported; no creation attribution or machine-trust conclusion.",
+  "correction": "All final primary commands explicitly use isolated DOTNET_CLI_HOME/NUGET_PACKAGES, telemetry opt-out and pinned actual SDK. User-profile artifacts retained; no cleanup or global PATH/config command issued.",
+  "baseline_setup_failure": "A second full worktree failed for lack of disk; first baseline launch consequently found no directory. Reuse existing clean combat-forecast checkout at the exact baseline SHA. No source/archive/worktree removal performed."
+}

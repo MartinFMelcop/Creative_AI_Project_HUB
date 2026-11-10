@@ -1,0 +1,400 @@
+{
+  "complete": true,
+  "failure": null,
+  "controls": [
+    "Forecast is conditional while complete live observation remains exact",
+    "Repeated inspection leaves sequence and costs exact",
+    "Explicit confirmation equals the one inspected action",
+    "Stale inspection confirmation refuses without owner mutation",
+    "Explicit read discards stale projection without replay",
+    "Lost confirmed receipt spends once and quarantines confirmation",
+    "Lost confirmation is observed and never replayed",
+    "Commit forecast stops at response choice without free release",
+    "One pending owner supports distinct conditional response costs",
+    "Confirming inspected break resolves only that actual chain",
+    "Interruption discards inspection without action",
+    "Late inspection reply cannot rearm interrupted confirmation",
+    "HTTP refuses extra forecast field without mutation",
+    "HTTP refuses duplicate forecast command without mutation",
+    "HTTP refuses forecast lifecycle command without mutation",
+    "HTTP refuses unknown reviewed field without mutation",
+    "HTTP refuses malformed reviewed sequence without mutation",
+    "False conditional HP renderer is detected against actual branch"
+  ],
+  "states": {
+    "inspected": {
+      "before": {
+        "sequence": 32,
+        "command": "restart toxic",
+        "accepted": true,
+        "phase": "active",
+        "preparation": {
+          "profile": "toxic",
+          "responses": false,
+          "controls": false,
+          "initiative": false,
+          "tempo": "heavy",
+          "passive": "none",
+          "armor": "light"
+        },
+        "state": {
+          "profile": "toxic",
+          "initiative": null,
+          "breakbar": null,
+          "responsePractice": false,
+          "wardAvailable": false,
+          "pending": null,
+          "resolution": [],
+          "round": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "enemyHp": 96,
+          "charges": 2,
+          "effects": [
+            {
+              "effect": "Poison",
+              "remaining": 3
+            },
+            {
+              "effect": "Bleed",
+              "remaining": 3
+            }
+          ],
+          "threat": "Contact: 20 direct damage.",
+          "events": [
+            "Practice begins with poison and bleed, each lasting three global rounds."
+          ],
+          "outcome": "active",
+          "last": "Choose an action. Reads and elapsed time do not advance the round.",
+          "weaponEnabled": true,
+          "attackMultiplier": 1,
+          "healingMultiplier": 0.7,
+          "passive": "none",
+          "armor": "light",
+          "rescueSpent": false,
+          "lastHit": null
+        }
+      },
+      "projected": {
+        "sequence": 32,
+        "forecast": {
+          "command": "guard",
+          "boundary": "action",
+          "state": {
+            "profile": "toxic",
+            "initiative": null,
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 1,
+            "hp": 81,
+            "maxHp": 100,
+            "enemyHp": 96,
+            "charges": 2,
+            "effects": [
+              {
+                "effect": "Poison",
+                "remaining": 2
+              },
+              {
+                "effect": "Bleed",
+                "remaining": 2
+              }
+            ],
+            "threat": "Pressure: 20 direct damage, then extends poison (toxic) or burn (heated) by two rounds.",
+            "events": [
+              "Guard halves this round's direct contact; it cannot reduce DOT.",
+              "Target contact: 10 incoming direct damage; 10 actual HP lost.",
+              "End round 1: Poison incoming DOT 6; actual HP lost 6; 2 rounds remain. Guard does not reduce this tick.",
+              "End round 1: Bleed incoming DOT 3; actual HP lost 3; 2 rounds remain. Guard does not reduce this tick.",
+              "Round 1 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 1 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 0.7,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 10,
+              "effectiveDamage": 10,
+              "hpBefore": 100,
+              "hpAfter": 90,
+              "damageReduced": 0,
+              "actualHpLost": 10,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        }
+      }
+    },
+    "confirmed": {
+      "sequence": 33,
+      "command": "guard",
+      "accepted": true,
+      "phase": "active",
+      "preparation": {
+        "profile": "toxic",
+        "responses": false,
+        "controls": false,
+        "initiative": false,
+        "tempo": "heavy",
+        "passive": "none",
+        "armor": "light"
+      },
+      "state": {
+        "profile": "toxic",
+        "initiative": null,
+        "breakbar": null,
+        "responsePractice": false,
+        "wardAvailable": false,
+        "pending": null,
+        "resolution": [],
+        "round": 1,
+        "hp": 81,
+        "maxHp": 100,
+        "enemyHp": 96,
+        "charges": 2,
+        "effects": [
+          {
+            "effect": "Poison",
+            "remaining": 2
+          },
+          {
+            "effect": "Bleed",
+            "remaining": 2
+          }
+        ],
+        "threat": "Pressure: 20 direct damage, then extends poison (toxic) or burn (heated) by two rounds.",
+        "events": [
+          "Guard halves this round's direct contact; it cannot reduce DOT.",
+          "Target contact: 10 incoming direct damage; 10 actual HP lost.",
+          "End round 1: Poison incoming DOT 6; actual HP lost 6; 2 rounds remain. Guard does not reduce this tick.",
+          "End round 1: Bleed incoming DOT 3; actual HP lost 3; 2 rounds remain. Guard does not reduce this tick.",
+          "Round 1 resolved: active."
+        ],
+        "outcome": "active",
+        "last": "Round 1 resolved: active.",
+        "weaponEnabled": true,
+        "attackMultiplier": 1,
+        "healingMultiplier": 0.7,
+        "passive": "none",
+        "armor": "light",
+        "rescueSpent": false,
+        "lastHit": {
+          "kind": "PhysicalDirect",
+          "incoming": 10,
+          "effectiveDamage": 10,
+          "hpBefore": 100,
+          "hpAfter": 90,
+          "damageReduced": 0,
+          "actualHpLost": 10,
+          "avoidedHpLoss": 0,
+          "rescued": false
+        }
+      }
+    },
+    "response": {
+      "pending": {
+        "sequence": 39,
+        "command": "commit",
+        "accepted": true,
+        "phase": "active",
+        "preparation": {
+          "profile": "toxic",
+          "responses": true,
+          "controls": false,
+          "initiative": false,
+          "tempo": "heavy",
+          "passive": "none",
+          "armor": "light"
+        },
+        "state": {
+          "profile": "toxic",
+          "initiative": null,
+          "breakbar": null,
+          "responsePractice": true,
+          "wardAvailable": false,
+          "pending": {
+            "ward": true,
+            "items": 2
+          },
+          "resolution": [],
+          "round": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "enemyHp": 96,
+          "charges": 1,
+          "effects": [
+            {
+              "effect": "Poison",
+              "remaining": 3
+            },
+            {
+              "effect": "Bleed",
+              "remaining": 3
+            }
+          ],
+          "threat": "Contact: 20 direct damage.",
+          "events": [
+            "Committed strike costs one shared treatment charge now. The target committed its one ward. Break it for one remaining charge, or Release without refund."
+          ],
+          "outcome": "active",
+          "last": "Committed strike costs one shared treatment charge now. The target committed its one ward. Break it for one remaining charge, or Release without refund.",
+          "weaponEnabled": true,
+          "attackMultiplier": 1,
+          "healingMultiplier": 0.7,
+          "passive": "none",
+          "armor": "light",
+          "rescueSpent": false,
+          "lastHit": null
+        }
+      },
+      "released": {
+        "sequence": 39,
+        "forecast": {
+          "command": "release",
+          "boundary": "action",
+          "state": {
+            "profile": "toxic",
+            "initiative": null,
+            "breakbar": null,
+            "responsePractice": true,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [
+              "Ward:applied",
+              "CommittedStrike:cancelled"
+            ],
+            "round": 1,
+            "hp": 71,
+            "maxHp": 100,
+            "enemyHp": 96,
+            "charges": 1,
+            "effects": [
+              {
+                "effect": "Poison",
+                "remaining": 2
+              },
+              {
+                "effect": "Bleed",
+                "remaining": 2
+              }
+            ],
+            "threat": "Pressure: 20 direct damage, then extends poison (toxic) or burn (heated) by two rounds.",
+            "events": [
+              "Resolution: Ward:applied",
+              "Resolution: CommittedStrike:cancelled",
+              "Committed strike resolved: 0 direct damage. Its cast charge is never refunded, including when countered.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "End round 1: Poison incoming DOT 6; actual HP lost 6; 2 rounds remain. Guard does not reduce this tick.",
+              "End round 1: Bleed incoming DOT 3; actual HP lost 3; 2 rounds remain. Guard does not reduce this tick.",
+              "Round 1 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 1 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 0.7,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 100,
+              "hpAfter": 80,
+              "damageReduced": 0,
+              "actualHpLost": 20,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        }
+      },
+      "broken": {
+        "sequence": 39,
+        "forecast": {
+          "command": "break-ward",
+          "boundary": "action",
+          "state": {
+            "profile": "toxic",
+            "initiative": null,
+            "breakbar": null,
+            "responsePractice": true,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [
+              "BreakWard:applied",
+              "Ward:cancelled",
+              "CommittedStrike:applied"
+            ],
+            "round": 1,
+            "hp": 71,
+            "maxHp": 100,
+            "enemyHp": 48,
+            "charges": 0,
+            "effects": [
+              {
+                "effect": "Poison",
+                "remaining": 2
+              },
+              {
+                "effect": "Bleed",
+                "remaining": 2
+              }
+            ],
+            "threat": "Pressure: 20 direct damage, then extends poison (toxic) or burn (heated) by two rounds.",
+            "events": [
+              "Break ward committed: one shared treatment charge spent before resolution.",
+              "Resolution: BreakWard:applied",
+              "Resolution: Ward:cancelled",
+              "Resolution: CommittedStrike:applied",
+              "Committed strike resolved: 48 direct damage. Its cast charge is never refunded, including when countered.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "End round 1: Poison incoming DOT 6; actual HP lost 6; 2 rounds remain. Guard does not reduce this tick.",
+              "End round 1: Bleed incoming DOT 3; actual HP lost 3; 2 rounds remain. Guard does not reduce this tick.",
+              "Round 1 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 1 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 0.7,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 100,
+              "hpAfter": 80,
+              "damageReduced": 0,
+              "actualHpLost": 20,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        }
+      }
+    }
+  },
+  "negatives": [
+    {
+      "id": "false-forecast-hp-renderer",
+      "detected": true,
+      "actual_projected_hp": 81,
+      "drawn_hp": 100,
+      "assertion": "Forecast HP follows actual branch\n\n100 !== 81\n"
+    }
+  ],
+  "scope": "Actual existing C# owner through Chromium; bounded conditional information, not independent player understanding or balance."
+}

@@ -1,0 +1,31 @@
+{
+  "complete": true,
+  "logs": [
+    {
+      "command": [
+        "/workspace/work/runtime/dotnet/dotnet",
+        "/workspace/work/earned-practice/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/bin/Release/net10.0/NorthStar.CombatStudy.dll",
+        "--serve",
+        "37281",
+        "/workspace/work/earned-practice/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/web",
+        "--seconds",
+        "180"
+      ],
+      "stdout": "READY http://127.0.0.1:37281/\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/runtime/dotnet/dotnet",
+        "/workspace/work/earned-practice/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/bin/Release/net10.0/NorthStar.CombatStudy.dll",
+        "--serve",
+        "37165",
+        "/tmp/control-render-mutant-FB9XYd",
+        "--seconds",
+        "180"
+      ],
+      "stdout": "READY http://127.0.0.1:37165/\n",
+      "stderr": ""
+    }
+  ]
+}

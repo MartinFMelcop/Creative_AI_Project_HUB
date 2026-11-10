@@ -1,84 +1,91 @@
 # Current transformation continuity
 
-**Updated:**2026-11-10 America/Sao_Paulo. **SEED:**0.34.0. Fresh main and isolated
-`combat-forecast` baseline are `5c468f80bd44c9db0f56ab06477c9ab59509513c`, initially
-clean with zero divergence. Root/workspace AGENTS, full Continuous Development, STATE,
-relevant SEED/DESIGN and actual source/consumer contracts recovered. Reference CI42767737700
-passed integrity/scope/C# with seven unrelated jobs skipped. Windows recipient42767207385
-passed atbf0bef4 for its narrow private-runtime .NET contract, not a Unity player.
+**Updated:**2026-11-10 America/Sao_Paulo. **SEED:**0.34.0. Isolated `earned-practice`
+started clean at `d01132bd0cd0f25aaa3339f36def1ba66049cb26`. Root/workspace AGENTS,
+full Continuous Development, STATE, relevant SEED/DESIGN and actual source/consumer
+contracts recovered. Freshly reverified reference CI42860471819 passed nine jobs, with recipient delivery
+scoped out; Windows recipient42767207385 previously passed atbf0bef4 for its
+narrow private-runtime .NET contract, not a Unity player. These are prior observations,
+not this candidate's publication or CI result.
 
-## Active result — consume P05 bounded forecast in the existing combat owner
+## Active result — acquired eligibility in existing optional combat practice
 
-ONE legacy/laboratory unit. The actual P05 `ResponseForecast.Calculate` forks its owner,
-applies one legal chosen action and announced responses, then stops before the next
-crew decision/result. Its Game and ResponseChecks supply real independence/parity
-controls. The source domain checks execute in a copied tree; their3711campaign checks
-are origin execution, NOT new North Star tests or participants. No P05 fiction,
-units, resource values, campaign or save format transfers.
+ONE North Star product unit. The EXISTING Treatment Line Room now owns optional binary
+host-session acquisition. An actual earned-route victory with None grants eligibility
+once for both existing passives; it never equips one. A later explicit preparation can
+choose None, Lining or Last thread, retaining one-slot exclusivity and unchanged armor,
+direct-hit/DOT, rescue, treatment, response and initiative rules. There is no XP curve,
+new framework, app, save format, account or source-fiction import.
 
-The existing portable C#8/netstandard2.1 Trial now reconstructs a private branch using
-its SAME implementation, original preparation/seed and private accepted-command history.
-Prior refusal text is retained. One forecast executes one command on that branch;
-it stops at pending response, next decision or terminal result. Commit never assumes
-Release/Break ward. Conditional next initiative state belongs only to that branch;
-live RNG/order are unchanged. There is no parallel formula/engine or public replay format.
+Only actual Begin counts an earned attempt. An active earned attempt cannot be replaced
+by ANY prepare/restart; finish or withdraw first. The untouched initial sequence0 may
+enter directly; an already acted free encounter refuses direct earned entry. Free presets
+retain their original preparation/reset behavior, so their drafts may enter the earned
+route. They never acquire eligibility.
+Defeat, withdrawal and forecast grant nothing. The first secured result supplies an
+immutable exact receipt; repeated reads, ended commands and a lost receipt cannot repay.
+Fresh host creation resets this explicitly session-only experiment.
 
-The existing Room/host exposes a read-only exact-command forecast. The page displays
-IF committed now separately from live facts. Confirm inspected action is distinct and
-uses the SAME command endpoint with an exact `reviewed_sequence` context guard. Stale,
-malformed or lifecycle review envelopes refuse BEFORE owner/Room sequence mutation.
-This context is not an account/permission token. Original one-field direct commands
-remain unchanged. Other commands, read/reconnect and interruption discard inspection;
-late replies cannot rearm it and a lost confirmed receipt is never replayed.
+The existing preparation group distinguishes acquisition from actual selected/active
+passive, disables locked options and shows the actual mode. Optional earned projection
+is validated strictly; legacy observations omit it until first earned preparation.
+Forecast stays one-action read-only on the SAME Trial and sequence-guarded confirmation
+remains separate. Acquisition lives outside Trial: inspection of a winning branch does
+not grant it, spend live resources or mutate live RNG.
 
-[Current execution](../evidence/combat-status/forecast/RUN.json) binds actual sources/results:
-67native forecast controls and18new Chromium/HTTP controls. Original46native controls
-are exact; all five fresh native mode JSON outcomes equal baseline5c468f8, using the
-same existing initiative vectors for comparable output (no expanded matrix). Current
-classic browser states and22original controls match the retained portable-owner record,
-not a newly executed browser baseline. The actual false forecast-HP renderer is detected
-alongside the retained live-HP negative. These are overlapping software observations,
-not independent trials, human understanding, accessibility, preference or balance.
-
-All four existing passive/control/response/initiative wrappers and their real browsers
-passed; the passive wrapper also reruns its required status child. No unrelated local
-Field/Gate/recipient gameplay suite was repeated. Source-launch6unit/7portfolio and19
-actual browser controls passed after selecting the current exact-byte combat proof.
+[Current execution](../evidence/combat-status/earned/RUN.json) records29 native and18
+new browser controls, including actual unlock/selection, no reset/replay/grant, locked
+forgery and false acquired-renderer negatives. The five fresh native mode JSON outputs
+and67 unchanged forecast controls compare exactly to fresh baseline d01132b outputs.
+All four passive/control/response/initiative wrappers and their real browsers pass;
+passive also reruns its status child. Existing browser observations are regressions,
+not a newly executed original browser baseline. No forecast/initiative/portability matrix
+was expanded. Software observations are overlapping controls, not participants or
+human understanding, accessibility, preference, creative approval or balance findings.
 
 ## Selection, review influence and retained failures
 
-Independent Engineering, Scientific and Creative analyses compared:
-A—the existing P05 forecast METHOD has a real missing consumer and no new numeric policy;
-B—earned passive/character acquisition remains valuable but needs its own explicit policy;
-C—CI recovery is verified and bounded PATH checks find no Unity/Hub executable.
-A selected to correct legacy underinvestment. An opt-in three-round cooldown alternative
-would require original duration/preparation policy; it was not implemented or canonized.
-ENG015 informed temporal contracts and reuse of the SAME owner, SCI013 matched branches
-and rival alias/RNG/reset controls, CRE005(A) conditional information with real costs.
+Independent Engineering, Scientific and Creative analyses compared A—remaining legacy
+eligibility/acquisition, creation and battle contracts; B—earned character/combat agency
+inside an existing owner; C—actual licensed production access. B selected as a coherent
+product contribution after P05 method consumption: it makes acquisition affect an
+existing choice without a second app or Gate-to-Trial health conversion. A remains a
+mandatory frontier; source helpers assign IDs but do not establish acquired eligibility.
+Source Warrior level6/9 and probabilistic Rogue semantics are not relabeled as this
+new grant. C remains bounded by absent observed Editor/Hub/license/modules; portable
+compilation does not replace production access.
 
-All three reviews completed independently. Subagents then became unavailable during
-implementation before source edits; primary implemented and executed the remainder.
-No additional independent implementation review or human validation is claimed.
+Engineering owned acquisition/temporal contracts and native checks; Creation owned the
+existing UI; Science owned real browser controls and evidence. Primary coordinated and
+ran final regressions. CRE005(A)/CRE013(H) influenced consequence/exclusivity and authorial
+limits; scientific rivals distinguish live victory from forecast/preset/client grants.
+These are independent agent reviews, not independent human validation.
 
-An exploratory heated cleanse/guard fixture failed to reach the presumed active spent-
-rescue state. The failed native output is retained. Only the fixture changed to the
-already evidenced toxic strike/strike/strike/cleanse prefix, reaching actual1HP with
-spent rescue; forecast/actual guard then both lose. No gameplay numbers were tuned.
-Setup wrong-directory edit/npm calls failed before candidate validation and are recorded.
-A metadata comparison first used an older pre-passive browser record with ten missing
-additive fields; latest retained portable record compares fully exact. Initial integrity
-rejected JS in the code-only global consumer list and stale prior combat proof hashes.
-Only current records select the fresh reexecuted proof; old evidence/pins and validators
-remain unchanged. Record assembly's missing optional evidence field was corrected too.
+A wrong-directory test-file creation failed before writing; the following build failed
+CS0103 because EarnedChecks was missing and produced no native JSON. An initial SDK
+invocation used its default user profile and created first-use/certificate/toolpath
+sentinels, NuGet config/cache and workload metadata. The SDK printed certificate
+installation, but the observed certificate file predates the command; no certificate
+contents or machine-trust claim were inspected. Final commands explicitly use isolated
+DOTNET_CLI_HOME/NUGET_PACKAGES and telemetry opt-out. User-profile artifacts remain;
+no cleanup/global PATH/config command was issued. A second full baseline worktree failed
+for disk space and its first launch found no directory. Existing clean `combat-forecast`
+at exact d01132b supplied the baseline instead; no source/archive/worktree was removed.
+The prior failed heated rescue fixture and its correction remain in forecast evidence.
+Initial source-launch6 had two failures and portfolio7 two errors because their old
+proof no longer matched current consumers. After updating the current proof pointer,
+both suites pass; actual source-launch19 passes for the unchanged Field and current
+combat consumers. No host/runtime workaround or gameplay number changed.
 
 ## Material continuity and preservation
 
-RPG Systems lab consumes ONE selected P05 method; its prior progression method and all
-eleven destinations remain. The five older combat integrations select current source-
-bound regression proof without claiming new consumption. Counts now25INTEGRATED/
+Prior RPG Systems consumption of ONE selected P05 method and its progression method
+remain. This original acquisition policy adds no legacy integration or lab promotion;
+all eleven mandatory destinations remain. The five older combat integrations select current source-
+bound regression proof without claiming new consumption. Counts remain25INTEGRATED/
 12REJECTED/15UNRESOLVED; full P05/P10 battle/progression/acquisition remains unresolved.
 Ten bounded laboratory methods remain operational; Build/Operations INCOMPLETE.
-Existing capability/portfolio source entry is updated, with no capability-state promotion.
+No capability-state promotion is implied by the new product behavior.
 
 Protected Brain originals/pins, source rights, Drive/Makers/MER/canon, Godot consumers,
 old evidence and all source/recipient archives remain untouched. Gate assist costs,
@@ -91,19 +98,21 @@ Original checkout `work` ata16a191 stays untouched. Earlier dirty routes and unp
 sanitation-p0/b592108 are NOT available in this restored executor; no recovery or deletion
 is claimed. Removal still requires an independent verified backup and actual restoration.
 Actual isolated SDK10.0.401/runtime10.0.12, Node24.19.0 and locked Chromium instrumentation
-are reused, with no global configuration changes. No Unity Editor/license/modules,
+are reused; the observed initial user-profile SDK side effects above remain disclosed. No Unity Editor/license/modules,
 Windows gameplay build, Steam, multiplayer/account authority, broad persistence or
 human/art approval is established. R51/R60/R61/INT-C01-001 remain OPEN; B/E ACKs unverified.
 
-Required source/reference/Brain/transformation/inventory/manifest gates and final diff
-must pass before normal authorized publication. Local tests, commit, remote SHA and CI
+Source/reference/Brain/transformation/inventory/portfolio gates and transformation19
+pass. Exact manifest passes; intended final diff reviewed before authorized publication. Local tests, commit, remote SHA and CI
 remain separate facts. Preserve MSB4166 unknown causes, prior gate/source/selector/
 identity failures, file:// refusals and cancelled42070817735/42065535102/42179260734.
 P08V6/CommanderSIM stay frozen:48held media, rejected Adaptive/Timing,4x not ITU true peak,
 G8 official key pending,768Eclipse games NO_ROBUST_IMPROVEMENT,ZERO complete Commander games.
 
-Next compare consequential remaining legacy, earned-character/combat integration and
-actual licensed production access. Do not repeat forecast/initiative/portability grids
+Next compare consequential remaining legacy acquisition/creation contracts, further
+existing earned-character product value and actual licensed production access. The new
+binary practice policy does not resolve source learning, historical eligibility or
+MMORPG progression. Do not repeat forecast/initiative/portability grids
 without an affected contract. Comprehension/value of conditional information requires
 appropriate people/devices; this software result does not discharge that obligation.
 
@@ -111,11 +120,11 @@ appropriate people/devices; this software result does not discharge that obligat
 
 Approximate47%legacy/laboratories,40%North Star,13%repository/portfolio remains qualitative
 effort guidance, not percentages derived from files/commits/tests/tokens. Once-counted
-rolling window (old source-launch unit rotated out):
+rolling window (old selected-breakbar unit rotated out; this original acquisition unit
+is counted once as North Star, not again as legacy consumption):
 
 | Unit | Primary stream | Evidence |
 |---|---|---|
-| Selected phased breakbar | Legacy/laboratories | [Breakbar](../evidence/breakbar/RUN.json) |
 | Focused same-person journey | North Star | [View](../evidence/journey-view/RUN.json) |
 | Paid post-Crossing gate | North Star | [Gate](../evidence/field-gate/RUN.json) |
 | Announced initiative in existing combat | Legacy/laboratories | [Initiative](../evidence/initiative/RUN.json) |
@@ -123,3 +132,9 @@ rolling window (old source-launch unit rotated out):
 | Worn-rig paid Gate assistance | North Star | [Equipment](../evidence/field-equipment/RUN.json) |
 | READY-before-HTTP authored continuity | Repository/production | [Readiness](../evidence/authored-scene/startup-readiness/RUN.json) |
 | P05 bounded same-owner combat forecast | Legacy/laboratories | [Forecast](../evidence/combat-status/forecast/RUN.json) |
+| Acquired optional practice eligibility | North Star | [Earned practice](../evidence/combat-status/earned/RUN.json) |
+
+The present product correction does not authorize indefinite laboratory deferral. The
+next selection must weigh still-unresolved consequential source consumption against
+licensed production access and actual product value; no percentages are inferred from
+this table, files, commits, controls or tokens.

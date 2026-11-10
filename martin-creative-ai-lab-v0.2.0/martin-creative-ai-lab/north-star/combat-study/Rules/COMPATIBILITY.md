@@ -20,3 +20,9 @@ fail-closed build graph, including only the reviewed exact Compile removal.
 This moves Trial's assembly identity. Recompile consumers; this is not a promise of
 precompiled binary compatibility, Unity serialization/API/IL2CPP, engine execution,
 Windows Player or save migration. [Execution](../../../evidence/portable-combat/RUN.json).
+
+The earned-practice Room observes the live Trial's read-only Secured query; it owns
+the optional session unlock outside this assembly's deterministic replay. Forecast
+reconstruction therefore cannot award. No new passive arithmetic, class/level grant,
+public replay/save format or world authority is added. Rebuild existing consumers
+for the added query; this remains C#8/netstandard2.1 code, not Unity execution.

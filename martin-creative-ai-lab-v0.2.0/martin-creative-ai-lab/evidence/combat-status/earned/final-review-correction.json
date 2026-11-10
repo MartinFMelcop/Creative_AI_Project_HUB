@@ -1,0 +1,4 @@
+{
+  "failure": "Final inventory helper mixed git diff root-relative names with git ls-files workspace-relative untracked names; read failed before manifest regeneration. Following manifest check correctly refused unlisted new files. Gameplay execution was unaffected.",
+  "correction": "Use maintained_files workspace inventory; explicitly stage five intended evidence .log files excluded by repository-wide *.log before exact manifest generation. No ignore rule or historical evidence changed."
+}

@@ -24,6 +24,7 @@ public sealed class Trial
     ResponseChain? pending;
     string[] resolution=Array.Empty<string>();
     public bool Active=>outcome=="active";
+    public bool Secured=>outcome=="secured";
     int round, hp=100, enemyHp=96, charges=2;
     string outcome="active";
     public string Last {get; private set;}="Choose an action. Reads and elapsed time do not advance the round.";

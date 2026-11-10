@@ -12,12 +12,23 @@ public sealed class Room
     private string tempo="heavy";
     private long sequence;
     private object observation;
+    private bool earnedStarted,earnedMode,unlocked;
+    private long attempt;
+    private object? receipt;
     public Room(){observation=Observe("initial",true);}
-    private object Observe(string command,bool accepted)=>new {
-        sequence,command,accepted,phase=preparing?"preparation":game.Active?"active":"ended",
-        preparation=new{profile,responses,controls,initiative,tempo,passive=PassiveIds.Name(preparation.Selection),armor=PassiveIds.Name(preparation.Armor)},
-        state=preparing?null:game.Snapshot()
-    };
+    private object Observe(string command,bool accepted)
+    {
+        if(earnedStarted)return new {
+            sequence,command,accepted,phase=preparing?"preparation":game.Active?"active":"ended",
+            preparation=new{profile,responses,controls,initiative,tempo,passive=PassiveIds.Name(preparation.Selection),armor=PassiveIds.Name(preparation.Armor)},
+            state=preparing?null:game.Snapshot(),earned=new {mode=earnedMode,unlocked,attempt,receipt}
+        };
+        return new {
+            sequence,command,accepted,phase=preparing?"preparation":game.Active?"active":"ended",
+            preparation=new{profile,responses,controls,initiative,tempo,passive=PassiveIds.Name(preparation.Selection),armor=PassiveIds.Name(preparation.Armor)},
+            state=preparing?null:game.Snapshot()
+        };
+    }
     public object Snapshot()=>observation;
     private static bool Action(string command)=>command is "strike" or "bash" or "guard" or "treat" or "cleanse" or "retreat" or "commit" or "release" or "break-ward" or "light-control" or "hard-control";
     private static string Parse(JsonElement document,bool allowReview,out long? review)
@@ -48,11 +59,12 @@ public sealed class Room
         // A review binds context, not permission. Existing direct commands retain their contract.
         if(review.HasValue&&(review.Value!=sequence||preparing||!game.Active||!Action(command)))
             throw new ArgumentException("Inspected context changed. Read and inspect again before confirming.");
+        bool earnedPrepare=command is "prepare earned toxic" or "prepare earned heated";
         bool responsePrepare=command is "prepare responses toxic" or "prepare responses heated";
         bool controlPrepare=command is "prepare controls toxic" or "prepare controls heated";
         bool initiativePrepare=command is "prepare initiative toxic" or "prepare initiative heated";
         bool tempoSelect=command is "tempo heavy" or "tempo quick";
-        bool prepare=initiativePrepare||controlPrepare||responsePrepare||command is "prepare toxic" or "prepare heated";
+        bool prepare=earnedPrepare||initiativePrepare||controlPrepare||responsePrepare||command is "prepare toxic" or "prepare heated";
         bool restart=command is "restart toxic" or "restart heated";
         bool equip=command.StartsWith("equip ",StringComparison.Ordinal);
         Passive selected=Passive.None;Armor armor=Armor.Light;
@@ -63,16 +75,24 @@ public sealed class Room
             selected=PassiveIds.Parse(words[1]);armor=PassiveIds.ParseArmor(words[2]);
         }
         else if(!tempoSelect&&!prepare&&!restart&&command is not ("begin" or "strike" or "bash" or "guard" or "treat" or "cleanse" or "retreat" or "commit" or "release" or "break-ward" or "light-control" or "hard-control"))throw new ArgumentException("Unknown command");
+        // A paid earned encounter cannot be replaced; preparation drafts are not active encounters.
+        if((prepare||restart)&&!preparing&&game.Active&&
+            (earnedMode||earnedPrepare&&sequence!=0))
+            throw new ArgumentException("Finish or withdraw from the actual encounter before preparing another practice.");
+        if(equip&&earnedMode&&!unlocked&&selected!=Passive.None)
+            throw new ArgumentException("Clear an actual earned practice with None before selecting a passive.");
         long next=checked(sequence+1);bool accepted;
+        bool activeBefore=!preparing&&game.Active;
         if(prepare)
         {
             // Explicit new practice discards the prior ephemeral trial; it is not a live swap.
-            initiative=initiativePrepare;tempo="heavy";responses=responsePrepare;controls=controlPrepare;profile=initiativePrepare?command[19..]:controlPrepare?command[17..]:responsePrepare?command[18..]:command[8..];preparation.Equip(Passive.None,Armor.Light,PassiveContext.Preparation);preparing=true;accepted=true;
+            earnedMode=earnedPrepare;if(earnedPrepare)earnedStarted=true;
+            initiative=initiativePrepare;tempo="heavy";responses=responsePrepare;controls=controlPrepare;profile=earnedPrepare?command[15..]:initiativePrepare?command[19..]:controlPrepare?command[17..]:responsePrepare?command[18..]:command[8..];preparation.Equip(Passive.None,Armor.Light,PassiveContext.Preparation);preparing=true;accepted=true;
         }
         else if(restart)
         {
             // Retained default consumer semantics: restart starts an active None trial immediately.
-            initiative=false;tempo="heavy";responses=false;controls=false;profile=command[8..];preparation.Equip(Passive.None,Armor.Light,PassiveContext.Preparation);game=new Trial(profile);preparing=false;accepted=true;
+            earnedMode=false;initiative=false;tempo="heavy";responses=false;controls=false;profile=command[8..];preparation.Equip(Passive.None,Armor.Light,PassiveContext.Preparation);game=new Trial(profile);preparing=false;accepted=true;
         }
         else if(tempoSelect)
         {
@@ -83,9 +103,12 @@ public sealed class Room
         else if(command=="begin")
         {
             accepted=preparing;
-            if(accepted){game=new Trial(profile,preparation.Selection,preparation.Armor,responses,controls,initiative,tempo);preparing=false;}
+            if(accepted){long nextAttempt=earnedMode?checked(attempt+1):attempt;game=new Trial(profile,preparation.Selection,preparation.Armor,responses,controls,initiative,tempo);preparing=false;attempt=nextAttempt;}
         }
         else accepted=!preparing&&game.Execute(command);
+        // Only the live accepted transition may award; forecasts reconstruct Trial without this ledger.
+        if(accepted&&Action(command)&&activeBefore&&earnedMode&&!unlocked&&game.Secured&&preparation.Selection==Passive.None)
+        {unlocked=true;receipt=new {kind="earned-practice-clear",sequence=next,attempt,profile};}
         sequence=next;observation=Observe(command,accepted);return observation;
     }
 }

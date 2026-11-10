@@ -1,0 +1,340 @@
+{
+  "complete": true,
+  "failure": null,
+  "checks": {
+    "passed": 29,
+    "failed": 0
+  },
+  "controls": [
+    "Fresh old schema excludes acquisition",
+    "Earned draft is not an attempt",
+    "Forged locked selection is atomic",
+    "Unknown acquisition field is atomic",
+    "Actual Begin counts one attempt",
+    "Paid active reset refused: prepare earned heated",
+    "Paid active reset refused: prepare toxic",
+    "Paid active reset refused: prepare responses heated",
+    "Paid active reset refused: prepare controls toxic",
+    "Paid active reset refused: prepare initiative toxic",
+    "Paid active reset refused: restart heated",
+    "Winning forecast grants nothing 0",
+    "Winning forecast grants nothing 1",
+    "Winning forecast grants nothing 2",
+    "Live victory records exact one-time award",
+    "Lost winning receipt is never replayed",
+    "Reads and terminal actions cannot duplicate award",
+    "Lining uses existing paid hit rule",
+    "Unlocked still cannot swap in combat",
+    "LastThread replaces rather than stacks Lining",
+    "Actual defeat grants nothing",
+    "Withdrawal grants nothing",
+    "Retry draft counts no attempt",
+    "Retry actual Begin counts attempt",
+    "Active free encounter cannot be reset into earned",
+    "Ended free encounter may enter earned",
+    "Free preset victory grants nothing",
+    "Free preset cannot smuggle earned selection",
+    "New Room never carries the award"
+  ],
+  "traces": [
+    {
+      "label": "actual clear and earned effects",
+      "win": {
+        "sequence": 6,
+        "command": "strike",
+        "accepted": true,
+        "phase": "ended",
+        "preparation": {
+          "profile": "toxic",
+          "responses": false,
+          "controls": false,
+          "initiative": false,
+          "tempo": "heavy",
+          "passive": "none",
+          "armor": "light"
+        },
+        "state": {
+          "profile": "toxic",
+          "initiative": null,
+          "breakbar": null,
+          "responsePractice": false,
+          "wardAvailable": false,
+          "pending": null,
+          "resolution": [],
+          "round": 4,
+          "hp": 7,
+          "maxHp": 100,
+          "enemyHp": 0,
+          "charges": 2,
+          "effects": [
+            {
+              "effect": "Poison",
+              "remaining": 1
+            }
+          ],
+          "threat": "No further threat; encounter ended.",
+          "events": [
+            "strike: 24 direct damage to target. Burn multiplier 1.0.",
+            "End round 4: Poison incoming DOT 6; actual HP lost 6; 1 rounds remain. Guard does not reduce this tick.",
+            "Round 4 resolved: secured."
+          ],
+          "outcome": "secured",
+          "last": "Round 4 resolved: secured.",
+          "weaponEnabled": true,
+          "attackMultiplier": 1,
+          "healingMultiplier": 1,
+          "passive": "none",
+          "armor": "light",
+          "rescueSpent": false,
+          "lastHit": null
+        },
+        "earned": {
+          "mode": true,
+          "unlocked": true,
+          "attempt": 1,
+          "receipt": {
+            "kind": "earned-practice-clear",
+            "sequence": 6,
+            "attempt": 1,
+            "profile": "toxic"
+          }
+        }
+      },
+      "lining": {
+        "sequence": 11,
+        "command": "guard",
+        "accepted": true,
+        "phase": "active",
+        "preparation": {
+          "profile": "toxic",
+          "responses": false,
+          "controls": false,
+          "initiative": false,
+          "tempo": "heavy",
+          "passive": "lining",
+          "armor": "heavy"
+        },
+        "state": {
+          "profile": "toxic",
+          "initiative": null,
+          "breakbar": null,
+          "responsePractice": false,
+          "wardAvailable": false,
+          "pending": null,
+          "resolution": [],
+          "round": 1,
+          "hp": 82,
+          "maxHp": 100,
+          "enemyHp": 96,
+          "charges": 2,
+          "effects": [
+            {
+              "effect": "Poison",
+              "remaining": 2
+            },
+            {
+              "effect": "Bleed",
+              "remaining": 2
+            }
+          ],
+          "threat": "Pressure: 20 direct damage, then extends poison (toxic) or burn (heated) by two rounds.",
+          "events": [
+            "Guard halves this round\u0027s direct contact; it cannot reduce DOT.",
+            "Target contact: 10 incoming direct damage; 9 actual HP lost.",
+            "Passive lining / heavy: physical contact 10 \u2192 9; damage reduced 1; actual HP lost 9; HP loss avoided 1; fatal-hit rescue not used now; once-per-encounter rescue not equipped. DOT is separate and remains payable.",
+            "End round 1: Poison incoming DOT 6; actual HP lost 6; 2 rounds remain. Guard does not reduce this tick.",
+            "End round 1: Bleed incoming DOT 3; actual HP lost 3; 2 rounds remain. Guard does not reduce this tick.",
+            "Round 1 resolved: active."
+          ],
+          "outcome": "active",
+          "last": "Round 1 resolved: active.",
+          "weaponEnabled": true,
+          "attackMultiplier": 1,
+          "healingMultiplier": 0.7,
+          "passive": "lining",
+          "armor": "heavy",
+          "rescueSpent": false,
+          "lastHit": {
+            "kind": "PhysicalDirect",
+            "incoming": 10,
+            "effectiveDamage": 9,
+            "hpBefore": 100,
+            "hpAfter": 91,
+            "damageReduced": 1,
+            "actualHpLost": 9,
+            "avoidedHpLoss": 1,
+            "rescued": false
+          }
+        },
+        "earned": {
+          "mode": true,
+          "unlocked": true,
+          "attempt": 2,
+          "receipt": {
+            "kind": "earned-practice-clear",
+            "sequence": 6,
+            "attempt": 1,
+            "profile": "toxic"
+          }
+        }
+      },
+      "exclusive": {
+        "sequence": 18,
+        "command": "guard",
+        "accepted": true,
+        "phase": "active",
+        "preparation": {
+          "profile": "toxic",
+          "responses": false,
+          "controls": false,
+          "initiative": false,
+          "tempo": "heavy",
+          "passive": "last-thread",
+          "armor": "heavy"
+        },
+        "state": {
+          "profile": "toxic",
+          "initiative": null,
+          "breakbar": null,
+          "responsePractice": false,
+          "wardAvailable": false,
+          "pending": null,
+          "resolution": [],
+          "round": 1,
+          "hp": 81,
+          "maxHp": 100,
+          "enemyHp": 96,
+          "charges": 2,
+          "effects": [
+            {
+              "effect": "Poison",
+              "remaining": 2
+            },
+            {
+              "effect": "Bleed",
+              "remaining": 2
+            }
+          ],
+          "threat": "Pressure: 20 direct damage, then extends poison (toxic) or burn (heated) by two rounds.",
+          "events": [
+            "Guard halves this round\u0027s direct contact; it cannot reduce DOT.",
+            "Target contact: 10 incoming direct damage; 10 actual HP lost.",
+            "Passive last-thread / heavy: physical contact 10 \u2192 10; damage reduced 0; actual HP lost 10; HP loss avoided 0; fatal-hit rescue not used now; once-per-encounter rescue unspent. DOT is separate and remains payable.",
+            "End round 1: Poison incoming DOT 6; actual HP lost 6; 2 rounds remain. Guard does not reduce this tick.",
+            "End round 1: Bleed incoming DOT 3; actual HP lost 3; 2 rounds remain. Guard does not reduce this tick.",
+            "Round 1 resolved: active."
+          ],
+          "outcome": "active",
+          "last": "Round 1 resolved: active.",
+          "weaponEnabled": true,
+          "attackMultiplier": 1,
+          "healingMultiplier": 0.7,
+          "passive": "last-thread",
+          "armor": "heavy",
+          "rescueSpent": false,
+          "lastHit": {
+            "kind": "PhysicalDirect",
+            "incoming": 10,
+            "effectiveDamage": 10,
+            "hpBefore": 100,
+            "hpAfter": 90,
+            "damageReduced": 0,
+            "actualHpLost": 10,
+            "avoidedHpLoss": 0,
+            "rescued": false
+          }
+        },
+        "earned": {
+          "mode": true,
+          "unlocked": true,
+          "attempt": 3,
+          "receipt": {
+            "kind": "earned-practice-clear",
+            "sequence": 6,
+            "attempt": 1,
+            "profile": "toxic"
+          }
+        }
+      },
+      "final": {
+        "sequence": 18,
+        "command": "guard",
+        "accepted": true,
+        "phase": "active",
+        "preparation": {
+          "profile": "toxic",
+          "responses": false,
+          "controls": false,
+          "initiative": false,
+          "tempo": "heavy",
+          "passive": "last-thread",
+          "armor": "heavy"
+        },
+        "state": {
+          "profile": "toxic",
+          "initiative": null,
+          "breakbar": null,
+          "responsePractice": false,
+          "wardAvailable": false,
+          "pending": null,
+          "resolution": [],
+          "round": 1,
+          "hp": 81,
+          "maxHp": 100,
+          "enemyHp": 96,
+          "charges": 2,
+          "effects": [
+            {
+              "effect": "Poison",
+              "remaining": 2
+            },
+            {
+              "effect": "Bleed",
+              "remaining": 2
+            }
+          ],
+          "threat": "Pressure: 20 direct damage, then extends poison (toxic) or burn (heated) by two rounds.",
+          "events": [
+            "Guard halves this round\u0027s direct contact; it cannot reduce DOT.",
+            "Target contact: 10 incoming direct damage; 10 actual HP lost.",
+            "Passive last-thread / heavy: physical contact 10 \u2192 10; damage reduced 0; actual HP lost 10; HP loss avoided 0; fatal-hit rescue not used now; once-per-encounter rescue unspent. DOT is separate and remains payable.",
+            "End round 1: Poison incoming DOT 6; actual HP lost 6; 2 rounds remain. Guard does not reduce this tick.",
+            "End round 1: Bleed incoming DOT 3; actual HP lost 3; 2 rounds remain. Guard does not reduce this tick.",
+            "Round 1 resolved: active."
+          ],
+          "outcome": "active",
+          "last": "Round 1 resolved: active.",
+          "weaponEnabled": true,
+          "attackMultiplier": 1,
+          "healingMultiplier": 0.7,
+          "passive": "last-thread",
+          "armor": "heavy",
+          "rescueSpent": false,
+          "lastHit": {
+            "kind": "PhysicalDirect",
+            "incoming": 10,
+            "effectiveDamage": 10,
+            "hpBefore": 100,
+            "hpAfter": 90,
+            "damageReduced": 0,
+            "actualHpLost": 10,
+            "avoidedHpLoss": 0,
+            "rescued": false
+          }
+        },
+        "earned": {
+          "mode": true,
+          "unlocked": true,
+          "attempt": 3,
+          "receipt": {
+            "kind": "earned-practice-clear",
+            "sequence": 6,
+            "attempt": 1,
+            "profile": "toxic"
+          }
+        }
+      }
+    }
+  ],
+  "scope": "Actual earned preparation in one ephemeral Room; no XP, persistence, people or balance validation."
+}

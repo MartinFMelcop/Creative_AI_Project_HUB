@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import {forecastControls} from './forecast-browser.mjs';
+import {earnedControls} from './earned-browser.mjs';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import os from 'node:os';
@@ -45,6 +46,7 @@ try{
  scratch=await fs.mkdtemp(path.join(os.tmpdir(),'combat-render-'));await fs.cp(path.join(study,'Host/web'),scratch,{recursive:true});let source=await fs.readFile(path.join(scratch,'app.js'),'utf8');assert.ok(source.includes('function render(s)'));source=source.replace('function render(s)','function render(s)');source=source.replace(/function render\(s\)\s*\{/,m=>m+' s={...s,hp:100};');await fs.writeFile(path.join(scratch,'app.js'),source);
  const badUrl=await start(scratch),bad=await browser.newPage();await bad.goto(badUrl);await bad.waitForFunction(()=>window.combatStudy?.snapshot());await bad.evaluate(()=>window.combatStudy.command('guard'));const actualBad=await fetch(badUrl+'/api/state').then(r=>r.json());let detected=false;try{await fidelity(bad,actualBad.state);}catch(e){detected=String(e.message).includes('Visible fact HP 81/100');negative.push({policy:'Renderer fabricates full HP after actual guarded DOT',actual_hp:actualBad.state.hp,detected,assertion:e.message});}check('Actual false full-HP renderer detected specifically',detected);
  await forecastControls({page,url,state,check,browser,start,study,out,negative});
+ await earnedControls({check,browser,start,study,out,negative});
  check('No actual browser script errors',errors.length===0);
  await fs.writeFile(path.join(out,'results.json'),JSON.stringify({controls,passed:controls.length,states,negative,browser:await browser.version(),errors},null,2)+'\n');
  complete=true;console.log(controls.length+' browser/HTTP controls passed; actual renderer negative detected');

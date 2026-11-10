@@ -1060,3 +1060,41 @@ action buttons and all numeric policies remain available unchanged. This is opti
 information for an existing decision, not a plan, source fiction, final class, balance
 or human-comprehension finding. [Execution](../evidence/combat-status/forecast/RUN.json) keeps
 old defeats, the failed initial rescue fixture and the false conditional-HP renderer.
+
+
+## Acquired practice eligibility — original host-session experiment
+
+The EXISTING Treatment Line now offers an optional earned route alongside its free
+presets. Begin starts a numbered attempt with the same Trial rules and initial resources.
+The first actual secured encounter with None acquires binary eligibility for Lining and
+Last thread within this host session. Acquisition never equips either; a later explicit
+earned preparation can select None or one of those mutually exclusive existing passives.
+Lining keeps its heavy-armor requirement; Last thread keeps its single interception and
+vulnerability to later DOT. No damage, resource, timing or progression curve changes.
+
+An active earned attempt cannot be replaced by any prepare/restart command. Finish or
+withdraw first. Untouched initial practice, preparation and ended encounters permit
+entry to the earned route; an already acted free encounter refuses direct earned entry.
+Free presets retain their existing preparation/reset behavior, including entering earned
+practice from a free preparation draft; they cannot escape an active earned attempt.
+Drafting is not an attempt. Defeat, withdrawal, free-preset victories and conditional
+inspection never acquire eligibility. Reads, late/lost receipts and ended actions cannot
+duplicate it. A fresh host starts without acquisition; there is no XP, account, save,
+world reward or Gate-to-Trial healing/conversion.
+
+This grant policy is ORIGINAL experimental staging, not recovered source acquisition,
+class canon or historical level eligibility. Inspected Warrior rows require levels6/9;
+Rogue's level6 rescue is probabilistic. Those requirements and the incomplete creation/
+acquisition helpers remain unresolved. The source single-slot/out-of-combat rule informed
+existing preparation; it does not supply the new victory grant. CRE-005(A) informs real
+consequence and opportunity cost; CRE-013(H) supports preparation-time exclusivity only
+as a hypothesis, not an approved talent tree.
+
+Independent Engineering, Scientific and Creative review compared remaining legacy
+contracts, earned combat preparation and actual licensed production access. The selected
+bounded product increment gives the existing combat beneficiary an acquired choice
+without a second consumer or arbitrary cross-owner resource conversion. Preserved source
+investigation remains mandatory; absent licensed Unity tooling is not discharged by
+this .NET execution. [Execution](../evidence/combat-status/earned/RUN.json) distinguishes
+29 native and18 browser controls from player meaning, comprehension, balance, historical
+runtime, final author approval and Unity/Windows/Steam validation.

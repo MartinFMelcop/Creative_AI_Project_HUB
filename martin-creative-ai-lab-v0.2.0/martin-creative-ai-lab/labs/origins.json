@@ -1362,6 +1362,7 @@
         "north-star/combat-study/Host/Trial.cs"
       ],
       "evidence": [
+        "evidence/combat-status/earned/RUN.json",
         "evidence/combat-status/forecast/RUN.json",
         "evidence/portable-combat/RUN.json",
         "evidence/initiative/RUN.json",
@@ -1381,7 +1382,8 @@
         "evidence/breakbar/RUN.json": "7990e8154852f9ef62b1bb940d35938255113be195412b1a1b4c15fee0840816",
         "evidence/initiative/RUN.json": "78de76f7cb3f9fdbba30fd3dc863899763ade65bc1e077a6045eca74f0616926",
         "evidence/portable-combat/RUN.json": "796d88965428745910575525df3ea135512709a750c36b114dce606e4878aa92",
-        "evidence/combat-status/forecast/RUN.json": "87d35388acc0f924c61dae2bcb2eb155e51c444e6f0349baba77514fcab895fc"
+        "evidence/combat-status/forecast/RUN.json": "87d35388acc0f924c61dae2bcb2eb155e51c444e6f0349baba77514fcab895fc",
+        "evidence/combat-status/earned/RUN.json": "05a31479c314208438a0de156cc6ec66bbfa960068b5feb1ca9c5fb6236c5201"
       }
     },
     {
@@ -2044,6 +2046,7 @@
       ],
       "decision": "Adapt one out-of-combat slot and selected literal heavy-physical 10% reduction/fatal-hit 1HP once-per-combat mechanics into the existing C# Treatment Line. Destination explicitly chooses direct-hit versus DOT separation, Guard-before-reduction and away-from-zero integer rounding. Source does not settle these policies. Class/gender/level/pool/scaling/rarity acquisition is not implemented: presets are experimental, not earned source abilities. Rogue chance survival and Knight control condition remain distinct, unintegrated choices.",
       "evidence": [
+        "evidence/combat-status/earned/RUN.json",
         "evidence/combat-status/forecast/RUN.json",
         "evidence/portable-combat/RUN.json",
         "evidence/initiative/RUN.json",
@@ -2059,7 +2062,8 @@
         "evidence/breakbar/RUN.json": "7990e8154852f9ef62b1bb940d35938255113be195412b1a1b4c15fee0840816",
         "evidence/initiative/RUN.json": "78de76f7cb3f9fdbba30fd3dc863899763ade65bc1e077a6045eca74f0616926",
         "evidence/portable-combat/RUN.json": "796d88965428745910575525df3ea135512709a750c36b114dce606e4878aa92",
-        "evidence/combat-status/forecast/RUN.json": "87d35388acc0f924c61dae2bcb2eb155e51c444e6f0349baba77514fcab895fc"
+        "evidence/combat-status/forecast/RUN.json": "87d35388acc0f924c61dae2bcb2eb155e51c444e6f0349baba77514fcab895fc",
+        "evidence/combat-status/earned/RUN.json": "05a31479c314208438a0de156cc6ec66bbfa960068b5feb1ca9c5fb6236c5201"
       },
       "consumer_paths": [
         "north-star/combat-study/Rules/Passives.cs",
@@ -2222,6 +2226,7 @@
       "decision": "Only selected queued action/reaction, LIFO and cast-cost-retention contracts are integrated through actual opt-in original Treatment Line. Damage48, one ward and shared charge policy are original, not recovered source abilities. Classic mode remains. Full stack, initiative, slot ordering, triggers, fizzle, cooldown and battle/runtime remain unresolved.",
       "next_action": "Compare actual authored combat needs and appropriate people/production access; do not automatically extend response matrices. Resolve broader battle contracts under explicit owner semantics.",
       "evidence": [
+        "evidence/combat-status/earned/RUN.json",
         "evidence/combat-status/forecast/RUN.json",
         "evidence/portable-combat/RUN.json",
         "evidence/initiative/RUN.json",
@@ -2233,7 +2238,8 @@
         "evidence/breakbar/RUN.json": "7990e8154852f9ef62b1bb940d35938255113be195412b1a1b4c15fee0840816",
         "evidence/initiative/RUN.json": "78de76f7cb3f9fdbba30fd3dc863899763ade65bc1e077a6045eca74f0616926",
         "evidence/portable-combat/RUN.json": "796d88965428745910575525df3ea135512709a750c36b114dce606e4878aa92",
-        "evidence/combat-status/forecast/RUN.json": "87d35388acc0f924c61dae2bcb2eb155e51c444e6f0349baba77514fcab895fc"
+        "evidence/combat-status/forecast/RUN.json": "87d35388acc0f924c61dae2bcb2eb155e51c444e6f0349baba77514fcab895fc",
+        "evidence/combat-status/earned/RUN.json": "05a31479c314208438a0de156cc6ec66bbfa960068b5feb1ca9c5fb6236c5201"
       },
       "origin_projects": [
         "P10"
@@ -2282,6 +2288,7 @@
       ],
       "decision": "Only selected weight1/3, protection/exposure/refill and specific-immunity boundaries are integrated through actual original Treatment Line control mode. Capacity5 consumer, zero-crossing drain-only, full-refill application ordering, shared hard-control charge and one-round contact/pressure suppression are explicit destination policies. DOT remains payable. No full CC/boss catalog, source runtime, balance or world fiction integration.",
       "evidence": [
+        "evidence/combat-status/earned/RUN.json",
         "evidence/combat-status/forecast/RUN.json",
         "evidence/portable-combat/RUN.json",
         "evidence/initiative/RUN.json",
@@ -2291,7 +2298,8 @@
         "evidence/breakbar/RUN.json": "7990e8154852f9ef62b1bb940d35938255113be195412b1a1b4c15fee0840816",
         "evidence/initiative/RUN.json": "78de76f7cb3f9fdbba30fd3dc863899763ade65bc1e077a6045eca74f0616926",
         "evidence/portable-combat/RUN.json": "796d88965428745910575525df3ea135512709a750c36b114dce606e4878aa92",
-        "evidence/combat-status/forecast/RUN.json": "87d35388acc0f924c61dae2bcb2eb155e51c444e6f0349baba77514fcab895fc"
+        "evidence/combat-status/forecast/RUN.json": "87d35388acc0f924c61dae2bcb2eb155e51c444e6f0349baba77514fcab895fc",
+        "evidence/combat-status/earned/RUN.json": "05a31479c314208438a0de156cc6ec66bbfa960068b5feb1ca9c5fb6236c5201"
       }
     },
     {
@@ -2313,6 +2321,7 @@
       "decision": "Selected INI001/002/004/005 and FLW one-turn/global-DOT boundaries now execute in actual optional Treatment Line. Numeric AGI+jitter/LCG/seed, two one-turn actors and Heavy/Quick damage are original destination policies. Earlier lethal contact cancels later action; earlier lethal strike skips contact; reads cannot reroll. Full initiative/formation/extra turns/SP/fizzle/cooldown/source runtime remain unresolved.",
       "next_action": "Compare remaining consequential source obligations, actual product needs and licensed Unity/Windows access; do not automatically expand initiative matrices. Human comprehension and balance need appropriate people.",
       "evidence": [
+        "evidence/combat-status/earned/RUN.json",
         "evidence/combat-status/forecast/RUN.json",
         "evidence/portable-combat/RUN.json",
         "evidence/initiative/RUN.json"
@@ -2320,7 +2329,8 @@
       "evidence_sha256": {
         "evidence/initiative/RUN.json": "78de76f7cb3f9fdbba30fd3dc863899763ade65bc1e077a6045eca74f0616926",
         "evidence/portable-combat/RUN.json": "796d88965428745910575525df3ea135512709a750c36b114dce606e4878aa92",
-        "evidence/combat-status/forecast/RUN.json": "87d35388acc0f924c61dae2bcb2eb155e51c444e6f0349baba77514fcab895fc"
+        "evidence/combat-status/forecast/RUN.json": "87d35388acc0f924c61dae2bcb2eb155e51c444e6f0349baba77514fcab895fc",
+        "evidence/combat-status/earned/RUN.json": "05a31479c314208438a0de156cc6ec66bbfa960068b5feb1ca9c5fb6236c5201"
       }
     },
     {
@@ -2343,6 +2353,7 @@
       ],
       "decision": "Adapt the real P05 fork/one-chosen-action/announced-consequence/next-decision boundary method through private accepted-history reconstruction of the SAME portable Trial, never parallel combat formulas. Repeated inspection preserves live RNG, charges, effects, rescue and full Room observation. Conditional pending Commit does not choose Release/Break ward. Separate source-sequence-guarded confirmation refuses stale/malformed context before mutation. Original five-mode native outputs and retained classic browser states remain exact. No P05 fiction, numeric balance, campaign, source save format, full runtime, Unity or human validation transfer.",
       "evidence": [
+        "evidence/combat-status/earned/RUN.json",
         "evidence/combat-status/forecast/RUN.json",
         "evidence/combat-status/forecast/source/source.json",
         "evidence/combat-status/forecast/native-parity.json",
@@ -2352,7 +2363,8 @@
         "evidence/combat-status/forecast/RUN.json": "87d35388acc0f924c61dae2bcb2eb155e51c444e6f0349baba77514fcab895fc",
         "evidence/combat-status/forecast/source/source.json": "0353ac9e9a180b9974b18386d6dfed427815d0b7ea906fd8876dc6346afaf1e0",
         "evidence/combat-status/forecast/native-parity.json": "95eed7b5fbe895c9c8949ebcb2232cc3e758d05742ad9a5427aae45dbb0497ff",
-        "evidence/combat-status/forecast/browser/forecast-browser.json": "bf1164037c699688b5c2e27ce91a51e038c0dab8a743301f1f4f1bf0096195fb"
+        "evidence/combat-status/forecast/browser/forecast-browser.json": "bf1164037c699688b5c2e27ce91a51e038c0dab8a743301f1f4f1bf0096195fb",
+        "evidence/combat-status/earned/RUN.json": "05a31479c314208438a0de156cc6ec66bbfa960068b5feb1ca9c5fb6236c5201"
       },
       "next_action": "Compare remaining consequential legacy and earned-character needs; do not expand forecast/initiative/portability matrices automatically. Human comprehension and preference require suitable people/devices."
     }
