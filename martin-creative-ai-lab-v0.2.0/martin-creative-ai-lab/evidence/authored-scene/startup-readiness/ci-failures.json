@@ -1,0 +1,30 @@
+{
+  "run_id": 42733698274,
+  "commit": "5990be50bc7ea023cb1f13db24c64f465d72cf58",
+  "url": "https://github.com/MartinFMelcop/Creative_AI_Project_HUB/actions/runs/42733698274",
+  "attempts": [
+    {
+      "attempt": 1,
+      "job_id": 129557938109,
+      "conclusion": "failure",
+      "startup": "second process, resume",
+      "prior_continuity_controls": 1,
+      "artifact": "ci-attempt1.zip",
+      "bytes": 15161,
+      "sha256": "5fa8519b6bded96ed4cfea74e2d69f3e39b14413fff9ed38c7d36035dc4f3947"
+    },
+    {
+      "attempt": 2,
+      "job_id": 129565075519,
+      "conclusion": "failure",
+      "startup": "first process, new",
+      "prior_continuity_controls": 0,
+      "artifact": "ci-attempt2.zip",
+      "bytes": 14129,
+      "sha256": "8451bf1370a47a7a8ce593fd4da7339fba4e8931d1f977c114a7f9a82b81bb3c"
+    }
+  ],
+  "error": "Host refused startup: Value cannot be null.",
+  "other_jobs": "Nine jobs success, including recipient-delivery. Later C# steps after authored scene were skipped, not passes.",
+  "historical_cause_limit": "Old CI logs contain exception Message only; no old CI stack is available."
+}

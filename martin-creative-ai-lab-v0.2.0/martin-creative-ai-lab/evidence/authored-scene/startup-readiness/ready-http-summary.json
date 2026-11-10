@@ -1,0 +1,247 @@
+{
+  "actual_processes": 4,
+  "ready_and_successful_http_each": true,
+  "exit_zero_each": true,
+  "all_http_after_matching_ready": true,
+  "all_resume_journal_bytes_unchanged": true,
+  "host_sha256_before": "6d5d6cc103e365bde600413646a906efe61f18e288b3682a22c037d9f23ed609",
+  "host_sha256_after": "6d5d6cc103e365bde600413646a906efe61f18e288b3682a22c037d9f23ed609",
+  "hook_sha256": "adb2adb3fcfd9d4bd3edaefe0df96843bc40177b61c17061102c542a6a605544",
+  "actual_ready_helper": "/workspace/work/authored-startup/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/tools/continuity-process.py",
+  "ready_helper_sha256": "bdb3ce9aefe3c3becf9a401eac30a9ee0d4ff81a42d85cdd9b945c12d9845af0",
+  "rules_identity": "efebc724563c75f9328c901a0b27be81987e9fae601aabca19a8573919b74cfe",
+  "limits": "Four bounded processes; deliberately stressed loopback GET. Observer present in both early and READY-first probes; no general runtime/server fix inferred.",
+  "raw_trace": {
+    "path": "/workspace/work/gate-assist/startup-hook-probe/ready-http/commands.json",
+    "bytes": 3411155,
+    "sha256": "4318bca1c3edb35a6885335adb351cb5ac065b6532f61f8c7ab56023447b6eee",
+    "retained_in_workspace": true,
+    "projection": "Repeated HTTP outcomes summarized by all-order assertion, first/last, status counts, unique errors and sequence values; request volume is not test count or performance evidence."
+  },
+  "processes": [
+    {
+      "command": [
+        "/workspace/work/runtime/dotnet/dotnet",
+        "/workspace/work/gate-equipment/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/Host/bin/Release/net10.0/NorthStar.AuthoredScene.dll",
+        "--serve",
+        "36373",
+        "/workspace/work/gate-equipment/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/web",
+        "--seconds",
+        "2",
+        "--new",
+        "/workspace/work/gate-assist/startup-hook-probe/ready-http/one actual journal.json"
+      ],
+      "exit_code": 0,
+      "stdout": "READY http://127.0.0.1:36373/\n",
+      "stderr": "STARTUP_HOOK active; bounded first-chance observer only\nFIRST_CHANCE type=System.IO.FileNotFoundException hresult=80070002 elapsed_ms=0\nSystem.IO.FileNotFoundException: Could not find file '/workspace/work/gate-assist/startup-hook-probe/ready-http/one actual journal.json'.\nFile name: '/workspace/work/gate-assist/startup-hook-probe/ready-http/one actual journal.json'\n   at System.IO.FileSystem.GetAttributes(String fullPath)\nFIRST_CHANCE type=System.IO.FileNotFoundException hresult=80070002 elapsed_ms=14\nSystem.IO.FileNotFoundException: Could not find file '/workspace/work/gate-assist/startup-hook-probe/ready-http/one actual journal.json.lock'.\nFile name: '/workspace/work/gate-assist/startup-hook-probe/ready-http/one actual journal.json.lock'\n   at System.IO.FileSystem.GetAttributes(String fullPath)\nFIRST_CHANCE type=System.IO.FileNotFoundException hresult=80070002 elapsed_ms=15\nSystem.IO.FileNotFoundException: Could not find file '/workspace/work/gate-assist/startup-hook-probe/ready-http/one actual journal.json'.\nFile name: '/workspace/work/gate-assist/startup-hook-probe/ready-http/one actual journal.json'\n   at System.IO.FileSystem.GetAttributes(String fullPath)\nFIRST_CHANCE type=System.Threading.Tasks.TaskCanceledException hresult=8013153B elapsed_ms=2127\nSystem.Threading.Tasks.TaskCanceledException: A task was canceled.\n   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)\nFIRST_CHANCE type=System.ObjectDisposedException hresult=80131622 elapsed_ms=2128\nSystem.ObjectDisposedException: Cannot access a disposed object.\nObject name: 'System.Net.Sockets.Socket'.\n   at System.ThrowHelper.ThrowObjectDisposedException(Object instance)\nFIRST_CHANCE type=System.ObjectDisposedException hresult=80131622 elapsed_ms=2129\nSystem.ObjectDisposedException: Cannot access a disposed object.\nObject name: 'System.Net.Sockets.Socket'.\n   at System.ThrowHelper.ThrowObjectDisposedException(Object instance)\n",
+      "failure": null,
+      "ready_observed_after_process_seconds": 0.2295167099982791,
+      "http_threads": 2,
+      "http_attempts": 3118,
+      "http_success": 3042,
+      "all_requests_after_matching_ready": true,
+      "journal_sha256_after": "a06416520fb1cc3fb51f7f0a721d745139aee23a4598246aa0c910d5fcc5d70c",
+      "resume_bytes_unchanged": null,
+      "all_journal_bytes_equal_original": true,
+      "http_outcomes_projection": {
+        "count": 3118,
+        "all_after_ready": true,
+        "first": {
+          "worker": 0,
+          "started_after_process_seconds": 0.22963123099907534,
+          "ready_observed_before_request": true,
+          "status": 200,
+          "sequence": 0,
+          "run_id": "0c863dd01fb347b186d23df017af72ec-day-1"
+        },
+        "last": {
+          "worker": 1,
+          "started_after_process_seconds": 2.210859545000858,
+          "ready_observed_before_request": true,
+          "error_type": "URLError",
+          "error": "<urlopen error [Errno 111] Connection refused>"
+        },
+        "status_counts": {
+          "200": 3042,
+          "JSONDecodeError": 2,
+          "URLError": 74
+        },
+        "error_messages": [
+          "<urlopen error [Errno 111] Connection refused>",
+          "Expecting value: line 1 column 1 (char 0)"
+        ],
+        "sequences": [
+          0
+        ]
+      }
+    },
+    {
+      "command": [
+        "/workspace/work/runtime/dotnet/dotnet",
+        "/workspace/work/gate-equipment/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/Host/bin/Release/net10.0/NorthStar.AuthoredScene.dll",
+        "--serve",
+        "43159",
+        "/workspace/work/gate-equipment/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/web",
+        "--seconds",
+        "2",
+        "--resume",
+        "/workspace/work/gate-assist/startup-hook-probe/ready-http/one actual journal.json"
+      ],
+      "exit_code": 0,
+      "stdout": "READY http://127.0.0.1:43159/\n",
+      "stderr": "STARTUP_HOOK active; bounded first-chance observer only\nFIRST_CHANCE type=System.Threading.Tasks.TaskCanceledException hresult=8013153B elapsed_ms=0\nSystem.Threading.Tasks.TaskCanceledException: A task was canceled.\n   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)\nFIRST_CHANCE type=System.ObjectDisposedException hresult=80131622 elapsed_ms=10\nSystem.ObjectDisposedException: Cannot access a disposed object.\nObject name: 'System.Net.Sockets.Socket'.\n   at System.ThrowHelper.ThrowObjectDisposedException(Object instance)\nFIRST_CHANCE type=System.ObjectDisposedException hresult=80131622 elapsed_ms=11\nSystem.ObjectDisposedException: Cannot access a disposed object.\nObject name: 'System.Net.Sockets.Socket'.\n   at System.ThrowHelper.ThrowObjectDisposedException(Object instance)\n",
+      "failure": null,
+      "ready_observed_after_process_seconds": 0.17806612599815708,
+      "http_threads": 2,
+      "http_attempts": 3424,
+      "http_success": 3377,
+      "all_requests_after_matching_ready": true,
+      "journal_sha256_after": "a06416520fb1cc3fb51f7f0a721d745139aee23a4598246aa0c910d5fcc5d70c",
+      "resume_bytes_unchanged": true,
+      "all_journal_bytes_equal_original": true,
+      "http_outcomes_projection": {
+        "count": 3424,
+        "all_after_ready": true,
+        "first": {
+          "worker": 0,
+          "started_after_process_seconds": 0.17814337500021793,
+          "ready_observed_before_request": true,
+          "status": 200,
+          "sequence": 0,
+          "run_id": "0c863dd01fb347b186d23df017af72ec-day-1"
+        },
+        "last": {
+          "worker": 0,
+          "started_after_process_seconds": 2.21000990599714,
+          "ready_observed_before_request": true,
+          "error_type": "URLError",
+          "error": "<urlopen error [Errno 111] Connection refused>"
+        },
+        "status_counts": {
+          "200": 3377,
+          "JSONDecodeError": 2,
+          "URLError": 45
+        },
+        "error_messages": [
+          "<urlopen error [Errno 111] Connection refused>",
+          "Expecting value: line 1 column 1 (char 0)"
+        ],
+        "sequences": [
+          0
+        ]
+      }
+    },
+    {
+      "command": [
+        "/workspace/work/runtime/dotnet/dotnet",
+        "/workspace/work/gate-equipment/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/Host/bin/Release/net10.0/NorthStar.AuthoredScene.dll",
+        "--serve",
+        "40395",
+        "/workspace/work/gate-equipment/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/web",
+        "--seconds",
+        "2",
+        "--resume",
+        "/workspace/work/gate-assist/startup-hook-probe/ready-http/one actual journal.json"
+      ],
+      "exit_code": 0,
+      "stdout": "READY http://127.0.0.1:40395/\n",
+      "stderr": "STARTUP_HOOK active; bounded first-chance observer only\nFIRST_CHANCE type=System.Threading.Tasks.TaskCanceledException hresult=8013153B elapsed_ms=0\nSystem.Threading.Tasks.TaskCanceledException: A task was canceled.\n   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)\nFIRST_CHANCE type=System.ObjectDisposedException hresult=80131622 elapsed_ms=9\nSystem.ObjectDisposedException: Cannot access a disposed object.\nObject name: 'System.Net.Sockets.Socket'.\n   at System.ThrowHelper.ThrowObjectDisposedException(Object instance)\nFIRST_CHANCE type=System.ObjectDisposedException hresult=80131622 elapsed_ms=10\nSystem.ObjectDisposedException: Cannot access a disposed object.\nObject name: 'System.Net.Sockets.Socket'.\n   at System.ThrowHelper.ThrowObjectDisposedException(Object instance)\n",
+      "failure": null,
+      "ready_observed_after_process_seconds": 0.17767248100062716,
+      "http_threads": 2,
+      "http_attempts": 3492,
+      "http_success": 3441,
+      "all_requests_after_matching_ready": true,
+      "journal_sha256_after": "a06416520fb1cc3fb51f7f0a721d745139aee23a4598246aa0c910d5fcc5d70c",
+      "resume_bytes_unchanged": true,
+      "all_journal_bytes_equal_original": true,
+      "http_outcomes_projection": {
+        "count": 3492,
+        "all_after_ready": true,
+        "first": {
+          "worker": 1,
+          "started_after_process_seconds": 0.1778097060014261,
+          "ready_observed_before_request": true,
+          "status": 200,
+          "sequence": 0,
+          "run_id": "0c863dd01fb347b186d23df017af72ec-day-1"
+        },
+        "last": {
+          "worker": 0,
+          "started_after_process_seconds": 2.2018110739991243,
+          "ready_observed_before_request": true,
+          "error_type": "URLError",
+          "error": "<urlopen error [Errno 111] Connection refused>"
+        },
+        "status_counts": {
+          "200": 3441,
+          "JSONDecodeError": 2,
+          "URLError": 49
+        },
+        "error_messages": [
+          "<urlopen error [Errno 111] Connection refused>",
+          "Expecting value: line 1 column 1 (char 0)"
+        ],
+        "sequences": [
+          0
+        ]
+      }
+    },
+    {
+      "command": [
+        "/workspace/work/runtime/dotnet/dotnet",
+        "/workspace/work/gate-equipment/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/Host/bin/Release/net10.0/NorthStar.AuthoredScene.dll",
+        "--serve",
+        "49641",
+        "/workspace/work/gate-equipment/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/web",
+        "--seconds",
+        "2",
+        "--resume",
+        "/workspace/work/gate-assist/startup-hook-probe/ready-http/one actual journal.json"
+      ],
+      "exit_code": 0,
+      "stdout": "READY http://127.0.0.1:49641/\n",
+      "stderr": "STARTUP_HOOK active; bounded first-chance observer only\nFIRST_CHANCE type=System.Threading.Tasks.TaskCanceledException hresult=8013153B elapsed_ms=0\nSystem.Threading.Tasks.TaskCanceledException: A task was canceled.\n   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)\nFIRST_CHANCE type=System.ObjectDisposedException hresult=80131622 elapsed_ms=8\nSystem.ObjectDisposedException: Cannot access a disposed object.\nObject name: 'System.Net.Sockets.Socket'.\n   at System.ThrowHelper.ThrowObjectDisposedException(Object instance)\nFIRST_CHANCE type=System.ObjectDisposedException hresult=80131622 elapsed_ms=9\nSystem.ObjectDisposedException: Cannot access a disposed object.\nObject name: 'System.Net.Sockets.Socket'.\n   at System.ThrowHelper.ThrowObjectDisposedException(Object instance)\n",
+      "failure": null,
+      "ready_observed_after_process_seconds": 0.15243237699905876,
+      "http_threads": 2,
+      "http_attempts": 3534,
+      "http_success": 3506,
+      "all_requests_after_matching_ready": true,
+      "journal_sha256_after": "a06416520fb1cc3fb51f7f0a721d745139aee23a4598246aa0c910d5fcc5d70c",
+      "resume_bytes_unchanged": true,
+      "all_journal_bytes_equal_original": true,
+      "http_outcomes_projection": {
+        "count": 3534,
+        "all_after_ready": true,
+        "first": {
+          "worker": 0,
+          "started_after_process_seconds": 0.1525047959985386,
+          "ready_observed_before_request": true,
+          "status": 200,
+          "sequence": 0,
+          "run_id": "0c863dd01fb347b186d23df017af72ec-day-1"
+        },
+        "last": {
+          "worker": 0,
+          "started_after_process_seconds": 2.1697603169996,
+          "ready_observed_before_request": true,
+          "error_type": "URLError",
+          "error": "<urlopen error [Errno 111] Connection refused>"
+        },
+        "status_counts": {
+          "200": 3506,
+          "JSONDecodeError": 2,
+          "URLError": 26
+        },
+        "error_messages": [
+          "<urlopen error [Errno 111] Connection refused>",
+          "Expecting value: line 1 column 1 (char 0)"
+        ],
+        "sequences": [
+          0
+        ]
+      }
+    }
+  ]
+}

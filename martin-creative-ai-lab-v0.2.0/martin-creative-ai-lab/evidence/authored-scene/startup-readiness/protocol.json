@@ -1,0 +1,13 @@
+{
+  "baseline_commit": "5990be50bc7ea023cb1f13db24c64f465d72cf58",
+  "selection": "C: restore existing authored-scene continuity verification; no new gameplay owner",
+  "acceptance": [
+    "Actual unchanged Host entrypoint new/resume runs all existing 47 continuity controls; no first HTTP request before exact matching READY",
+    "Original owner, RulesIdentity algorithm, all source closure and historical recipient archive bytes remain unchanged",
+    "Missing/corrupt/incompatible/leased journal negatives remain refused without resetting bytes",
+    "Startup death, wrong URL and absent readiness cannot reach HTTP; same bounded deadline, no process retry or swallowed failure",
+    "Actual authored-scene native/journal/browser wrapper passes with current instrument; all original negative controls retained"
+  ],
+  "causal_evidence": "Official startup hook on unchanged actual entrypoint captures Monitor.Enter ArgumentNull in HttpEndPointListener.ProcessAccept during HttpListener.Start under early HTTP; cold no-HTTP12passed",
+  "causal_limit": "Stack localizes reproduced failure mechanism; historical CI emitted only Message so exact old stacks remain unavailable. Linux .NET10.0.12 only; no universal runtime fix."
+}

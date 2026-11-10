@@ -1,0 +1,34 @@
+[
+  {
+    "command": [
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "north-star/authored-scene/tools",
+      "-p",
+      "test_*.py"
+    ],
+    "cwd": "/workspace/work/authored-startup/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ".......\n----------------------------------------------------------------------\nRan 7 tests in 0.055s\n\nOK\n",
+    "startup_hook": false
+  },
+  {
+    "command": [
+      "python3",
+      "north-star/authored-scene/tools/verify.py",
+      "--dotnet",
+      "/workspace/work/runtime/dotnet/dotnet",
+      "--output",
+      "/workspace/work/authored-startup-evidence/verified-final"
+    ],
+    "cwd": "/workspace/work/authored-startup/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+    "exit_code": 0,
+    "stdout": "PASS: actual authored C# scene, browser consequences and source-stable input closure\n",
+    "stderr": "",
+    "startup_hook": false
+  }
+]

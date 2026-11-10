@@ -1,0 +1,32 @@
+test_start_does_not_probe_http_before_exact_ready (readiness_tests.ReadinessProtocol.test_start_does_not_probe_http_before_exact_ready) ... FAIL
+
+======================================================================
+FAIL: test_start_does_not_probe_http_before_exact_ready (readiness_tests.ReadinessProtocol.test_start_does_not_probe_http_before_exact_ready)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/work/authored-startup/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/tools/test_continuity_process.py", line 103, in test_start_does_not_probe_http_before_exact_ready
+    row, observed = self.run_start()
+                    ^^^^^^^^^^^^^^^^
+  File "/workspace/work/authored-startup/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/tools/test_continuity_process.py", line 100, in run_start
+    return self.instrument.start('--new', self.root / 'one run.json')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/work/authored-startup-science/original-5990-continuity-process.py", line 52, in start
+    status,observed=self.request(row['url'])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py", line 1139, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py", line 1143, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py", line 1204, in _execute_mock_call
+    result = effect(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/work/authored-startup/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/tools/test_continuity_process.py", line 88, in request
+    self.assertIn(('stdout', self.process.expected), self.events,
+AssertionError: ('stdout', 'READY http://127.0.0.1:36795/') not found in [] : HTTP was attempted before matching READY
+
+----------------------------------------------------------------------
+Ran 1 test in 0.002s
+
+FAILED (failures=1)

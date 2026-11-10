@@ -1,0 +1,27 @@
+using System;
+using System.Diagnostics;
+using System.Runtime.ExceptionServices;
+using System.Threading;
+public static class StartupHook
+{
+    private static readonly Stopwatch Clock=Stopwatch.StartNew();
+    private static int remaining=64;
+    [ThreadStatic] private static bool logging;
+    public static void Initialize()
+    {
+        Console.Error.WriteLine("STARTUP_HOOK active; bounded first-chance observer only");
+        AppDomain.CurrentDomain.FirstChanceException += Observe;
+    }
+    private static void Observe(object? sender,FirstChanceExceptionEventArgs e)
+    {
+        if(logging||Clock.ElapsedMilliseconds>10000||Interlocked.Decrement(ref remaining)<0)return;
+        logging=true;
+        try
+        {
+            Console.Error.WriteLine("FIRST_CHANCE type="+e.Exception.GetType().FullName+" hresult="+e.Exception.HResult.ToString("X8")+" elapsed_ms="+Clock.ElapsedMilliseconds);
+            Console.Error.WriteLine(e.Exception.ToString());
+        }
+        catch { }
+        finally { logging=false; }
+    }
+}

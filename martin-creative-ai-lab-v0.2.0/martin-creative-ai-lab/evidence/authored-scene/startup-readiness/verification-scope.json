@@ -1,0 +1,284 @@
+{
+  "schema_version": 1,
+  "selected": {
+    "progression": false,
+    "crafting": false,
+    "loadout": false,
+    "recovery": false,
+    "narrative": false,
+    "input_timing": false,
+    "intake": false,
+    "field": false,
+    "presentation": false,
+    "audio": false,
+    "authored_scene": true,
+    "tooling": false,
+    "reputation": false,
+    "combat": false,
+    "availability": false,
+    "recipient": false
+  },
+  "suites": [
+    "authored_scene"
+  ],
+  "browser": true,
+  "required": true,
+  "full_fallback": false,
+  "changed_paths": [
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/docs/STATE.md",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/tools/continuity-process.py",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/capabilities.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/Hook.csproj.txt",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/RUN.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/StartupHook.cs.txt",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/browser/browser.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/browser/hosts.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/candidate-final-commands.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/candidate-initial-commands.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/ci-attempt1.zip",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/ci-attempt2.zip",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/ci-failures.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/continuity-control-parity.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/continuity/execution.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/continuity/results.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/early-http-failure.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/early-http-producer.py",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/first-integrity-failure.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/integrity-checks.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/journal-native.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/native.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/ordering-negative.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/ordering-negative.py",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/ordering-negative.txt",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/preserved-source-and-recipient.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/protocol.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/ready-http-producer.py",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/ready-http-summary.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/scope-invocation-correction.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/verification-scope.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/tools/test_continuity_process.py"
+  ],
+  "reasons": [
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/tools/continuity-process.py",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "authored_scene"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/Hook.csproj.txt",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "authored_scene"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/RUN.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "authored_scene"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/StartupHook.cs.txt",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "authored_scene"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/browser/browser.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "authored_scene"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/browser/hosts.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "authored_scene"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/candidate-final-commands.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "authored_scene"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/candidate-initial-commands.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "authored_scene"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/ci-attempt1.zip",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "authored_scene"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/ci-attempt2.zip",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "authored_scene"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/ci-failures.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "authored_scene"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/continuity-control-parity.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "authored_scene"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/continuity/execution.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "authored_scene"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/continuity/results.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "authored_scene"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/early-http-failure.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "authored_scene"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/early-http-producer.py",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "authored_scene"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/first-integrity-failure.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "authored_scene"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/integrity-checks.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "authored_scene"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/journal-native.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "authored_scene"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/native.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "authored_scene"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/ordering-negative.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "authored_scene"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/ordering-negative.py",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "authored_scene"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/ordering-negative.txt",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "authored_scene"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/preserved-source-and-recipient.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "authored_scene"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/protocol.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "authored_scene"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/ready-http-producer.py",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "authored_scene"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/ready-http-summary.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "authored_scene"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/scope-invocation-correction.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "authored_scene"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/startup-readiness/verification-scope.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "authored_scene"
+      ]
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/tools/test_continuity_process.py",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "authored_scene"
+      ]
+    }
+  ],
+  "wrapper_coverage": {
+    "field": [
+      "preparation-verify.py",
+      "sampling-verify.py",
+      "conditions-verify.py",
+      "memory-verify",
+      "presentation-verify.py",
+      "field-verify"
+    ]
+  },
+  "limits": "Conservative routing of unchanged verification bodies; no test execution, performance, Unity/Windows or human claim."
+}

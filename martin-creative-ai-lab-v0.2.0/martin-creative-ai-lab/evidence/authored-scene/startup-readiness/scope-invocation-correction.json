@@ -1,0 +1,10 @@
+{
+  "initial": "Direct Python import tools.csharp_scope from workspace without tools on sys.path",
+  "failure": "ModuleNotFoundError: No module named ci_scope",
+  "phase": "Read-only scope inspection; no product test ran or source changed.",
+  "correction": "Put existing tools directory on sys.path for its existing ci_scope import; router and contracts unchanged. Both Git reads now execute from the actual repository root; no router/gate change.",
+  "selected": [
+    "authored_scene"
+  ],
+  "second_failure": "Mixed git diff root-relative and git ls-files workspace-relative paths triggered the correct conservative full fallback and a failed expected-selection assertion."
+}

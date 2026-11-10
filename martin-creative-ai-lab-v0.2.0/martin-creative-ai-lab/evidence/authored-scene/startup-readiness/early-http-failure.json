@@ -1,0 +1,18 @@
+[
+  {
+    "command": [
+      "/workspace/work/runtime/dotnet/dotnet",
+      "/workspace/work/gate-equipment/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/Host/bin/Release/net10.0/NorthStar.AuthoredScene.dll",
+      "--serve",
+      "55975",
+      "/workspace/work/gate-equipment/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/web",
+      "--seconds",
+      "2",
+      "--new",
+      "/workspace/work/gate-assist/startup-hook-probe/early-http/run-0.json"
+    ],
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "STARTUP_HOOK active; bounded first-chance observer only\nFIRST_CHANCE type=System.IO.FileNotFoundException hresult=80070002 elapsed_ms=0\nSystem.IO.FileNotFoundException: Could not find file '/workspace/work/gate-assist/startup-hook-probe/early-http/run-0.json'.\nFile name: '/workspace/work/gate-assist/startup-hook-probe/early-http/run-0.json'\n   at System.IO.FileSystem.GetAttributes(String fullPath)\nFIRST_CHANCE type=System.IO.FileNotFoundException hresult=80070002 elapsed_ms=11\nSystem.IO.FileNotFoundException: Could not find file '/workspace/work/gate-assist/startup-hook-probe/early-http/run-0.json.lock'.\nFile name: '/workspace/work/gate-assist/startup-hook-probe/early-http/run-0.json.lock'\n   at System.IO.FileSystem.GetAttributes(String fullPath)\nFIRST_CHANCE type=System.IO.FileNotFoundException hresult=80070002 elapsed_ms=12\nSystem.IO.FileNotFoundException: Could not find file '/workspace/work/gate-assist/startup-hook-probe/early-http/run-0.json'.\nFile name: '/workspace/work/gate-assist/startup-hook-probe/early-http/run-0.json'\n   at System.IO.FileSystem.GetAttributes(String fullPath)\nFIRST_CHANCE type=System.ArgumentNullException hresult=80004003 elapsed_ms=151\nSystem.ArgumentNullException: Value cannot be null.\n   at System.ArgumentNullException.Throw(String paramName)\nFIRST_CHANCE type=System.ArgumentNullException hresult=80004003 elapsed_ms=151\nSystem.ArgumentNullException: Value cannot be null.\n   at System.ArgumentNullException.Throw(String paramName)\n   at System.Threading.Monitor.Enter(Object obj, Boolean& lockTaken)\n   at System.Net.HttpEndPointListener.ProcessAccept(SocketAsyncEventArgs args)\n   at System.Net.HttpEndPointListener.Accept(SocketAsyncEventArgs e)\n   at System.Net.HttpEndPointListener..ctor(HttpListener listener, IPAddress addr, Int32 port, Boolean secure)\n   at System.Net.HttpEndPointManager.GetEPListener(String host, Int32 port, HttpListener listener, Boolean secure)\n   at System.Net.HttpEndPointManager.AddPrefixInternal(String p, HttpListener listener)\n   at System.Net.HttpEndPointManager.AddListener(HttpListener listener)\nFIRST_CHANCE type=System.ArgumentNullException hresult=80004003 elapsed_ms=151\nSystem.ArgumentNullException: Value cannot be null.\n   at System.ArgumentNullException.Throw(String paramName)\n   at System.Threading.Monitor.Enter(Object obj, Boolean& lockTaken)\n   at System.Net.HttpEndPointListener.ProcessAccept(SocketAsyncEventArgs args)\n   at System.Net.HttpEndPointListener.Accept(SocketAsyncEventArgs e)\n   at System.Net.HttpEndPointListener..ctor(HttpListener listener, IPAddress addr, Int32 port, Boolean secure)\n   at System.Net.HttpEndPointManager.GetEPListener(String host, Int32 port, HttpListener listener, Boolean secure)\n   at System.Net.HttpEndPointManager.AddPrefixInternal(String p, HttpListener listener)\n   at System.Net.HttpEndPointManager.AddListener(HttpListener listener)\n   at System.Net.HttpListener.Start()\nValue cannot be null.\n"
+  }
+]

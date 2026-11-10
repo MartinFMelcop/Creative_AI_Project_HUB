@@ -38,20 +38,36 @@ class Instrument:
         try:
             with urllib.request.urlopen(req,timeout=4) as response:return response.status,json.loads(response.read())
         except urllib.error.HTTPError as error:return error.code,json.loads(error.read())
+    def wait_ready(self,row,deadline):
+        # HttpListener.Start can accept a connection before its internal state is ready.
+        # Observe the host's completion signal before sending any HTTP request.
+        expected='READY '+row['url']+'/'
+        while time.monotonic()<deadline:
+            if row['process'].poll() is not None:
+                raise ValueError('Host refused startup: '+row['stderr_path'].read_text())
+            if expected in row['stdout_path'].read_text().splitlines():
+                return
+            time.sleep(.025)
+        raise ValueError('Actual host did not announce matching READY before deadline')
     def start(self,mode,path):
         self.number+=1
         with socket.socket() as reserve:reserve.bind(('127.0.0.1',0));port=reserve.getsockname()[1]
-        stdout=(self.output/f'host-{self.number}.stdout.txt').open('wb');stderr=(self.output/f'host-{self.number}.stderr.txt').open('wb')
+        stdout_path=self.output/f'host-{self.number}.stdout.txt';stderr_path=self.output/f'host-{self.number}.stderr.txt'
+        stdout=stdout_path.open('wb');stderr=stderr_path.open('wb')
         command=[self.dotnet,str(DLL),'--serve',str(port),str(WEB),'--seconds','120',mode,str(path)]
         process=subprocess.Popen(command,cwd=ROOT,env=dict(os.environ,DOTNET_NOLOGO='1',DOTNET_CLI_TELEMETRY_OPTOUT='1',DOTNET_PROCESSOR_COUNT='2'),stdout=stdout,stderr=stderr)
-        row={'process':process,'stdout':stdout,'stderr':stderr,'command':command,'url':f'http://127.0.0.1:{port}','path':str(path),'mode':mode};self.processes.append(row)
+        row={'process':process,'stdout':stdout,'stderr':stderr,'command':command,'url':f'http://127.0.0.1:{port}','path':str(path),'mode':mode,'stdout_path':stdout_path,'stderr_path':stderr_path};self.processes.append(row)
+        record={'command':command,'observation':'Waiting for actual matching READY; no HTTP sent','exit_code_at_start':None}
+        self.commands.append(record)
         deadline=time.monotonic()+10
+        self.wait_ready(row,deadline)
+        record['observation']='Actual matching READY observed before HTTP'
         while time.monotonic()<deadline:
             if process.poll() is not None:raise ValueError('Host refused startup: '+(self.output/f'host-{self.number}.stderr.txt').read_text())
             try:
                 status,observed=self.request(row['url'])
                 if status==200:
-                    self.commands.append({'command':command,'observation':'Actual loopback READY and state','exit_code_at_start':None});return row,observed
+                    record['observation']='Actual matching READY then loopback state';return row,observed
             except (OSError,ValueError):pass
             time.sleep(.025)
         raise ValueError('Actual host did not become ready')

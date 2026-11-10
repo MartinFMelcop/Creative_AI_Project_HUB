@@ -1,0 +1,14 @@
+{
+  "kind": "actual_old_instrument_ordering_negative",
+  "baseline_commit": "5990be50bc7ea023cb1f13db24c64f465d72cf58",
+  "original_instrument_sha256": "b7dc347841fc56237edf88ca242b1796d23ad381fb3bc82c1f31a31057d768c7",
+  "current_test_sha256": "e79e94451168b3e44adf1d72cc7ef286942b6c41face6676bbea34d999476445",
+  "test": "ReadinessProtocol.test_start_does_not_probe_http_before_exact_ready",
+  "tests_run": 1,
+  "failures": 1,
+  "errors": 0,
+  "observed_failure": "HTTP was attempted before matching READY",
+  "specific_failure_detected": true,
+  "scope": "The same current ordering test exercises original Instrument.start with the identical declared fake process/clock/HTTP probe. No host/runtime/source archive changed. This is a controlled protocol negative, separate from actual captured HttpListener stack and full integration.",
+  "transcript": "ordering-negative.txt"
+}
