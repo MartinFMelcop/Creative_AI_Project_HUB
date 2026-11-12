@@ -325,6 +325,7 @@ jobs:
         working-directory: martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab
         run: |
           python3 -m unittest discover -s labs/visual-animation -p 'test_*.py'
+          python3 -m unittest discover -s labs/visual-animation/vea-calibration -p 'test_runner.py' -v
           python3 labs/visual-animation/run.py --godot "$RUNNER_TEMP/veil-godot/Godot_v4.6.3-stable_linux.x86_64" --output "$RUNNER_TEMP/visual-animation.json" --compare evidence/visual-animation/results.json
 
       - name: Execute preserved adaptive audio sources and actual mixer controls
