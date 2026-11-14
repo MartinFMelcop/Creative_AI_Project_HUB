@@ -19,6 +19,32 @@ an original MMORPG centered on recognizable character identity and meaningful ad
 **Unity/C# is selected for production, Windows is the priority platform, and Steam is
 intended distribution.** The current downloadable experiment is a local C#/browser scene.
 
+### North Star — Current Authorial Direction
+
+Virgo Diamond: The North Star is an author-directed
+dark-fantasy MMORPG with a predominantly 2.5D
+isometric presentation.
+
+The MMORPG Maker AI baseline of November 14, 2026
+defines the product direction, nine conceptual nodes,
+human approval boundaries and the requirement to
+keep historical sources distinct from adopted canon.
+
+Unity/C# remains the selected production direction.
+Polyglot, AI-assisted and alternative rendering
+architectures remain subjects of investigation.
+
+A playable North Star executable is intended for
+future download through the HUB/AI Proofbook, subject
+to build verification, licensing, integrity checks
+and release authorization.
+
+The currently downloadable C#/browser scene is a
+separate experiment, not the completed MMORPG.
+
+Authorial baseline:
+MMAI C02 — Authorial Baseline, 2026-11-14 (internal record)
+
 ### The coil and the shutters
 
 Edda has five shutter crates to secure before four shifts of light end. A coil also

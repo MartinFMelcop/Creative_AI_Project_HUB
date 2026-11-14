@@ -64,6 +64,34 @@ The following versioned milestones are historical execution summaries. STATE is 
 preferred location for current continuity; do not append another current-state table
 or synchronize these historical accounts after every execution.
 
+### MMAI C02 — Authorial Baseline Reference
+
+On November 14, 2026, the author approved a new
+conceptual baseline for MMORPG Maker AI and
+Virgo Diamond: The North Star.
+
+The baseline defines nine direct MMAI nodes,
+human governance, a dark-fantasy MMORPG direction,
+and a predominantly 2.5D isometric presentation.
+
+Research and production should prioritize
+meaningful MMORPG experiences and diversified
+artistic capabilities. Detailed ecological or
+hydraulic simulation is not a universal obligation.
+
+Unity/C# remains the selected production direction.
+Polyglot and alternative rendering technologies
+remain research subjects, not approved migrations.
+
+Earlier laboratory allocations, source-protection
+rules, executed results and independent fictional
+canon retain their original historical status.
+The baseline does not automatically replace
+those records or authorize implementation.
+
+Authorial reference:
+MMAI C02 — Authorial Baseline, 2026-11-14 (internal record)
+
 ### Historical consumer increment — v0.33.19
 
 DEVELOPMENT: the existing North Star adventure now accepts mapped gamepad movement,
