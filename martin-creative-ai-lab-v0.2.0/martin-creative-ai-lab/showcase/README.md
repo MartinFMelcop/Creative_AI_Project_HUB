@@ -9,6 +9,27 @@ This case study presents the **existing downloadable C# scene**. Its continuous
 walkthrough is actual Linux/Chromium execution of the extracted private-runtime
 recipient, not a new game, Unity player, Windows run or participant session.
 
+### Relationship to the Future North Star MMORPG
+
+This downloadable C#/browser experience is a
+limited, separately evidenced experiment.
+
+The approved product direction for Virgo Diamond:
+The North Star is a dark-fantasy MMORPG with a
+predominantly 2.5D isometric presentation.
+
+A future playable North Star executable is planned
+for download through the HUB/AI Proofbook, subject
+to release approval, platform verification,
+licensing and artifact integrity.
+
+This case study does not demonstrate a completed
+Unity client, production MMORPG, multiplayer
+service, or future release.
+
+Authorial baseline:
+MMAI C02 — Authorial Baseline, 2026-11-14 (internal record)
+
 [![Actual recipient walkthrough: observed handoff and unfinished local work](../evidence/portfolio/poster.png)](../evidence/portfolio/walkthrough.webm)
 
 [Watch the continuous walkthrough —43.12s](../evidence/portfolio/walkthrough.webm) ·

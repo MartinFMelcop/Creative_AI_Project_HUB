@@ -9,6 +9,30 @@ This record evolves with product work. The Creative Brain remains byte-preserved
 knowledge; its hypotheses do not become canon through implementation. Current direct
 author decisions prevail. Status here describes scope, not independent player approval.
 
+## MMAI C02 — Current Product Direction
+
+The authorial baseline recorded on November 14,
+2026 establishes North Star as a dark-fantasy
+MMORPG with a predominantly 2.5D isometric
+presentation and coherent audiovisual identity.
+
+MMORPG gameplay and meaningful player experience
+take priority over mandatory simulation of
+ecological, biological or hydraulic detail.
+
+This direction is approved. Historical class
+taxonomies, creatures, quests, regions, mechanics,
+assets and experimental scenes are not automatically
+approved or made canonical.
+
+Past decisions and execution evidence remain
+preserved in their original scopes. Reuse within
+the current North Star baseline requires explicit
+source-bound review and applicable authorization.
+
+Source:
+MMAI C02 — Authorial Baseline, 2026-11-14 (internal record)
+
 | Status | Decision / provenance | Observable consequence and review trigger |
 |---|---|---|
 | Accepted author direction | Recognizable character identity and meaningful adventure; current adaptive author mandate, CRE-001 and CRE-005 | Compare creative, technical and knowledge value, strategic relevance and opportunity cost across North Star and justified portfolio work. Checks/reports do not substitute for experience. |
